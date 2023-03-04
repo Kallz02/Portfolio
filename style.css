@@ -19,14 +19,15 @@ body {
 
 header{
     display: flex;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     /* padding-top: 1rem; */
     
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     min-height: 3rem;
     color: var(--sec);
-    background-color: var(--main);
+    background-color: rgba(--main,0.7);
+    backdrop-filter: blur(6px);
     /* position: fixed;
     top: 0; 
     width: 100%; */
@@ -36,7 +37,8 @@ header{
 }
 
 .logo{
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-right: auto;
 }
 
 .nav {
@@ -50,6 +52,11 @@ header{
     margin-left: 1rem;
     padding: 1rem; 
 }
+
+
+.nav li{
+    transition: all 1s;
+  }  
 .nav li:hover {
     z-index: 2; 
     
@@ -69,7 +76,7 @@ header{
     padding: 0 2rem;
     width: 100%;
     
-   height:calc(100vh - 5rem); 
+   height:calc(100vh - 4.4rem); 
    
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -80,9 +87,10 @@ header{
 .pg1{
    
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   align-items: stretch; /* stretch items to fill container height */
-  grid-auto-rows: minmax(50%, auto); /* set a minimum height for the grid items */
+  grid-auto-rows: minmax(calc(50vh - 2.5rem),auto); /* set a minimum height for the grid items */
+  min-width: 250px; 
   
 
   
@@ -91,30 +99,85 @@ header{
 
 .pg1 .social{
   background-color: powderblue;
-  margin: 4rem;
-    border-radius: 5px;
+  border-radius: 5px;
+  justify-self: stretch ;
+  align-self: stretch;
+  margin: 4rem 0;
 }
 .pg1 .main-text{
     /* align-self: center; */
     font-size: 3rem;
-    padding-top: 3rem;
+    padding-top: 20rem;
   
     /* background-color: blue; */
     justify-self: center;
 }
 
-@media (width <= 1000px) {
+@media (width <= 1111px) {
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:-1;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main);
+    justify-items: center;
+    align-items: center;
+    gap: 5rem;
+    padding-top: 9rem;
+    padding-right:4rem ;
+
+    transition: transform 1s ease-in;
+      transform: translateY(-100%);
+
+  }
+
+.feather{
+
+  }  
+.nav a{
+    font-size: 2rem;
+    color: var(--sec);
+}
+.nav li{
+    transition: all 1s;
+  }  
+.nav li:hover {
+    
+  
+    transform: scale(1.5);
+
+}
+.pg1{
+  min-width: unset;  
+  }
+.pg1 .color{
+    color: var(--main);
+  }  
+
+
+.pg1 .social{
+  background-color: powderblue;
+    border-radius: 5px;
+}
+
 
 .pg1 .main-text{
     /* align-self: center; */
-    padding-top: 3rem;
-    font-size: 3rem;
-    padding-left: 3rem;
 
+    padding-top: 3rem;
+    justify-self: left; 
+    font-size: 2.2rem;
+    max-width: 80%;
+    
     /* background-color: blue; */
-    justify-self: center;
 
 }
+
 
   
 }
