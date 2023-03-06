@@ -178,7 +178,7 @@ header{
     padding-right:1rem ;
 
     transition: all .5s ease-in;
-      /* transform: translateY(-100%); */
+      transform: translateY(-100%);
       /* transform: translateY(0%); */
 
   }
