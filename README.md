@@ -10,4 +10,4 @@ My Personal Portfoio Made Using **Vanilla HTML,CSS and Javascript**
 
 - **Modern Design** inspired by Neubrutalism and other similar design philosophies
 
-### Live 🔗 : 
+### Live 🔗 :  https://akshayk.dev/
