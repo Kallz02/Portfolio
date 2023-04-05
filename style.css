@@ -232,10 +232,10 @@ header{
 
 
 
-.socialLinks a {
+.socialLinks {
   
 
- margin-top: .5rem; 
+ margin-top: 1rem; 
 
 
 }
@@ -565,10 +565,15 @@ footer .socialLinks a{
     margin-left: .8rem;
 
 
+
   }
   
   input[type="checkbox"]:checked  ~ label .navmenu .feather-align-right{
     display: none;
+  }
+
+  .socialLinks{
+    margin-top: 1rem;
   }
   
   
