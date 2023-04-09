@@ -161,7 +161,7 @@ header{
 .pg1{
    
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
   align-items: stretch; /* stretch items to fill container height */
   grid-auto-rows: minmax(calc(50vh - 1rem),auto); /* set a minimum height for the grid items */
   min-width: 250px; 
