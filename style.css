@@ -522,7 +522,7 @@ footer .socialLinks a{
 
 
 
-@media (width <= 1111px) {
+@media only screen and (max-width:1111px) {
 
 .feather{
     /* background-color: gray; */
@@ -620,7 +620,7 @@ footer .socialLinks a{
   
 }
 
-@media (width <= 550px) {
+@media only screen and (max-width:550px) {
 
 .logo{
   font-size: 1.5rem;
