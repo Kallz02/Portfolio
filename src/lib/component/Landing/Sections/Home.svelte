@@ -1,7 +1,7 @@
 <div class="pg1 section" id="home">
 	<div class="main-text">
-		<h1 class="hidden1 md:text-[7rem]">FullStack,</h1>
-		<h1 class="hidden1 md:text-[7rem]">Android <br /> Developer</h1>
+		<h1 class="hidden1 sm:text-[7rem]">FullStack,</h1>
+		<h1 class="hidden1 sm:text-[7rem]">Android <br /> Developer</h1>
 		<p class="hidden1">Always ready to Work On Something New, "Hello World!"</p>
 
 		<div class="socialLinks hidden1 flex gap-4">
@@ -114,7 +114,7 @@
 			border-radius: 5px;
 		}
 
-		.pg1 .main-text h1 {
+		.pg1 .main-text {
 			/* align-self: center; */
 
 			justify-self: left;
