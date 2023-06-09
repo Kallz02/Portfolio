@@ -48,8 +48,6 @@ body {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-75%);
-    animation-name: hidden-animation;
-    animation-duration: 0.8s;
 }
 
 .show {
@@ -60,19 +58,6 @@ body {
     animation-duration: 0.8s;
 }
 
-@keyframes hidden-animation {
-    0% {
-        opacity: 0;
-        filter: blur(5px);
-        transform: translateX(-75%);
-    }
-
-    100% {
-        opacity: 0;
-        filter: blur(5px);
-        transform: translateX(-75%);
-    }
-}
 
 @keyframes show-animation {
     0% {
