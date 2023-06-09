@@ -30,7 +30,7 @@
 
 :root{
  --sec:black;
- --main:white;
+ --main:rgb(255, 255, 255);
   
 	--shadowColor: 187 60% 40%;
 	--shadow: 187, 47%, 60%;
@@ -364,6 +364,10 @@ header{
   font-weight: 200;
 }
 
+.cta li b{
+  font-weight: 600;
+}
+
 .cta h3{
   margin-top: 0;
   font-weight: 300;
@@ -391,6 +395,7 @@ header{
   margin-top: .5rem;
   font-size: 1.3rem;
 }
+
 
 .pg4 h2{
   font-size: 4rem;
