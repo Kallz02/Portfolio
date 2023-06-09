@@ -1,7 +1,7 @@
 <div class="pg1 section" id="home">
 	<div class="main-text">
-		<h1 class="hidden1 text-[7rem]">FullStack,</h1>
-		<h1 class="hidden1 text-[7rem]">Android <br /> Developer</h1>
+		<h1 class="hidden1 md:text-[7rem]">FullStack,</h1>
+		<h1 class="hidden1 md:text-[7rem]">Android <br /> Developer</h1>
 		<p class="hidden1">Always ready to Work On Something New, "Hello World!"</p>
 
 		<div class="socialLinks hidden1 flex gap-4">
@@ -105,16 +105,16 @@
 			grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
 		}
 
-		.pg1 .color {
+		/* .pg1 {
 			color: var(--main);
-		}
+		} */
 
 		.pg1 .social {
 			background-color: powderblue;
 			border-radius: 5px;
 		}
 
-		.pg1 .main-text {
+		.pg1 .main-text h1 {
 			/* align-self: center; */
 
 			justify-self: left;
@@ -126,10 +126,6 @@
 	}
 
 	@media only screen and (max-width: 550px) {
-		.logo {
-			font-size: 1.5rem;
-		}
-
 		.pg1 {
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 		}

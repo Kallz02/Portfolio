@@ -208,4 +208,10 @@
 			transform: scale(1.5);
 		}
 	}
+
+	@media only screen and (max-width: 550px) {
+		.logo {
+			font-size: 1.5rem;
+		}
+	}
 </style>
