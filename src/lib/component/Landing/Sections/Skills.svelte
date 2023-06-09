@@ -114,4 +114,14 @@
 		margin-top: 0.5rem;
 		font-size: 1.5rem;
 	}
+
+	@media only screen and (max-width: 550px) {
+		.skill {
+			max-width: 400px;
+		}
+
+		.skill h2 {
+			font-size: 2rem;
+		}
+	}
 </style>

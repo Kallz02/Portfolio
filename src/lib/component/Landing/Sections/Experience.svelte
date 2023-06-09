@@ -106,17 +106,17 @@
   -3px -3px 12px #fff; */
 	}
 
-	.logo:nth-child(even) {
+	/* .logo:nth-child(even) {
 		transition-delay: 200ms;
-	}
+	} */
 
 	.timeline p {
 		padding: 0 20px 10px 20px;
 	}
-
+	/* 
 	.timeline h3 {
 		padding: 0 20px 10px 20px;
-	}
+	} */
 
 	.timeline summary {
 		display: block;

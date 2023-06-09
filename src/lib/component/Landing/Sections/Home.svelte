@@ -99,4 +99,49 @@
 	.socialLinks {
 		margin-top: 1rem;
 	}
+
+	@media only screen and (max-width: 1111px) {
+		.pg1 {
+			grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+		}
+
+		.pg1 .color {
+			color: var(--main);
+		}
+
+		.pg1 .social {
+			background-color: powderblue;
+			border-radius: 5px;
+		}
+
+		.pg1 .main-text {
+			/* align-self: center; */
+
+			justify-self: left;
+			font-size: 3.5rem;
+			max-width: 80%;
+
+			/* background-color: blue; */
+		}
+	}
+
+	@media only screen and (max-width: 550px) {
+		.logo {
+			font-size: 1.5rem;
+		}
+
+		.pg1 {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+
+		.pg1 .main-text {
+			/* align-self: center; */
+
+			justify-self: left;
+			font-size: 2.2rem;
+			max-width: 80%;
+
+			/* background-color: blue; */
+		}
+	}
 </style>
