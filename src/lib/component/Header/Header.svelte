@@ -110,7 +110,7 @@
 	.logo {
 		font-size: 2rem;
 		margin-right: auto;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	.nav {
@@ -122,7 +122,7 @@
 		font-size: 1.5rem;
 		margin-left: 1rem;
 		padding: 1rem;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	.nav li {

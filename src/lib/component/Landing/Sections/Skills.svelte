@@ -114,7 +114,7 @@
 	.skill li {
 		margin-top: 0.5rem;
 		font-size: 1.5rem;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	@media only screen and (max-width: 550px) {
