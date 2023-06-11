@@ -48,6 +48,7 @@ body {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-75%);
+    will-change: opacity, filter, transform;
 }
 
 .show {
@@ -56,8 +57,9 @@ body {
     transform: translateX(0);
     animation-name: show-animation;
     animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
 }
-
 
 @keyframes show-animation {
     0% {

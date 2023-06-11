@@ -1,4 +1,24 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const handleClick = () => {
+			const checkbox = document.getElementById('nav-menu') as HTMLInputElement;
+			checkbox.checked = false;
+		};
+
+		const navLinks = document.querySelectorAll('.nav li a') as NodeListOf<HTMLAnchorElement>;
+
+		navLinks.forEach((link) => {
+			link.addEventListener('click', handleClick);
+		});
+
+		return () => {
+			navLinks.forEach((link) => {
+				link.removeEventListener('click', handleClick);
+			});
+		};
+	});
 </script>
 
 <header>
@@ -90,7 +110,7 @@
 	.logo {
 		font-size: 2rem;
 		margin-right: auto;
-		font-weight: 400;
+		font-weight: 300;
 	}
 
 	.nav {
@@ -102,7 +122,7 @@
 		font-size: 1.5rem;
 		margin-left: 1rem;
 		padding: 1rem;
-		font-weight: 400;
+		font-weight: 300;
 	}
 
 	.nav li {

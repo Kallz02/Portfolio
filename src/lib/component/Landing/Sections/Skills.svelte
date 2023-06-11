@@ -104,6 +104,7 @@
 
 	.skill h2 {
 		font-size: 2.5rem;
+		font-weight: 500;
 	}
 
 	.skill ul {
@@ -113,6 +114,7 @@
 	.skill li {
 		margin-top: 0.5rem;
 		font-size: 1.5rem;
+		font-weight: 300;
 	}
 
 	@media only screen and (max-width: 550px) {

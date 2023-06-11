@@ -114,7 +114,7 @@
 			border-radius: 5px;
 		}
 
-		.main-text h1 {
+		.main-text {
 			/* align-self: center; */
 
 			justify-self: left;
