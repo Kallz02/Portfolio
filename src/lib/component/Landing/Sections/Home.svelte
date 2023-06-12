@@ -1,7 +1,7 @@
 <div class="pg1 section" id="home">
 	<div class="main-text">
-		<h1 class="hidden1 text-[4rem] sm:text-[7rem]">FullStack,</h1>
-		<h1 class="hidden1 text-[4rem] sm:text-[7rem]">Android <br /> Developer</h1>
+		<h1 class="hidden1 text-[4.5rem] sm:text-[7rem]">FullStack,</h1>
+		<h1 class="hidden1 text-[4.5rem] sm:text-[7rem]">Android <br /> Developer</h1>
 		<p class="hidden1">Always ready to Work On Something New, "Hello World!"</p>
 
 		<div class="socialLinks hidden1 flex gap-4">

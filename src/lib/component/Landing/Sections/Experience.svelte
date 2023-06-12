@@ -168,4 +168,21 @@
 	.timeline li:nth-child(even) {
 		justify-content: flex-end;
 	}
+
+	@media only screen and (max-width: 1111px) {
+		.timeline li {
+			justify-content: flex-end;
+		}
+
+		.timeline li:before {
+			left: 3%;
+		}
+
+		.timeline:before {
+			left: 3%;
+		}
+		.timeline .panel {
+			width: 90%;
+		}
+	}
 </style>
