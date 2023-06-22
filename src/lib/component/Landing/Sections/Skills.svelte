@@ -1,17 +1,17 @@
 <div class="pg2 section" id="skill">
 	<h1 id="skills">
-		<center>Skills</center>
+		<center>Tech</center>
 	</h1>
 	<div class="skills">
 		<div class="skill hidden1">
 			<h2>FrontEnd</h2>
 			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
-				<li>Angular</li>
+				<li>NextJs</li>
+
 				<li>React</li>
-				<li />
+				<li>TypeScript</li>
+				<li>Angular</li>
+				<li>SvelteKit</li>
 			</ul>
 		</div>
 
@@ -19,7 +19,10 @@
 			<h2>Backend</h2>
 			<ul>
 				<li>Nodejs</li>
-				<li>Flask</li>
+				<li>Django</li>
+				<li>Postgres</li>
+				<li>MySQL</li>
+				<li>MongoDB</li>
 				<li>Servlet</li>
 				<li>JSP</li>
 			</ul>
@@ -28,10 +31,10 @@
 			<h2>Programing & Scripting</h2>
 			<ul>
 				<li>Java</li>
-				<li>C</li>
+				<li>C/C++</li>
 				<li>Python</li>
 				<li>JavaScript</li>
-				<li>bash</li>
+				<li>Bash</li>
 				<li>Markdown</li>
 			</ul>
 		</div>
@@ -48,7 +51,9 @@
 			<h2>Android</h2>
 			<ul>
 				<li>Android Studio</li>
+				<li>Kotlin</li>
 				<li>Java</li>
+				<li>Jetpack Compose</li>
 				<li>XML</li>
 			</ul>
 		</div>
@@ -56,10 +61,14 @@
 			<h2>Tools & Tech</h2>
 			<ul>
 				<li>Linux</li>
-				<li>Cloud</li>
-				<li>Scrapy</li>
+				<li>AWS</li>
+				<li>Azure</li>
 				<li>Git & Github</li>
 				<li>Docker</li>
+				<li>Kubernetes</li>
+
+				<li>Scrapy</li>
+				<li />
 			</ul>
 		</div>
 	</div>

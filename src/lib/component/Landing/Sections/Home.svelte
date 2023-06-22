@@ -33,13 +33,7 @@
 		</div>
 	</div>
 	<div class="social">
-		<img
-			src={src1}
-			class="h-full w-full object-cover"
-			alt="MyPhoto"
-			loading="lazy"
-			decoding="async"
-		/>
+		<img src={src1} class="h-full w-full object-cover" alt="MyPhoto" />
 	</div>
 </div>
 
