@@ -3,11 +3,11 @@
 	import Header from '../lib/component/Header/Header.svelte';
 	import Footer from '../lib/component/Footer/Footer.svelte';
 
-	import { onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
 
 	let hiddenElements: NodeListOf<Element>;
 
-	onMount(() => {
+	afterUpdate(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {

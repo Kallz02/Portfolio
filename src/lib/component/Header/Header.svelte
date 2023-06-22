@@ -21,16 +21,18 @@
 	});
 </script>
 
-<header>
+<header class="xl:pl-[2.5rem] xl:pr-[2rem]">
 	<h1 class="logo">Akshay Kalathil</h1>
 
 	<input type="checkbox" id="nav-menu" />
 	<ul class="nav">
-		<li><a href="#home">Home</a></li>
+		<li><a href="/">Home</a></li>
 
-		<li><a href="#skill">Skills</a></li>
-		<li><a href="#proj">Projects</a></li>
-		<li><a href="#exp">Experience</a></li>
+		<li><a href="/#skill">Tech</a></li>
+		<li><a href="/#proj">Projects</a></li>
+		<li><a href="/#exp">Experience</a></li>
+		<li><a href="/blog">Blog</a></li>
+		<li><a href="/contact">Contact</a></li>
 		<!-- <li><a href="#"> 
   
    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> 
@@ -90,12 +92,12 @@
 <style>
 	header {
 		display: flex;
-		padding: 1rem 1rem;
+		padding: 1rem 1.5rem;
 		/* padding-top: 1rem; */
 
 		justify-content: flex-end;
 		align-items: center;
-		min-height: 3rem;
+		min-height: 2.5rem;
 		background-color: rgba(white, 0.7);
 		backdrop-filter: blur(6px);
 		border-bottom: solid 0.2rem black;
@@ -171,6 +173,10 @@
 	}
 
 	@media only screen and (max-width: 1111px) {
+		header {
+			padding: 1rem 1rem;
+		}
+
 		.feather-align-right {
 			display: block;
 			margin-left: 0.8rem;

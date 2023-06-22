@@ -9,4 +9,9 @@ declare global {
 	}
 }
 
-export {};
+declare module '$lib/pics/*' {
+	const meta: Object[]
+	export default meta
+}
+
+export { };

@@ -1,3 +1,7 @@
+<script>
+	import src1 from '$lib/pics/IMG_4296.jpg';
+</script>
+
 <div class="pg1 section" id="home">
 	<div class="main-text">
 		<h1 class="hidden1 text-[4.5rem] sm:text-[7rem]">FullStack,</h1>
@@ -29,15 +33,22 @@
 		</div>
 	</div>
 	<div class="social">
-		<div class="layer" />
+		<img
+			src={src1}
+			class="h-full w-full object-cover"
+			alt="MyPhoto"
+			loading="lazy"
+			decoding="async"
+		/>
 	</div>
 </div>
 
 <style>
 	.section {
-		padding: 0 1rem;
+		padding: 0 1.5rem;
 		width: 100%;
 
+		/* min-height: calc(100vh - 22.4rem); */
 		min-height: calc(100vh - 4.4rem);
 
 		scroll-snap-align: start;
@@ -48,7 +59,7 @@
 
 	.pg1 {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 		align-items: stretch;
 		/* stretch items to fill container height */
 		grid-auto-rows: minmax(calc(50vh - 1rem), auto);
@@ -61,22 +72,10 @@
 		border-radius: 5px;
 		justify-self: stretch;
 		align-self: stretch;
-		border: solid 0.3rem black;
-		margin: 2rem 0;
+		border: solid 0.2rem black;
+		margin: 1rem 0;
 
-		box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
-	}
-
-	.layer {
-		/* The image used */
-		background-image: url('../../../pics/IMG_4296.jpg');
-		/* Full height */
-		height: 100%;
-		/* Create the parallax scrolling effect */
-		/* background-attachment: fixed; */
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		box-shadow: 0.4rem 0.4rem 0 hsl(var(--shadowColor) / 1);
 	}
 
 	.pg1 .main-text {
@@ -101,6 +100,10 @@
 	}
 
 	@media only screen and (max-width: 1111px) {
+		.section {
+			padding: 0 1rem;
+		}
+
 		.pg1 {
 			grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
 		}
