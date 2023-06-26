@@ -1,27 +1,27 @@
-<script>
-	export let posts = []
+<script lang="ts">
+	export let posts: any = [];
 </script>
-
 
 <ul class="posts-list">
 	{#each posts as post}
-		<li>
+		<li class="my-5">
 			<article>
-				<a href="/blog/{post.slug}">
+				<a href="/blog/{post.slug}" class="flex flex-wrap justify-center">
 					<img
-					src={post.coverImage}
-					alt=""
-					width={post.coverWidth}
-					height={post.coverHeight}
-					style="ratio: {post.coverWidth} / {post.coverHeight}"
+						src={post.coverImage}
+						alt=""
+						style="ratio: {post.coverWidth} / {post.coverHeight}"
+						class="w-[500px] border border-black"
 					/>
-					<h2>
-						{post.title}
-					</h2>
+					<div class="">
+						<h2>
+							{post.title}
+						</h2>
+						<h3>{post.categories}</h3>
+						<p>{post.excerpt}</p>
+					</div>
 				</a>
 			</article>
-
-			<p>{post.excerpt}</p>
 		</li>
 	{/each}
 </ul>

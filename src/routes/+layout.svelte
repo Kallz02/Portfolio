@@ -2,14 +2,15 @@
 	import '../app.css';
 	import Header from '../lib/component/Header/Header.svelte';
 	import Footer from '../lib/component/Footer/Footer.svelte';
-	import { currentPage, isMenuOpen } from '$lib/assets/js/store';
+	import { currentPage } from '$lib/assets/js/store';
 	import { navItems } from '$lib/config';
 	import { preloadCode } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	export let data;
+	export let data: LayoutData;
 
 	import { afterUpdate } from 'svelte';
+	import type { LayoutData } from './$types';
 	const transitionIn = { delay: 150, duration: 150 };
 	const transitionOut = { duration: 100 };
 
@@ -62,3 +63,9 @@
 	{/key}
 </div>
 <Footer />
+
+<style>
+	:global(body.dark) {
+		background-color: black;
+	}
+</style>
