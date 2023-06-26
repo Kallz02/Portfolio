@@ -1,3 +1,32 @@
+<script>
+	let timelineItems = [
+		{
+			school: 'Chrysalis High, Whitefield',
+			class: 'Class 10 , CBSE',
+			pcmc: 'PCMC',
+			percentage: '82.8%',
+			year: '2018'
+		},
+		{
+			school: 'Delhi Public School, Whitefield',
+			class: '10+2 (CBSE)',
+			percentage: '88.4%',
+			year: '2020'
+		},
+		{
+			school: 'VIT, Vellore',
+			class: 'Integrated Mtech(Cse)',
+			cgpa: 'CGPA: 7.35 (tentative)',
+			year: '2025 · 5 years'
+		},
+		{
+			school: 'Formi',
+			class: 'Marketing Intern',
+			year: 'Apr 2022 - Jul 2022 · 4 mos'
+		}
+	];
+</script>
+
 <div class="pg4 section" id="exp">
 	<h2>
 		<center>Experience</center>
@@ -5,40 +34,36 @@
 	<p>Click on the Cards for more!</p>
 	<div class="wrapper">
 		<ul class="timeline">
-			<li>
-				<details class="panel hidden1">
-					<summary>Class 10 (CBSE) • Chrysalis High, Whitefield</summary>
-					<!-- <h3></h3> -->
-					<p>82.8%</p>
-					<p><b>2018</b></p>
-				</details>
-			</li>
-
-			<li>
-				<details class="panel hidden1">
-					<summary> 10+2 (CBSE) • Delhi Public School, Whitefield</summary>
-					<!-- <h3></h3> -->
-					<p>88.4%</p>
-					<p><b>2020</b></p>
-				</details>
-			</li>
-
-			<li>
-				<details class="panel hidden1">
-					<summary>VIT,Vellore • Integrated Mtech(Cse)</summary>
-					<!-- <h3></h3> -->
-					<p>CGPA: 7.2 (tentative)</p>
-					<p><b>2025 · 5 years</b></p>
-				</details>
-			</li>
-
-			<li>
-				<details class="panel hidden1">
-					<summary>Formi • <b>Marketing Intern</b></summary>
-					<!-- <h3>Marketing Intern</h3> -->
-					<p><b>Apr 2022 - Jul 2022 · 4 mos</b></p>
-				</details>
-			</li>
+			{#each timelineItems as item, index (item.school)}
+				<li>
+					<details class="panel {index === 0 ? '' : 'hidden1'}">
+						<summary>
+							{#if item.school}
+								<div class="flex">
+									<img
+										src=""
+										alt=""
+										loading="lazy"
+										class="w-[55px] h-[55px] rounded-full border-2 border-black"
+									/>
+									<div class="flex ml-2 flex-col">
+										<h4 class="text-[1.2rem] md:text-[1.5rem] font-medium">
+											{item.school}
+										</h4>
+										<h4 class="text-[1rem] flex justify-between font-semibold">{item.class}</h4>
+									</div>
+								</div>
+								<div class="ml-[63px] font-normal">{item.pcmc}</div>
+							{/if}
+						</summary>
+						<p>{item.percentage}</p>
+						<p><b>{item.year}</b></p>
+						{#if item.cgpa}
+							<p>{item.cgpa}</p>
+						{/if}
+					</details>
+				</li>
+			{/each}
 		</ul>
 	</div>
 </div>
@@ -119,11 +144,14 @@
 	} */
 
 	.timeline summary {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		user-select: none;
 		cursor: pointer;
 		outline: none;
-		padding: 20px;
+		padding: 15px 0px;
+		padding-left: 15px;
+		padding-right: 10px;
 		margin-bottom: 0px;
 		font-size: 1rem;
 		transition: all 600ms cubic-bezier(0.2, 1, 0.3, 1);
