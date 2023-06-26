@@ -80,8 +80,8 @@
 
 	.pg1 .main-text {
 		/* align-self: center; */
-		font-size: 3.5rem;
-		line-height: 6rem;
+		font-size: 2rem;
+		line-height: 1;
 		padding-top: 3rem;
 
 		/* background-color: blue; */
