@@ -14,7 +14,7 @@
 
 	<div class="cont1">
 		<article class="cta hidden1">
-			<img src={insta} alt="Insta React" />
+			<img src={insta} alt="Insta React" loading="lazy" />
 			<div class="cta__text-column">
 				<h2>InstafakeDetectAPI</h2>
 				<h3>BackEnd</h3>
@@ -58,7 +58,7 @@
 		</article>
 
 		<article class="cta hidden1">
-			<img src={arch} alt="Arch Startup" />
+			<img src={arch} alt="Arch Startup" loading="lazy" />
 			<div class="cta__text-column">
 				<h2>Arch_setup.sh</h2>
 				<h3>Arch Dev Environment Script</h3>
@@ -91,7 +91,7 @@
 		</article>
 
 		<article class="cta hidden1">
-			<img src={websock} alt="Bluetit" />
+			<img src={websock} alt="Bluetit" loading="lazy" />
 			<div class="cta__text-column">
 				<h2>WebsocketBallGame</h2>
 				<h3>Game Using WebSockets</h3>
@@ -121,7 +121,7 @@
 		</article>
 
 		<article class="cta hidden1">
-			<img src={port} alt="Bluetit" />
+			<img src={port} alt="Bluetit" loading="lazy" />
 			<div class="cta__text-column">
 				<h2>Personal Portfolio</h2>
 				<h3>Portfolio Website</h3>
@@ -148,7 +148,7 @@
 		</article>
 
 		<article class="cta hidden1">
-			<img src={instang} alt="Bluetit" />
+			<img src={instang} alt="Bluetit" loading="lazy" />
 			<div class="cta__text-column">
 				<h2>InstafakeAngular</h2>
 				<h3>Angular Client</h3>
@@ -171,7 +171,7 @@
 		</article>
 
 		<article class="cta hidden1">
-			<img src={instadroid} alt="Bluetit" />
+			<img src={instadroid} alt="Bluetit" loading="lazy" />
 			<div class="cta__text-column">
 				<h2>InstaDroid</h2>
 				<h3>Android Client</h3>
