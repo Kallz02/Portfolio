@@ -99,8 +99,8 @@
 		overflow: hidden;
 		position: relative;
 		border: solid 0.3rem black;
-		background: hsl(191, 35%, 90%);
-
+		/* background: hsl(191, 35%, 90%); */
+		background: whitesmoke;
 		box-shadow: 0.4rem 0.4rem 0 hsl(var(--shadowColor) / 1);
 		/* box-shadow: 3px 3px 12px #dee1e4,
   -3px -3px 12px #fff; */

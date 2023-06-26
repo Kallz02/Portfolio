@@ -71,7 +71,7 @@
 	<div class="projcar flex w-[1770px] animate-marquee overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<img src={project.image} alt="ProjectImage" />
+				<img src={project.image} loading="lazy" alt="ProjectImage" />
 				<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
 				<div class="cta__text-column">
 					<h2 class="px-2">{project.title}</h2>
@@ -93,7 +93,7 @@
 	<div class="projcar absolute top-0 flex w-[1770px] animate-marquee2 overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<img src={project.image} alt="ProjectImage" />
+				<img src={project.image} loading="lazy" alt="ProjectImage" />
 				<div class="cta__text-column">
 					<h2 class="px-2">{project.title}</h2>
 					<p class="pl-2 pb-2">

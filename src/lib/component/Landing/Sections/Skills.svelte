@@ -100,7 +100,8 @@
 	}
 
 	.skill {
-		background: hsl(191, 35%, 90%);
+		/* background: hsl(191, 35%, 90%); */
+		background: whitesmoke;
 		border: 0.3rem solid #000;
 
 		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);

@@ -253,7 +253,8 @@
 	.cta {
 		display: flex;
 		flex-wrap: wrap;
-		background: hsl(191, 35%, 90%);
+		/* background: hsl(191, 35%, 90%); */
+		background: whitesmoke;
 		max-width: 35rem;
 		width: 100%;
 		box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
