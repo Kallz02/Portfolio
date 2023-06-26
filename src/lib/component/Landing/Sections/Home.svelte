@@ -3,7 +3,7 @@
 </script>
 
 <div class="pg1 section" id="home">
-	<div class="main-text pt-[1rem] md:pt-[3rem] dark:text-[#f2f2f2]">
+	<div class="main-text pt-[1.5rem] md:pt-[3rem] dark:text-[#f2f2f2]">
 		<h1 class="hidden1 text-[4.5rem] sm:text-[6rem]">FullStack</h1>
 		<h1 class="hidden1 text-[4.5rem] sm:text-[6rem]">Web , <br /> Android<br /> Developer</h1>
 		<p class="hidden1">Always ready to Work On Something New, "Hello World!"</p>

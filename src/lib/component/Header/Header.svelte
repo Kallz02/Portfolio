@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { DarkMode } from 'flowbite-svelte';
+	// import { DarkMode } from 'flowbite-svelte';
 	onMount(() => {
 		const handleClick = () => {
 			const checkbox = document.getElementById('nav-menu') as HTMLInputElement;
@@ -41,7 +41,7 @@
                      </a> 
                   </li> -->
 	</ul>
-	<DarkMode class="text-lg p-0">
+	<!-- <DarkMode class="text-lg p-0">
 		<svelte:fragment slot="lightIcon">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@
 				/></svg
 			>
 		</svelte:fragment>
-	</DarkMode>
+	</DarkMode> -->
 	<div class="resume dark:border-2 dark:border-[#B5C0C0]">
 		<a
 			href="https://drive.google.com/file/d/132yDbr5WAJNLiVacQvRx0S4rXtEm4z2Z/view?usp=share_link"
