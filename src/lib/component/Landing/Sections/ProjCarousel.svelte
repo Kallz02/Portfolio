@@ -18,7 +18,7 @@
 		{
 			image: websock,
 			title: 'InstafakeDetectAPI',
-			description: 'NodeJS | Javascript'
+			description: 'NodeJS | JavaScript'
 		},
 		{
 			image: instadroid,
@@ -28,7 +28,7 @@
 		{
 			image: port,
 			title: 'Akshayk.dev',
-			description: 'SvelteKit | TailwindCSS | TypeScript '
+			description: 'SvelteKit | TailwindCSS | TypeScript'
 		}
 	];
 	function getBadgeClass(word: string) {
@@ -40,22 +40,24 @@
 				return 'bg-red-100 text-red-800 border-red-800 border ';
 			case 'Angular':
 				return 'bg-red-100 text-red-800 border-red-800 border ';
-			case 'Javascript':
+			case 'JavaScript':
 				return 'bg-yellow-100 text-yellow-800 border-yellow-800 border ';
 			case 'Python':
 				return 'bg-yellow-100 text-yellow-800 border-yellow-800 border ';
 			case 'Android':
 				return 'bg-green-100 text-green-800 border-green-800 border ';
 			case 'React':
-				return 'bg-blue-100 text-blue-800 	border-blue-800 border ';
-
+				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
 			case 'TypeScript':
-				return 'bg-blue-100 text-blue-800 	border-blue-800 border ';
+				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
 			case 'NodeJS':
 				return 'bg-indigo-100 text-indigo-800 border-indigo-800 border ';
 			case '.Net':
 				return 'bg-purple-100 text-purple-800 border-purple-800 border ';
-
+			case 'Bash':
+				return 'bg-black-100 text-black-800 border-black border ';
+			case 'Arch Linux':
+				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
 			case 'SvelteKit':
 				return 'bg-orange-100 text-orange-800 border-orange-800 border ';
 			case 'AI':
@@ -79,7 +81,7 @@
 						{#each project.description.split(' | ') as word}
 							<span
 								class="
-					inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium
+					inline-flex items-center gap-1.5 py-1 mr-1 px-2 rounded-full text-xs font-medium
 					{getBadgeClass(word)}
 				  ">{word}</span
 							>
@@ -100,7 +102,7 @@
 						{#each project.description.split(' | ') as word}
 							<span
 								class="
-					inline-flex items-center gap-1.5 py-1 px-2 rounded-full text-xs font-medium
+					inline-flex items-center gap-1.5 py-1 mr-1 px-2 rounded-full text-xs font-medium
 					{getBadgeClass(word)}
 				  ">{word}</span
 							>

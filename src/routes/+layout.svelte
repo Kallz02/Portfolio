@@ -29,8 +29,27 @@
 	 **/
 
 	onMount(() => {
-		const navRoutes = navItems.map((item) => item.route);
-		preloadCode(...navRoutes);
+		// const navRoutes = navItems.map((item) => item.route);
+		// preloadCode(...navRoutes);
+		const styleSheet = document.styleSheets[0];
+
+		const keyframes = `
+  @keyframes show-animation {
+	0% {
+	  opacity: 0;
+	  filter: blur(5px);
+	  transform: translateX(-75%);
+	}
+
+	100% {
+	  opacity: 1;
+	  filter: blur(0);
+	  transform: translateX(0);
+	}
+  }
+`;
+
+		styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 	});
 
 	let hiddenElements: NodeListOf<Element>;
