@@ -38,13 +38,13 @@
 	0% {
 	  opacity: 0;
 	  filter: blur(5px);
-	  transform: translateX(-75%);
+	  transform: translate3d(-75%,0,0);
 	}
 
 	100% {
 	  opacity: 1;
 	  filter: blur(0);
-	  transform: translateX(0);
+	  transform: translateX(0,0,0);
 	}
   }
 `;
