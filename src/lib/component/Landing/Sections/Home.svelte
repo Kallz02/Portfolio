@@ -98,7 +98,7 @@
 		font-size: 2rem;
 		line-height: 1;
 		/* background-color: blue; */
-		font-weight: 300;
+		/* font-weight: 300; */
 		justify-self: left;
 		/* align-self: center; */
 	}
