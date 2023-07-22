@@ -40,7 +40,7 @@
 		</div>
 		
 		
-	<div class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-100 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem]  3xl:top-[4.5rem]">
+	<div class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-50 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem]  3xl:top-[4.5rem]">
 <div class="text-center text-3xl mx-auto font-light mt-1">
 	Professional Work
 </div>
