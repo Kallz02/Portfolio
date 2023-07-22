@@ -20,7 +20,7 @@
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
 {#if posts && posts.length}
-	<h1 class=" text-2xl md:text-4xl mx-auto text-center py-4 font-thin">
+	<h1 class=" text-2xl md:text-4xl mx-auto text-center py-4 ">
 		Category: {category}
 		<br />
 	<div class="text-lg my-3">	Posts {lowerBound}–{upperBound} of {totalPosts} </div>

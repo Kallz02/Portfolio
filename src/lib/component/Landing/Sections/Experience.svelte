@@ -1,33 +1,42 @@
 <script>
 	let timelineItems = [
-		{
-			school: 'Chrysalis High, Whitefield',
-			class: 'Class 10 , CBSE',
+
+	{
+			school: 'Formi',
+			class: 'Marketing Intern',
+			year: 'Apr 2022 - Jul 2022 · 4 mos',
 			pcmc: 'PCMC',
-			percentage: '82.8%',
-			year: '2018'
-		},
-		{
-			school: 'Delhi Public School, Whitefield',
-			class: '10+2 (CBSE)',
-			percentage: '88.4%',
-			year: '2020',
-			pcmc: 'PCMC'
+			img:'/exp/formi.png'
+			
 		},
 		{
 			school: 'VIT, Vellore',
 			class: 'Integrated Mtech(Cse)',
 			cgpa: 'CGPA: 7.35 (tentative)',
 			year: '2025 · 5 years',
-			pcmc: 'PCMC'
+			pcmc: 'PCMC',
+			img:'/exp/vit.jpg'
+
 		},
 		{
-			school: 'Formi',
-			class: 'Marketing Intern',
-			year: 'Apr 2022 - Jul 2022 · 4 mos',
-			pcmc: 'PCMC'
-			
-		}
+			school: 'Delhi Public School, Whitefield',
+			class: '10+2 (CBSE)',
+			percentage: '88.4%',
+			year: '2020',
+			pcmc: 'PCMC',
+			img:'/exp/dps.png'
+		},
+		
+		{
+			school: 'Chrysalis High, Whitefield',
+			class: 'Class 10 , CBSE',
+			pcmc: 'PCMC',
+			percentage: '82.8%',
+			year: '2018',
+			img:'/exp/ch.png'
+		},
+	
+		
 	];
 </script>
 
@@ -45,7 +54,7 @@
 							{#if item.school}
 								<div class="flex">
 									<img
-										src=""
+										src={item.img}
 										alt=""
 										loading="lazy"
 										class="w-[55px] h-[55px] rounded-full border-2 border-black"

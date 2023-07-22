@@ -1,9 +1,14 @@
 <!-- This file renders each individual blog post for reading. Be sure to update the svelte:head below -->
 <script lang="ts">
 	export let data;
+	import Copy from '$lib/components/Copy.svelte';
 
 	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta;
-	const { PostContent } = data;
+	const  Posts  = data.PostContent;
+
+
+
+
 
 	function getBadgeClass(word: string) {
 		switch (word) {
@@ -103,8 +108,10 @@
 		{updated}
 	</div> -->
 
-	<div class="mx-2 blog mt-4 ">
-	<svelte:component this={PostContent}  />
+	<div class="mx-2 relative blog mt-4 ">
+		<Copy>
+	<Posts/>
+</Copy>
 </div>
 
 
@@ -134,6 +141,5 @@
 		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
 	}
 
-	
 
 </style>
