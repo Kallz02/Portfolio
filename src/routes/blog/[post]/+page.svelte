@@ -22,16 +22,19 @@
 	<!-- <meta name="twitter:image" content="https://yourdomain.com/image_path" /> -->
 </svelte:head>
 
-<article class="post flex flex-col justify-start max-w-[50rem]">
+<article class="post flex mx-4 flex-col md:mx-auto max-w-[60rem]">
 	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
+	
+	<h1 class="text-4xl  md:text-6xl text-center my-10">{title}</h1>
+	
 	<img
-		class="cover-image w-[800px]"
+		class="cover-image rounded-md w-[1000px]"
 		src={coverImage}
 		alt=""
 		style="aspect-ratio: {coverWidth} / {coverHeight};"
 	/>
 
-	<h1>{title}</h1>
+
 
 	<div class="meta">
 		<b>Published:</b>
@@ -44,12 +47,12 @@
 	<svelte:component this={PostContent} />
 
 	{#if categories}
-		<aside class="post-footer">
-			<h2>Posted in:</h2>
-			<ul>
+		<aside class=" my-8">
+			<h2 class="text-lg text-medium ">Posted in:</h2>
+			<ul class="flex mt-4 text-md  ">
 				{#each categories as category}
 					<li>
-						<a href="/blog/category/{category}/">
+						<a class=" mr-4 py-2 px-3 bg-gray-300 border border-gray-500 rounded-full" href="/blog/category/{category}/">
 							{category}
 						</a>
 					</li>

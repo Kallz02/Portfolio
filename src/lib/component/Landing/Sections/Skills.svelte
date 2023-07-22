@@ -1,78 +1,51 @@
-<div class="pg2 section" id="skill">
+<script>
+	// Object containing data for each skill category
+	let skills = [
+	  {
+		title: 'FrontEnd',
+		items: ['NextJs', 'React', 'TypeScript', 'Angular', 'SvelteKit']
+	  },
+	  {
+		title: 'Backend',
+		items: ['Nodejs', 'Django', 'Postgres', 'MySQL', 'MongoDB', 'Servlet', 'JSP']
+	  },
+	  {
+		title: 'Programing & Scripting',
+		items: ['Java', 'C/C++', 'Python', 'JavaScript', 'Bash', 'Markdown']
+	  },
+	  {
+		title: 'Machine Learning',
+		items: ['Python', 'Scikit-learn', 'Numpy', 'Pandas']
+	  },
+	  {
+		title: 'Android',
+		items: ['Android Studio', 'Kotlin', 'Java', 'Jetpack Compose', 'XML']
+	  },
+	  {
+		title: 'Tools & Tech',
+		items: ['Linux', 'AWS', 'Azure', 'Git & Github', 'Docker', 'Kubernetes', 'Scrapy']
+	  }
+	];
+  </script>
+  
+  <div class="pg2 section" id="skill">
 	<h1 id="skills">
-		<center>Tech</center>
+	  <center>Tech</center>
 	</h1>
 	<div class="skills">
+	  {#each skills as skill}
 		<div class="skill hidden1">
-			<h2>FrontEnd</h2>
-			<ul>
-				<li>NextJs</li>
-
-				<li>React</li>
-				<li>TypeScript</li>
-				<li>Angular</li>
-				<li>SvelteKit</li>
-			</ul>
+		  <h2>{skill.title}</h2>
+		  <ul>
+			{#each skill.items as item}
+			  <li>{item}</li>
+			{/each}
+		  </ul>
 		</div>
-
-		<div class="skill hidden1">
-			<h2>Backend</h2>
-			<ul>
-				<li>Nodejs</li>
-				<li>Django</li>
-				<li>Postgres</li>
-				<li>MySQL</li>
-				<li>MongoDB</li>
-				<li>Servlet</li>
-				<li>JSP</li>
-			</ul>
-		</div>
-		<div class="skill hidden1">
-			<h2>Programing & Scripting</h2>
-			<ul>
-				<li>Java</li>
-				<li>C/C++</li>
-				<li>Python</li>
-				<li>JavaScript</li>
-				<li>Bash</li>
-				<li>Markdown</li>
-			</ul>
-		</div>
-		<div class="skill hidden1">
-			<h2>Machine Learning</h2>
-			<ul>
-				<li>Python</li>
-				<li>Scikit-learn</li>
-				<li>Numpy</li>
-				<li>Pandas</li>
-			</ul>
-		</div>
-		<div class="skill hidden1">
-			<h2>Android</h2>
-			<ul>
-				<li>Android Studio</li>
-				<li>Kotlin</li>
-				<li>Java</li>
-				<li>Jetpack Compose</li>
-				<li>XML</li>
-			</ul>
-		</div>
-		<div class="skill hidden1">
-			<h2>Tools & Tech</h2>
-			<ul>
-				<li>Linux</li>
-				<li>AWS</li>
-				<li>Azure</li>
-				<li>Git & Github</li>
-				<li>Docker</li>
-				<li>Kubernetes</li>
-
-				<li>Scrapy</li>
-				<li />
-			</ul>
-		</div>
+	  {/each}
 	</div>
-</div>
+  </div>
+  
 
 <style>
 	.section {

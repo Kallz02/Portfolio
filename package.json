@@ -12,12 +12,14 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@material-tailwind/html": "^2.0.0",
 		"@popperjs/core": "^2.11.8",
 		"@sveltejs/adapter-auto": "^2.1.0",
 		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.20.5",
 		"@typescript-eslint/eslint-plugin": "^5.60.0",
 		"@typescript-eslint/parser": "^5.60.0",
+		"@zerodevx/svelte-img": "^1.2.11",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.43.0",
 		"eslint-config-prettier": "^8.8.0",

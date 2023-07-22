@@ -22,7 +22,7 @@
 </script>
 
 <header
-	class="xl:pl-[2.5rem] xl:pr-[2rem] border-b-[0.2rem] dark:border-b-[0.15rem] border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem] bg-[whitesmoke] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-b-[0.18rem] dark:border-b-[0.15rem] border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
 >
 	<h1 class="logo">Akshay Kalathil</h1>
 
@@ -41,7 +41,7 @@
                      </a> 
                   </li> -->
 	</ul>
-	<!-- <DarkMode class="text-lg p-0">
+	<!-- <DarkMode class="p-0 text-lg">
 		<svelte:fragment slot="lightIcon">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -128,8 +128,8 @@
 		justify-content: flex-end;
 		align-items: center;
 		min-height: 2.5rem;
-		background-color: rgba(white, 1);
-		backdrop-filter: blur(6px);
+		/* background-color: rgba(white, 1); */
+		/* backdrop-filter: blur(6px); */
 		/* position: fixed;
     top: 0; 
     width: 100%; */

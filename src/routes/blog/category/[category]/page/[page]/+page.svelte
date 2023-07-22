@@ -20,13 +20,13 @@
 
 <!-- TODO: this is duplicated across multiple `+page.svelte` files -->
 {#if posts && posts.length}
-	<h1>
+	<h1 class=" text-2xl md:text-4xl mx-auto text-center py-4 font-thin">
 		Category: {category}
 		<br />
-		<small>Posts {lowerBound}–{upperBound} of {totalPosts}</small>
-	</h1>
+	<div class="text-lg my-3">	Posts {lowerBound}–{upperBound} of {totalPosts} </div>
+	</h1> 
 	<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />
-
+ 
 	<PostsList {posts} />
 
 	<Pagination currentPage={page} {totalPosts} path="/blog/category/{category}/page" />

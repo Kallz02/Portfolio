@@ -9,6 +9,7 @@
 	import { fade } from 'svelte/transition';
 	export let data: LayoutData;
 
+	let show=false
 	import { afterUpdate } from 'svelte';
 	import type { LayoutData } from './$types';
 	const transitionIn = { delay: 150, duration: 150 };
@@ -44,7 +45,7 @@
 	100% {
 	  opacity: 1;
 	  filter: blur(0);
-	  transform: translateX(0,0,0);
+	  transform: translate3d(0,0,0);
 	}
   }
 `;
@@ -60,8 +61,10 @@
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						entry.target.classList.add('show');
+						show=true
 					} else {
 						entry.target.classList.remove('show');
+				show=false
 					}
 				});
 			},
@@ -73,7 +76,7 @@
 	});
 </script>
 
-<div class="h-full">
+<div class="h-full font-sans">
 	<Header />
 	{#key data.path}
 		<main id="main" tabindex="-1" in:fade={transitionIn} out:fade={transitionOut}>
@@ -83,8 +86,4 @@
 </div>
 <Footer />
 
-<style>
-	:global(body.dark) {
-		background-color: black;
-	}
-</style>
+

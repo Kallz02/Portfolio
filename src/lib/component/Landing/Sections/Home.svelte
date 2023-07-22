@@ -1,14 +1,18 @@
 <script>
 	import src1 from '$lib/pics/IMG_4296.jpg';
+	
+	
 </script>
 
-<div class="pg1 section" id="home">
-	<div class="main-text pt-[1.5rem] md:pt-[3rem] dark:text-[#f2f2f2]">
-		<h1 class="hidden1 text-[4.5rem] sm:text-[6rem]">FullStack</h1>
-		<h1 class="hidden1 text-[4.5rem] sm:text-[6rem]">Web , <br /> Android<br /> Developer</h1>
-		<p class="hidden1">Always ready to Work On Something New, "Hello World!"</p>
+<div class="pg1 border-none section" id="home">
+	<div class="lg:bg-[whitesmoke] dark:bg-[#0f191b] xl:my-8    md:pl-6 2xl:pl-16  lg:border-[0.15rem] border-black 2xl:ml-[4rem] lg:mr-[-0.5rem] xl:mr-[-1rem] rounded-md ">
+		
+		<div  class="main-text pt-[1.5rem] md:py-6 2xl:pt-[4rem]  dark:text-[#f2f2f2]">
+		<h1 class=" text-[4.5rem] hidden1  2xl:text-[6rem]">FullStack</h1>
+		<h1 class=" text-[4.5rem] hidden1 2xl:text-[6rem]">Web , <br /> Mobile<br /> Developer</h1>
+		<p class="hidden1 mt-20">Always ready to Work On Something New, "Hello World!"</p>
 
-		<div class="socialLinks hidden1 flex gap-4">
+		<div class="hidden1 fixed hidden  bg-[whitesmoke] z-50 top-[10rem] left-0 px-5 py-4  border-t-[0.15rem]  border-b-[0.15rem] border-r-[0.15rem] border-black rounded-r-md 2xl:flex flex-col  gap-8">
 			<a href="https://github.com/Kallz02" target="_blank">
 				<img
 					id="github"
@@ -34,7 +38,18 @@
 				/>
 			</a>
 		</div>
+		
+		
+	<div class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-100 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem]  3xl:top-[4.5rem]">
+<div class="text-center text-3xl mx-auto font-light mt-1">
+	Professional Work
+</div>
+
 	</div>
+	
+	</div>
+	
+</div>
 	<div class="social border-[0.2rem] border-black">
 		<img
 			src={src1}
@@ -82,22 +97,23 @@
 		/* align-self: center; */
 		font-size: 2rem;
 		line-height: 1;
-
 		/* background-color: blue; */
+		font-weight: 300;
 		justify-self: left;
 		/* align-self: center; */
 	}
 
 	.main-text p {
 		margin-top: 1rem;
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 		line-height: normal;
 		font-weight: 300;
 	}
 
-	.socialLinks {
+
+	/* .socialLinks {
 		margin-top: 1rem;
-	}
+	} */
 	/* .socialLinks a img {
 		filter: invert(1) brightness(0.8);
 	} */
@@ -128,6 +144,9 @@
 			max-width: 80%;
 
 			/* background-color: blue; */
+		}
+		.main-text p {
+			font-size: 1.2rem;
 		}
 	}
 

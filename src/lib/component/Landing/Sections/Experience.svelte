@@ -11,18 +11,22 @@
 			school: 'Delhi Public School, Whitefield',
 			class: '10+2 (CBSE)',
 			percentage: '88.4%',
-			year: '2020'
+			year: '2020',
+			pcmc: 'PCMC'
 		},
 		{
 			school: 'VIT, Vellore',
 			class: 'Integrated Mtech(Cse)',
 			cgpa: 'CGPA: 7.35 (tentative)',
-			year: '2025 · 5 years'
+			year: '2025 · 5 years',
+			pcmc: 'PCMC'
 		},
 		{
 			school: 'Formi',
 			class: 'Marketing Intern',
-			year: 'Apr 2022 - Jul 2022 · 4 mos'
+			year: 'Apr 2022 - Jul 2022 · 4 mos',
+			pcmc: 'PCMC'
+			
 		}
 	];
 </script>
@@ -36,7 +40,7 @@
 		<ul class="timeline">
 			{#each timelineItems as item, index (item.school)}
 				<li>
-					<details class="panel {index === 0 ? '' : 'hidden1'}">
+					<details class="panel hidden1">
 						<summary>
 							{#if item.school}
 								<div class="flex">
@@ -50,7 +54,7 @@
 										<h4 class="text-[1.2rem] md:text-[1.5rem] font-medium">
 											{item.school}
 										</h4>
-										<h4 class="text-[1rem] flex justify-between font-semibold">{item.class}</h4>
+										<h4 class="text-[1rem] flex justify-between font-medium">{item.class}</h4>
 									</div>
 								</div>
 								<div class="ml-[63px] font-normal">{item.pcmc}</div>
@@ -123,7 +127,7 @@
 		border-radius: 10px;
 		overflow: hidden;
 		position: relative;
-		border: solid 0.3rem black;
+		border: solid 0.2rem black;
 		/* background: hsl(191, 35%, 90%); */
 		background: whitesmoke;
 		box-shadow: 0.4rem 0.4rem 0 hsl(var(--shadowColor) / 1);
