@@ -57,7 +57,7 @@
 
 </svelte:head>
 
-<article class="post flex  mx-2 flex-col md:mx-auto max-w-[10201px]">
+<article class="post flex  mx-2 flex-col md:mx-auto max-w-[1020px]">
 	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 	
 	
