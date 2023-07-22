@@ -26,7 +26,7 @@
 			case '.Net':
 				return 'bg-purple-100 text-purple-800 border-purple-800 border ';
 
-			case 'SvelteKit':
+			case 'sveltekit':
 				return 'bg-orange-100 text-orange-800 border-orange-800 border ';
 			case 'AI':
 				return 'bg-white/[.1] text-gray-600 dark:text-gray-400 border-gray-800 border ';
@@ -71,6 +71,6 @@
 
 <style>
 	img {
-		box-shadow: 0.5rem 0.5rem 0 hsl(var(--shadowColor) / 1);
+		box-shadow: 0.45rem 0.45rem 0 hsl(var(--shadowColor) / 1);
 	}
 </style>

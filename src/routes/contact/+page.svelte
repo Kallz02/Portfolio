@@ -31,7 +31,7 @@
 									type="text"
 									name="hs-firstname-contacts-1"
 									id="hs-firstname-contacts-1"
-									class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+									class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
 									placeholder="First Name"
 								/>
 							</div>
