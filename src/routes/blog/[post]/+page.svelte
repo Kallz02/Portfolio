@@ -62,13 +62,13 @@
 	
 	
 	<img
-		class="cover-image rounded-md mt-5 md:mt-16 border-[0.15rem] border-black mb-5 md:mb-10 w-[1000px]"
+		class="cover-image rounded-md mt-4 md:mt-6 border-[0.2rem] border-black mb-5 md:mb-10 w-[1000px]"
 		src={coverImage}
 		alt=""
 		style="aspect-ratio: {coverWidth} / {coverHeight};"
 	
 	/>
-	<h1 class="text-4xl  md:text-5xl text-left mx-2  ">{title}</h1>
+	<h1 class="text-4xl  md:text-6xl text-left mx-2  ">{title}</h1>
 
 	<div class="flex flex-col mt-4 md:mt-12 items-start justify-between w-full mx-2 md:flex-row md:items-center dark:text-gray-400">
 		<div class="flex items-center space-x-3">
@@ -110,7 +110,7 @@
 
 	{#if categories}
 		<aside class=" mx-2 my-8">
-			<h2 class="text-lg text-medium ">Posted in:</h2>
+			<h2 class="text-lg text-bold ">Posted in:</h2>
 			<ul class="flex mt-4 text-sm  ">
 
 				{#each categories as category}
