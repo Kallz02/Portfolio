@@ -63,7 +63,7 @@ let firstName = '';
     };
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/send-email/', {
+      const response = await fetch('http://back.akshayk.dev/send-email/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -115,83 +115,99 @@ let firstName = '';
 			<div class="mb-3 text-center">
 				<p class="text-md text-gray-700">I'll get back to you in 1 or 2 days.</p>
 			</div>
-			  <!-- Card -->
-  <div class="flex flex-col card border-[0.15rem] border-black rounded-xl p-4 sm:p-6 lg:p-8 lg:py-14 md:my-16 dark:border-gray-700">
-    <form on:submit|preventDefault={handleSubmit}>
-      <div class="grid gap-4">
-        <!-- Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label for="firstName" class="sr-only">First Name</label>
-            <input
-              type="text"
-              id="firstName"
-              bind:value={firstName}
-              class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-              placeholder="First Name"
-            />
+		  <!-- Card -->
+      <div class="flex flex-col card border-[0.15rem] border-black rounded-xl p-4 sm:p-6 lg:p-8 lg:py-14 md:my-16 dark:border-gray-700">
+        <form on:submit|preventDefault={handleSubmit}>
+          <div class="grid gap-4">
+            <!-- Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="sr-only">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  bind:value={firstName}
+                  class="{firstNameError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                  placeholder="First Name"
+                />
+                {#if firstNameError}
+                  <p class="text-red-500 text-sm">{firstNameError}</p>
+                {/if}
+              </div>
+    
+              <div>
+                <label for="lastName" class="sr-only">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  bind:value={lastName}
+                  class="{lastNameError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                  placeholder="Last Name"
+                />
+                {#if lastNameError}
+                  <p class="text-red-500 text-sm">{lastNameError}</p>
+                {/if}
+              </div>
+            </div>
+            <!-- End Grid -->
+    
+            <div>
+              <label for="email" class="sr-only">Email</label>
+              <input
+                type="email"
+                id="email"
+                bind:value={email}
+                autocomplete="email"
+                class="{emailError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                placeholder="Email"
+              />
+              {#if emailError}
+                <p class="text-red-500 text-sm">{emailError}</p>
+              {/if}
+            </div>
+    
+            <div>
+              <label for="phoneNumber" class="sr-only">Phone Number</label>
+              <input
+                type="text"
+                id="phoneNumber"
+                bind:value={phoneNumber}
+                class="{phoneNumberError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                placeholder="Phone Number"
+              />
+              {#if phoneNumberError}
+                <p class="text-red-500 text-sm">{phoneNumberError}</p>
+              {/if}
+            </div>
+    
+            <div>
+              <label for="details" class="sr-only">Details</label>
+              <textarea
+                id="details"
+                bind:value={details}
+                rows="4"
+                class="{detailsError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                placeholder="Details"
+              />
+              {#if detailsError}
+                <p class="text-red-500 text-sm">{detailsError}</p>
+              {/if}
+            </div>
           </div>
-
-          <div>
-            <label for="lastName" class="sr-only">Last Name</label>
-            <input
-              type="text"
-              id="lastName"
-              bind:value={lastName}
-              class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-              placeholder="Last Name"
-            />
+          <!-- End Grid -->
+    
+          <div class="mt-4 grid">
+            <button
+              type="submit"
+              class="inline-flex justify-center items-center gap-x-3 text-center bg-cyan-300 border-[0.15rem] border-black hover:bg-cyan-700  text-lg  text-black font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+            >
+              Send inquiry
+            </button>
           </div>
-        </div>
-        <!-- End Grid -->
-
-        <div>
-          <label for="email" class="sr-only">Email</label>
-          <input
-            type="email"
-            id="email"
-            bind:value={email}
-            autocomplete="email"
-            class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-            placeholder="Email"
-          />
-        </div>
-
-        <div>
-          <label for="phoneNumber" class="sr-only">Phone Number</label>
-          <input
-            type="text"
-            id="phoneNumber"
-            bind:value={phoneNumber}
-            class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-            placeholder="Phone Number"
-          />
-        </div>
-
-        <div>
-          <label for="details" class="sr-only">Details</label>
-          <textarea
-            id="details"
-            bind:value={details}
-            rows="4"
-            class="py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
-            placeholder="Details"
-          />
-        </div>
+        </form>
       </div>
-      <!-- End Grid -->
-
-      <div class="mt-4 grid">
-        <button
-          type="submit"
-          class="inline-flex justify-center items-center gap-x-3 text-center bg-cyan-300 border-[0.15rem] border-black hover:bg-cyan-700  text-lg  text-black font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
-        >
-          Send inquiry
-        </button>
-      </div>
-    </form>
-  </div>
-  <!-- End Card -->
+      <!-- End Card -->
+    
 
 	
 			</div>
