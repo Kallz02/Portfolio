@@ -63,7 +63,7 @@ let firstName = '';
     };
 
     try {
-      const response = await fetch('http://back.akshayk.dev/send-email/', {
+      const response = await fetch('https://back.akshayk.dev/send-email/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
