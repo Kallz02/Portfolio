@@ -9,7 +9,7 @@
 		
 		<div  class="main-text pt-[1.5rem] md:py-6 2xl:pt-[4rem]  dark:text-[#f2f2f2]">
 		<h1 class=" text-[4.5rem] hidden1  2xl:text-[6rem]">FullStack</h1>
-		<h1 class=" text-[4.5rem] hidden1 2xl:text-[6rem]">Web , <br /> Mobile<br /> Developer</h1>
+		<h1 class=" text-[4.5rem] hidden1 2xl:text-[6rem]">Web, <br /> Mobile<br /> Developer</h1>
 		<p class="hidden1 mt-20">Fullstack dev working mainly with Django, Node and NextJS  </p>
 
 		<div class="hidden1 fixed hidden  bg-[whitesmoke] z-50 top-[10rem] left-0 px-5 py-4  border-t-[0.15rem]  border-b-[0.15rem] border-r-[0.15rem] border-black rounded-r-md 2xl:flex flex-col  gap-8">
