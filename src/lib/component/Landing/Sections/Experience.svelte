@@ -5,7 +5,7 @@
 			school: 'Formi',
 			class: 'Marketing Intern',
 			year: 'Apr 2022 - Jul 2022 · 4 mos',
-			pcmc: 'PCMC',
+			pcmc: 'Marketing',
 			img:'/exp/formi.png'
 			
 		},
@@ -14,7 +14,7 @@
 			class: 'Integrated Mtech(Cse)',
 			cgpa: 'CGPA: 7.35 (tentative)',
 			year: '2025 · 5 years',
-			pcmc: 'PCMC',
+			pcmc: 'Computer Science and Engineering',
 			img:'/exp/vit.jpg'
 
 		},
@@ -30,7 +30,7 @@
 		{
 			school: 'Chrysalis High, Whitefield',
 			class: 'Class 10 , CBSE',
-			pcmc: 'PCMC',
+			pcmc: 'High School',
 			percentage: '82.8%',
 			year: '2018',
 			img:'/exp/ch.png'

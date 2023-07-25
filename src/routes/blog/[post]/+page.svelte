@@ -5,8 +5,7 @@
 
 	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta;
 	const  Posts  = data.PostContent;
-
-
+	
 
 
 
@@ -64,7 +63,7 @@
 
 <article class="post flex  mx-2 flex-col md:mx-auto max-w-[1020px]">
 	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
-	
+
 	
 	<img
 		class="cover-image rounded-md mt-4 md:mt-6 border-[0.2rem] border-black mb-5 md:mb-10 w-[1000px]"
@@ -86,6 +85,7 @@
 
 		</button>
 	</div>
+	
 		
 		<!-- {#each categories as category}
 			<span
@@ -133,6 +133,7 @@
 			</ul>
 		</aside>
 	{/if}
+
 </article>
 
 <style>

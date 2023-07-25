@@ -14,7 +14,8 @@
 		title: 'InstafakeDetectAPI',
 		subtitle: 'BackEnd',
 		githubLink: 'https://github.com/Kallz02/InstaFakeDetectAPI',
-		liveLink: 'https://instareact.akshayk.dev/'
+		liveLink: 'https://instareact.akshayk.dev/',
+		desc: 'An  API to detect fake Instagram accounts using ML',
 	  },
 	  {
 		imgSrc: arch,
@@ -22,7 +23,8 @@
 		title: 'Arch_setup.sh',
 		subtitle: 'Arch Dev Environment Script',
 		githubLink: 'https://github.com/Kallz02/arch',
-		knowMoreLink: 'https://github.com/Kallz02/arch'
+		knowMoreLink: 'https://github.com/Kallz02/arch',
+		desc: 'A script to setup my arch dev environment',
 	  },
 	  {
 		imgSrc: websock,
@@ -30,7 +32,8 @@
 		title: 'WebsocketBallGame',
 		subtitle: 'Game Using WebSockets',
 		githubLink: 'https://github.com/Kallz02/',
-		liveLink: 'https://wsbg.akshayk.dev/'
+		liveLink: 'https://wsbg.akshayk.dev/',
+		desc: 'A game using websockets',
 	  },
 	  {
 		imgSrc: port,
@@ -38,7 +41,8 @@
 		title: 'Personal Portfolio',
 		subtitle: 'Portfolio Website',
 		githubLink: 'https://github.com/Kallz02/Portfolio/',
-		liveLink: 'https://akshayk.dev/'
+		liveLink: 'https://akshayk.dev/',
+		desc: 'My personal portfolio website',
 	  },
 	  {
 		imgSrc: instang,
@@ -46,7 +50,8 @@
 		title: 'InstafakeAngular',
 		subtitle: 'Angular Client',
 		githubLink: 'https://github.com/Kallz02/InstaAng',
-		liveLink: 'https://instang.akshayk.dev/'
+		liveLink: 'https://instang.akshayk.dev/',
+		desc: 'An Angular client for InstaFakeDetectAPI',
 	  },
 	  {
 		imgSrc: instadroid,
@@ -54,7 +59,8 @@
 		title: 'InstaDroid',
 		subtitle: 'Android Client',
 		githubLink: 'https://github.com/Kallz02/InstaDroid',
-		demoVideoLink: 'https://drive.google.com/file/d/1dg4ygBhyaDIAOZvBG0EKrM7pxbre2ZML/view?usp=sharing'
+		demoVideoLink: 'https://drive.google.com/file/d/1dg4ygBhyaDIAOZvBG0EKrM7pxbre2ZML/view?usp=sharing',
+		desc: 'An Android client for InstaFakeDetectAPI',
 	  }
 	];
   </script>
@@ -71,6 +77,7 @@
 		  <div class="cta__text-column">
 			<h2>{article.title}</h2>
 			<h3>{article.subtitle}</h3>
+			<h4 class="mt-4 text-lg">{article.desc}</h4>
   
 			<div class="butn hidden1">
 			  <a href={article.githubLink} target="_blank">
@@ -178,7 +185,7 @@
 	}
 
 	.cta__text-column > * + * {
-		margin: min(1.5rem, 2.5vw) 0 0 0;
+		margin: 1rem 0;
 	}
 
 	/* .cta__text-column li {

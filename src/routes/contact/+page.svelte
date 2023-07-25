@@ -1,17 +1,47 @@
 <script lang="ts">
-
+import Swal from 'sweetalert2';
 let firstName = '';
   let lastName = '';
   let email = '';
   let phoneNumber = '';
   let details = '';
-
+  let isLoading = false;
   let firstNameError = '';
   let lastNameError = '';
   let emailError = '';
   let phoneNumberError = '';
   let detailsError = '';
 
+  const swalWithButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'bg-cyan-300 shadow-xl text-black px-5 py-1 border-[0.12rem] border-black rounded-md',
+    cancelButton: 'bg-cyan-300 shadow-xl text-black px-5 py-1 border-[0.12rem] border-black rounded-md',
+    popup: 'dark:bg-slate-900 dark:text-gray-400 dark:border-gray-700 border-[0.15rem] border-black',
+  },
+  background: 'whitesmoke',
+ buttonsStyling:false,
+  
+})
+
+
+  function showSuccessPopup() {
+    swalWithButtons.fire({
+      title: 'Success!',
+      text: 'Email sent successfully.',
+      icon: 'success',
+      confirmButtonText: 'OK',
+    });
+  }
+
+  // Helper function to show an error popup
+  function showErrorPopup() {
+    swalWithButtons.fire({
+      title: 'Error!',
+      text: 'Failed to send the email.',
+      icon: 'error',
+      confirmButtonText: 'OK',
+    });
+  }
   async function handleSubmit() {
     // Reset previous errors
     firstNameError = '';
@@ -19,6 +49,8 @@ let firstName = '';
     emailError = '';
     phoneNumberError = '';
     detailsError = '';
+
+   
 
     // Validate input fields
     if (firstName.trim() === '') {
@@ -63,6 +95,7 @@ let firstName = '';
     };
 
     try {
+      isLoading = true;
       const response = await fetch('https://back.akshayk.dev/send-email/', {
         method: 'POST',
         headers: {
@@ -72,17 +105,23 @@ let firstName = '';
       });
 
       if (response.ok) {
+        isLoading = false;
         // Handle successful form submission
         console.log('Email sent successfully');
         // Optionally, you can show a success message or redirect the user to a thank-you page.
+        showSuccessPopup();
       } else {
         // Handle form submission failure
         console.error('Failed to send the email');
+        isLoading = false;
         // Optionally, you can show an error message to the user.
+        showErrorPopup();
       }
     } catch (error) {
+      isLoading = false;
       console.error('Error occurred during form submission:', error);
       // Optionally, you can show an error message to the user.
+      showErrorPopup();
     }
   }
 
@@ -102,7 +141,7 @@ let firstName = '';
 </svelte:head>
 
 <!-- Contact Us -->
-<div class="max-w-[150rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
+<div class="max-w-[150rem] px-4 my-5 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
 	<div class="max-w-[130rem] lg:max-w-5xl mx-auto">
 		<div class="text-center">
 			<h1 class="text-3xl text-black sm:text-6xl dark:text-white">Contact Me</h1>
@@ -197,12 +236,33 @@ let firstName = '';
           <!-- End Grid -->
     
           <div class="mt-4 grid">
-            <button
+            <!-- <button
               type="submit"
               class="inline-flex justify-center items-center gap-x-3 text-center bg-cyan-300 border-[0.15rem] border-black hover:bg-cyan-700  text-lg  text-black font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
             >
               Send inquiry
-            </button>
+            </button> -->
+            <button
+  type="submit"
+  disabled={isLoading} 
+  class="inline-flex justify-center items-center gap-x-3 text-center bg-cyan-300 border-[0.15rem] border-black hover:bg-cyan-700  text-lg  text-black font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white transition py-3 px-4 dark:focus:ring-offset-gray-800"
+>
+  {#if isLoading}
+  <div aria-label="Loading..." role="status">
+    <svg class="h-6 w-6 animate-spin" viewBox="3 3 18 18">
+      <path
+        class="fill-gray-200"
+        d="M12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5ZM3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"></path>
+      <path
+        class="fill-gray-800"
+        d="M16.9497 7.05015C14.2161 4.31648 9.78392 4.31648 7.05025 7.05015C6.65973 7.44067 6.02656 7.44067 5.63604 7.05015C5.24551 6.65962 5.24551 6.02646 5.63604 5.63593C9.15076 2.12121 14.8492 2.12121 18.364 5.63593C18.7545 6.02646 18.7545 6.65962 18.364 7.05015C17.9734 7.44067 17.3403 7.44067 16.9497 7.05015Z"></path>
+    </svg>
+  </div>
+    Sending...
+  {:else}
+    Send inquiry
+  {/if}
+</button>
           </div>
         </form>
       </div>

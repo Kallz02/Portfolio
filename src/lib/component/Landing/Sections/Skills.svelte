@@ -36,7 +36,8 @@
 	  {#each skills as skill}
 		<div class="skill hidden1">
 		  <h2>{skill.title}</h2>
-		  <ul>
+		  <!-- <ul class="justify-around  flex-wrap flex "> -->
+		  <ul class=" ">
 			{#each skill.items as item}
 			  <li>{item}</li>
 			{/each}
@@ -90,9 +91,6 @@
 		font-weight: 500;
 	}
 
-	.skill ul {
-		margin-bottom: 0.5rem;
-	}
 
 	.skill li {
 		margin-top: 0.5rem;
