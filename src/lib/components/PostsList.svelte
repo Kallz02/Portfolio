@@ -36,7 +36,7 @@
 	}
 </script>
 
-<ul class="posts-list mx-2 flex flex-col items-center">
+<ul class="posts-list mx-2 md:ml-[12rem] flex flex-col  items-start">
 	{#each posts as post}
 		<li class="my-5 max-w-[100rem]">
 			<article>
@@ -47,7 +47,7 @@
 						style="ratio: {post.coverWidth} / {post.coverHeight}"
 						class="w-[500px] border-2 rounded-md border-black"
 					/>
-					<div class="max-w-[50rem] md:mt-6 px-2 md:px-3">
+					<div class="max-w-[30rem] 2xl:max-w-[50rem] md:mt-6 px-2 md:px-3">
 						<h2 class=" text-[2rem] leading-[2.2rem] md:text-[2.6rem] md:leading-[3rem]">
 							{post.title}
 						</h2>

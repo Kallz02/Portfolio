@@ -12,7 +12,16 @@
 </svelte:head>
 
 <h1 class=" text-center my-10 text-6xl">Blog</h1>
-
+<ul>
+	{#each data.uniqueCategories as category}
+	<li>
+		<a href="/blog/category/{category.title}">
+			{ category.title }
+		</a>
+		({category.count})
+	</li>
+	{/each}
+</ul>
 <PostsList posts={data.posts} />
 
 <Pagination currentPage={1} totalPosts={data.total} />

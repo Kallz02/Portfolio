@@ -5,9 +5,14 @@
 
 	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta;
 	const  Posts  = data.PostContent;
+	const len = data.length1;
 	
 
 
+	const wordsPerMinute = 200; // Adjust the reading speed as needed
+
+// Calculate the minutes to read the blog post
+let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 
 	function getBadgeClass(word: string) {
 		switch (word) {
@@ -77,7 +82,7 @@
 	<div class="flex flex-col mt-4 md:mt-12 items-start justify-between w-full mx-2 md:flex-row md:items-center dark:text-gray-400">
 		<div class="flex items-center space-x-3">
 			<img loading="lazy" src="/profile.jpg" alt="profile" class="w-10 h-10 border border-black rounded-full dark:bg-gray-500 dark:border-gray-700">
-			<p class="text-lg ">Akshay Kalathil • {updated} </p>
+			<p class="text-lg ">Akshay Kalathil • {updated} • {minutesToRead} min{minutesToRead !== 1 ? 's' : ''} </p>
 			<p class="flex-shrink-0 mt-3 text-lg md:mt-0"></p>
 		</div>
 		<!-- <p class="flex-shrink-0 mt-3 text-lg md:mt-0">4 min read • 1,570 views</p> -->
