@@ -96,6 +96,8 @@ let firstName = '';
 
     try {
       isLoading = true;
+      // const response = await fetch('https://kallz02-portfolio.hf.space/send-email/', {
+      // const response = await fetch('http://localhost:8000/send-email/', {
       const response = await fetch('https://back.akshayk.dev/send-email/', {
         method: 'POST',
         headers: {
@@ -112,6 +114,7 @@ let firstName = '';
         showSuccessPopup();
       } else {
         // Handle form submission failure
+        console.log(response)
         console.error('Failed to send the email');
         isLoading = false;
         // Optionally, you can show an error message to the user.

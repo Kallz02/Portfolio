@@ -1,14 +1,12 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.core.mail import send_mail
 from django.http import JsonResponse
 from django.views import View
 from django.conf import settings
 import json
+import asyncio
 
 class SendEmailView(View):
-    def post(self, request):
+    async def post(self, request):
         data = json.loads(request.body.decode('utf-8'))  # Parse the JSON data sent from Svelte
         print(data)
         first_name = data.get('firstName', '')
@@ -26,7 +24,9 @@ class SendEmailView(View):
         to_email = "akshay@akshayk.dev"  # Replace with the recipient email address
 
         try:
-            send_mail(subject, message, from_email, [to_email], fail_silently=False)
+            # Send the email asynchronously using asyncio
+            loop = asyncio.get_event_loop()
+            await loop.run_in_executor(None, send_mail, subject, message, from_email, [to_email], False)
         except Exception as e:
             response_data = {
                 'status': 'error',
@@ -48,3 +48,4 @@ class SendEmailView(View):
         }
 
         return JsonResponse(response_data)
+
