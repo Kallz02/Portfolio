@@ -23,4 +23,4 @@ COPY . /app/
 # Collect static files (change 'myproject' to your Django project name)
 
 # Start Gunicorn with Uvicorn workers as the production server
-CMD ["gunicorn", "--bind", "0.0.0.0:7860", "Backend.asgi:application", "-w", "4", "-k", "uvicorn.workers.UvicornWorker"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Backend.asgi:application", "-w", "4", "-k", "uvicorn.workers.UvicornWorker"]
