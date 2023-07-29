@@ -29,6 +29,7 @@ CSRF_TRUSTED_ORIGINS=['*']
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://akshayk.dev"
     # Add other origins you want to allow here
 ]
 
