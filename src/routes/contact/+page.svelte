@@ -98,7 +98,7 @@ let firstName = '';
       isLoading = true;
       // const response = await fetch('https://kallz02-portfolio.hf.space/send-email/', {
       // const response = await fetch('http://localhost:8000/send-email/', {
-      const response = await fetch('https://back.akshayk.dev/send-email', {
+      const response = await fetch('https://back.akshayk.dev/send-email/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
