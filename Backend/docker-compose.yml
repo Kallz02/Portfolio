@@ -6,6 +6,6 @@ services:
       dockerfile: Dockerfile
     image: your_image_name:latest
     ports:
-      - '8000:8000'
+      - '7860:7860'
     volumes:
       - .:/app

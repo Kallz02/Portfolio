@@ -29,29 +29,8 @@
 	 * own preloadData() calls here, too.
 	 **/
 
-	onMount(() => {
 		// const navRoutes = navItems.map((item) => item.route);
 		// preloadCode(...navRoutes);
-		const styleSheet = document.styleSheets[0];
-
-		const keyframes = `
-  @keyframes show-animation {
-	0% {
-	  opacity: 0;
-	  filter: blur(5px);
-	  transform: translate3d(-75%,0,0);
-	}
-
-	100% {
-	  opacity: 1;
-	  filter: blur(0);
-	  transform: translate3d(0,0,0);
-	}
-  }
-`;
-
-		styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-	});
 
 	let hiddenElements: NodeListOf<Element>;
 
@@ -73,7 +52,28 @@
 
 		hiddenElements = document.querySelectorAll('.hidden1');
 		hiddenElements.forEach((ele) => observer.observe(ele));
-	});
+
+		const styleSheet = document.styleSheets[0];
+
+		const keyframes = `
+  @keyframes show-animation {
+	0% {
+	  opacity: 0;
+	  filter: blur(5px);
+	  transform: translate3d(-75%,0,0);
+	}
+
+	100% {
+	  opacity: 1;
+	  filter: blur(0);
+	  transform: translate3d(0,0,0);
+	}
+  }
+`;
+
+		styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+
+});
 </script>
 
 <div class="h-full font-sans">
