@@ -1,17 +1,26 @@
 <script>
 	import src1 from '$lib/pics/IMG_4296.jpg';
-	
-	
+	import { afterUpdate } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+
+	let show=false;
+	afterUpdate(() => {
+		show=true;
+	})
+
 </script>
 
 <div class="pg1 border-none section" id="home">
 	<div class="lg:bg-[whitesmoke] dark:bg-[#0f191b] xl:my-8    md:pl-6 2xl:pl-16  lg:border-[0.15rem] border-black 2xl:ml-[4rem] lg:mr-[-0.5rem] xl:mr-[-1rem] rounded-md ">
 		
 		<div  class="main-text pt-[1.5rem] md:py-6 2xl:pt-[4rem]  dark:text-[#f2f2f2]">
-		<h1 class=" text-[4.5rem] hidden1  2xl:text-[6rem]">FullStack</h1>
-		<h1 class=" text-[4.5rem] hidden1 2xl:text-[6rem]">Web, <br /> Mobile<br /> Developer</h1>
-		<p class="hidden1 mt-20">Fullstack dev working mainly with Django, Node and NextJS  </p>
-
+			{#if show}
+			<h1 transition:fly={{ x: -200, duration: 800 }} class=" text-[4.5rem] hidden2  2xl:text-[6rem]">FullStack</h1>
+			
+			<h1 transition:fly={{ x: -200, duration: 800 }}  class=" text-[4.5rem] hidden2 2xl:text-[6rem]">Web, <br /> Mobile<br /> Developer</h1>
+		<p transition:fly={{ x: -200, duration: 1000 }} class="hidden2 mt-20">Fullstack dev working mainly with Django, Node and NextJS  </p>
+		{/if}
 		<div class="hidden1 fixed hidden  bg-[whitesmoke] z-50 top-[10rem] left-0 px-5 py-4  border-t-[0.15rem]  border-b-[0.15rem] border-r-[0.15rem] border-black rounded-r-md 2xl:flex flex-col  gap-8">
 			<a href="https://github.com/Kallz02" target="_blank">
 				<img
