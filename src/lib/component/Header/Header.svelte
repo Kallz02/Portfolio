@@ -22,7 +22,7 @@
 </script>
 
 <header
-	class="xl:pl-[2.5rem] shadow-lg relative bg-[whitesmoke] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] lg:border-b-[0.18rem] border-b-2   dark:border-b-[0.15rem] border-gray-500 lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem]  relative bg-[whitesmoke] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] lg:border-b-[0.18rem] border-b-2   dark:border-b-[0.15rem] border-gray-500 lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
 >
 
 	<h1 class="logo">
