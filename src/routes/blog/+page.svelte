@@ -11,8 +11,8 @@
 	<meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<h1 class=" text-center my-10 text-6xl">Blog</h1>
-<ul>
+<h1 class=" text-center my-2 md:my-10 text-4xl  md:text-6xl">Blog</h1>
+<!-- <ul>
 	{#each data.uniqueCategories as category}
 	<li>
 		<a href="/blog/category/{category.title}">
@@ -21,7 +21,7 @@
 		({category.count})
 	</li>
 	{/each}
-</ul>
+</ul> -->
 <PostsList posts={data.posts} />
 
 <Pagination currentPage={1} totalPosts={data.total} />

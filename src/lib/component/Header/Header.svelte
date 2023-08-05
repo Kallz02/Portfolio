@@ -22,12 +22,17 @@
 </script>
 
 <header
-	class="xl:pl-[2.5rem] bg-[whitesmoke] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-b-[0.18rem] dark:border-b-[0.15rem] border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem] relative bg-[whitesmoke] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] lg:border-b-[0.18rem] dark:border-b-[0.15rem] border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
 >
-	<h1 class="logo">Akshay Kalathil</h1>
+
+	<h1 class="logo">
+		<a href="/">
+		Akshay Kalathil
+	</a>
+	</h1>
 
 	<input type="checkbox" id="nav-menu" />
-	<ul class="nav">
+	<ul class="nav hidden md:flex">
 		<li><a href="/">Home</a></li>
 
 		<li><a href="/#skill">Tech</a></li>
@@ -35,12 +40,8 @@
 		<li><a href="/#exp">Experience</a></li>
 		<li><a href="/blog">Blog</a></li>
 		<li><a href="/contact">Contact</a></li>
-		<!-- <li><a href="#"> 
-  
-   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> 
-                     </a> 
-                  </li> -->
 	</ul>
+	
 	<!-- <DarkMode class="p-0 text-lg">
 		<svelte:fragment slot="lightIcon">
 			<svg
@@ -81,7 +82,7 @@
 	<!-- <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> -->
 
 	<!--             </div> -->
-	<label for="nav-menu">
+	<!-- <label for="nav-menu">
 		<div class="navmenu">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -116,9 +117,15 @@
 				<line x1="6" y1="6" x2="18" y2="18" />
 			</svg>
 		</div>
-	</label>
+	</label> -->
 </header>
 
+	<ul class=" flex lg:hidden sticky top-[4.5rem] bg-[whitesmoke] z-[1000] overflow-x-auto text-lg pb-1 justify-around border-b-[0.15rem] border-black">
+
+		<li><a href="/#proj">Projects</a></li>
+		<li><a href="/#skill">Tech</a></li>
+		<li><a href="/#exp">Experience</a></li>
+	</ul>
 <style>
 	header {
 		display: flex;
@@ -190,7 +197,7 @@
 		font-size: 1.2rem;
 		color: whitesmoke;
 	}
-	.feather-align-right {
+	/* .feather-align-right {
 		display: none;
 
 		transition: all 1s;
@@ -199,17 +206,17 @@
 	.feather-x {
 		display: none;
 		transition: all 1s;
-	}
+	} */
 
 	@media only screen and (max-width: 1111px) {
 		header {
 			padding: 1rem 1rem;
 		}
 
-		.feather-align-right {
+		/* .feather-align-right {
 			display: block;
 			margin-left: 0.8rem;
-		}
+		} */
 
 		.nav {
 			display: flex;
@@ -223,15 +230,15 @@
 			font-size: 5rem;
 			background-color: var(--main);
 			align-items: center;
-			padding-top: 20%;
-			gap: 3rem;
+			padding-top: 2.5rem;
+			gap: 0rem;
 			overflow-y: scroll;
 
 			transition: all 0.5s ease-in;
 			transform: translateY(-120%);
 		}
 
-		input[type='checkbox']:checked ~ .nav {
+		/* input[type='checkbox']:checked ~ .nav {
 			transform: translateY(0%);
 		}
 
@@ -244,7 +251,7 @@
 
 		input[type='checkbox']:checked ~ label .navmenu .feather-align-right {
 			display: none;
-		}
+		} */
 
 		.nav:target {
 			transform: translateY(0);

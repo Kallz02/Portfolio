@@ -10,6 +10,7 @@
 				continue;
 			}
 			const text = pre.innerText;
+			pre.className = "relative overflow-x-auto p-4 rounded-md bg-gray-900";
 			let copyButton = document.createElement("button");
 			copyButton.addEventListener(
 				"click",

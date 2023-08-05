@@ -144,32 +144,32 @@ let firstName = '';
 </svelte:head>
 
 <!-- Contact Us -->
-<div class="max-w-[150rem] px-4 my-5 py-10 sm:px-6 lg:px-8 lg:py-10 mx-auto">
+<div class="max-w-[150rem] px-4 py-8 sm:px-6 lg:px-8 bg-[whitesmoke]  mx-auto">
 	<div class="max-w-[130rem] lg:max-w-5xl mx-auto">
 		<div class="text-center">
-			<h1 class="text-3xl text-black sm:text-6xl dark:text-white">Contact Me</h1>
-			<p class="mt-3 text-lg text-gray-800 dark:text-gray-400">
+			<h1 class="text-5xl text-black mb-6 sm:text-6xl dark:text-white">Contact Me</h1>
+			<p class="mt-3 text-md text-gray-800 dark:text-gray-400">
 				Let me know if you have any questions or just want to say hi.
 			</p>
 		</div>
 
 		<div class="mt-3  items-center ">
 			<div class="mb-3 text-center">
-				<p class="text-md text-gray-700">I'll get back to you in 1 or 2 days.</p>
+				<p class="text-md mb-6 text-gray-700">I'll get back to you in 1 or 2 days.</p>
 			</div>
 		  <!-- Card -->
       <div class="flex flex-col card border-[0.15rem] border-black rounded-xl p-4 sm:p-6 lg:p-8 lg:py-14 md:my-16 dark:border-gray-700">
         <form on:submit|preventDefault={handleSubmit}>
           <div class="grid gap-4">
             <!-- Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 text-black sm:grid-cols-2 gap-4">
               <div>
-                <label for="firstName" class="sr-only">First Name</label>
+                <label for="firstName"  class="sr-only text-black">First Name</label>
                 <input
                   type="text"
                   id="firstName"
                   bind:value={firstName}
-                  class="{firstNameError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                  class="{firstNameError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                   placeholder="First Name"
                 />
                 {#if firstNameError}
@@ -183,7 +183,7 @@ let firstName = '';
                   type="text"
                   id="lastName"
                   bind:value={lastName}
-                  class="{lastNameError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                  class="{lastNameError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                   placeholder="Last Name"
                 />
                 {#if lastNameError}
@@ -200,7 +200,7 @@ let firstName = '';
                 id="email"
                 bind:value={email}
                 autocomplete="email"
-                class="{emailError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                class="{emailError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                 placeholder="Email"
               />
               {#if emailError}
@@ -214,7 +214,7 @@ let firstName = '';
                 type="text"
                 id="phoneNumber"
                 bind:value={phoneNumber}
-                class="{phoneNumberError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                class="{phoneNumberError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                 placeholder="Phone Number"
               />
               {#if phoneNumberError}
@@ -228,7 +228,7 @@ let firstName = '';
                 id="details"
                 bind:value={details}
                 rows="4"
-                class="{detailsError ? 'error-input' : ''} py-3 px-4 block w-full border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+                class="{detailsError ? 'error-input' : ''} py-3 px-4 block w-full bg-gray-100 border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
                 placeholder="Details"
               />
               {#if detailsError}

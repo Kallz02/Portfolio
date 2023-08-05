@@ -1,5 +1,5 @@
-<footer>
-	<div class="socialLinks hidden1 flex">
+<footer class="mb-14 md:mb-0">
+	<div class="socialLinks hidden1 flex ">
 		<a href="https://github.com/Kallz02" target="_blank">
 			<img
 				id="github"

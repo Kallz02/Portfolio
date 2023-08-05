@@ -46,6 +46,7 @@
 						alt=""
 						style="ratio: {post.coverWidth} / {post.coverHeight}"
 						class="w-[500px] border-2 rounded-md border-black"
+						loading="lazy"
 					/>
 					<div class="max-w-[30rem] 2xl:max-w-[50rem] md:mt-6 px-2 md:px-3">
 						<h2 class=" text-[2rem] leading-[2.2rem] md:text-[2.6rem] md:leading-[3rem]">
