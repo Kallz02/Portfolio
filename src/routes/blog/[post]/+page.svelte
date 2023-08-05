@@ -2,7 +2,7 @@
 <script lang="ts">
 	export let data;
 	import Copy from '$lib/components/Copy.svelte';
-
+	import { Image } from "@unpic/svelte";
 	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta;
 	const  Posts  = data.PostContent;
 	const len = data.length1;
@@ -70,12 +70,14 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
 	
-	<img
+	<Image
 		class="cover-image rounded-md mt-4 md:mt-6 border-[0.2rem] border-black mb-5 md:mb-10 w-[1000px]"
 		src={coverImage}
 		alt=""
-		style="aspect-ratio: {coverWidth} / {coverHeight};"
-	
+
+		layout="constrained"
+		aspectRatio={coverWidth / coverHeight} 
+		style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
 	/>
 	<h1 class="text-4xl  md:text-6xl text-left mx-2  ">{title}</h1>
 
@@ -143,7 +145,7 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 
 <style>
 
-	.cover-image{
+	.cover-image {
 		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
 	}
 

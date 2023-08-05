@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let posts: any = [];
-
+	import { Image } from "@unpic/svelte";
 	function getBadgeClass(word: string) {
 		switch (word) {
 			case 'React':
@@ -41,12 +41,13 @@
 		<li class="my-5 max-w-[100rem]">
 			<article>
 				<a href="/blog/{post.slug}" class="flex flex-wrap justify-start gap-5">
-					<img
+					<Image
+						layout="constrained"
 						src={post.coverImage}
 						alt=""
-						style="ratio: {post.coverWidth} / {post.coverHeight}"
+						aspectRatio={post.coverWidth/ post.coverHeight}
 						class="w-[500px] border-2 rounded-md border-black"
-						loading="lazy"
+						style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
 					/>
 					<div class="max-w-[30rem] 2xl:max-w-[50rem] md:mt-6 px-2 md:px-3">
 						<h2 class=" text-[2rem] leading-[2.2rem] md:text-[2.6rem] md:leading-[3rem]">
@@ -70,8 +71,4 @@
 	{/each}
 </ul>
 
-<style>
-	img {
-		box-shadow: 0.45rem 0.45rem 0 hsl(var(--shadowColor) / 1);
-	}
-</style>
+

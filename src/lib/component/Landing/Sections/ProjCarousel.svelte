@@ -4,6 +4,7 @@
 	import websock from '$lib/pics/websock-min.webp';
 	import instadroid from '$lib/pics/instadroid-min.webp';
 	import port from '$lib/pics/port.webp';
+	import { Image } from "@unpic/svelte";
 	let projects = [
 		{
 			image: insta,
@@ -73,7 +74,7 @@
 	<div class="projcar flex w-[1770px] animate-marquee overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<img src={project.image} loading="lazy" alt="ProjectImage" />
+				<Image src={project.image} width="800" alt="ProjectImage" />
 				<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
 				<div class="cta__text-column">
 					<h2 class="px-2">{project.title}</h2>
