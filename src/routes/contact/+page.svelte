@@ -144,7 +144,7 @@ let firstName = '';
 </svelte:head>
 
 <!-- Contact Us -->
-<div class="max-w-[150rem] px-4 py-8 sm:px-6 lg:px-8 bg-[whitesmoke]  mx-auto">
+<div class="max-w-[150rem] px-4 py-8 sm:px-6 lg:px-8   mx-auto">
 	<div class="max-w-[130rem] lg:max-w-5xl mx-auto">
 		<div class="text-center">
 			<h1 class="text-5xl text-black mb-6 sm:text-6xl dark:text-white">Contact Me</h1>
@@ -158,7 +158,7 @@ let firstName = '';
 				<p class="text-md mb-6 text-gray-700">I'll get back to you in 1 or 2 days.</p>
 			</div>
 		  <!-- Card -->
-      <div class="flex flex-col card border-[0.15rem] border-black rounded-xl p-4 sm:p-6 lg:p-8 lg:py-14 md:my-16 dark:border-gray-700">
+      <div class="flex flex-col card border-[0.15rem] border-black bg-gray-100 rounded-xl p-4 sm:p-6 lg:p-8 lg:py-14 md:my-16 dark:border-gray-700">
         <form on:submit|preventDefault={handleSubmit}>
           <div class="grid gap-4">
             <!-- Grid -->

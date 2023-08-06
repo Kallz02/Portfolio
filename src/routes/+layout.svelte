@@ -103,13 +103,13 @@
 </BottomNav> -->
 
 <Footer />
-<div class="fixed bottom-0 left-0 z-50 w-full h-14 bg-white md:hidden border-t-[0.1rem] border-black dark:bg-gray-700 dark:border-gray-600">
+<div class="fixed bottom-0 left-0 z-50 w-full h-14 bg-white/75 backdrop-blur-md md:hidden border-t-[0.1rem] border-black dark:bg-gray-700 dark:border-gray-600">
     <div class="grid grid-cols-3 h-full max-w-lg mx-auto font-medium group-hover:bg-gray-800 ">
 		{#each navItems as item,index }
 
       
 
-		<a href={item.route} type="button" class="inline-flex pt-2  flex-col items-center justify-around px-5  hover:bg-gray-100 dark:hover:bg-gray-800 group dark:border-gray-600">
+		<a href={item.route} type="button" class="inline-flex pt-2  flex-col items-center justify-around px-5  hover:bg-gray-100/80 hover:backdrop-blur-md dark:hover:bg-gray-800 group dark:border-gray-600">
             			
 			{#if index === 0}
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z"/></svg>	

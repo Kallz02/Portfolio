@@ -11,7 +11,8 @@
 	<meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<h1 class=" text-center my-2 md:my-10 text-4xl  md:text-6xl">Blog</h1>
+<div class="">
+<h1 class=" text-center my-5 md:my-10 text-5xl  md:text-6xl">Blog</h1>
 <!-- <ul>
 	{#each data.uniqueCategories as category}
 	<li>
@@ -50,4 +51,6 @@
 			class="dark:invert dark:brigthness-[80%]"
 		/>
 	</a>
+</div>
+
 </div>

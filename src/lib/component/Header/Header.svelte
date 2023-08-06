@@ -22,7 +22,7 @@
 </script>
 
 <header
-	class="xl:pl-[2.5rem]  relative bg-[whitesmoke] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] lg:border-b-[0.18rem] border-b-2   dark:border-b-[0.15rem] border-gray-500 lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem]  relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300  lg:border-b-[0.18rem]   dark:border-b-[0.15rem] z-[200]  lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
 >
 
 	<h1 class="logo">
@@ -70,7 +70,7 @@
 			>
 		</svelte:fragment>
 	</DarkMode> -->
-	<div class="resume dark:border-2 dark:border-[#B5C0C0]">
+	<div class="resume dark:border-2 dark:border-[#cad8d8]">
 		<a
 			href="https://drive.google.com/file/d/132yDbr5WAJNLiVacQvRx0S4rXtEm4z2Z/view?usp=share_link"
 			target="_blank"
@@ -120,7 +120,7 @@
 	</label> -->
 </header>
 
-	<ul class=" flex lg:hidden sticky top-[4.5rem] bg-[whitesmoke] z-[1000] overflow-x-auto text-lg py-1 justify-around border-b-[0.15rem] border-gray-500 shadow-lg">
+	<ul class=" flex lg:hidden sticky top-[4.5rem] backdrop-blur-md bg-teal-100/50 z-[50] overflow-x-auto text-lg py-1 justify-around border-b-[0.15rem] border-gray-500 shadow-lg">
 
 		<li><a href="/#proj">Projects</a></li>
 		<li><a href="/#skill">Tech</a></li>

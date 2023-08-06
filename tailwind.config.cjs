@@ -24,9 +24,9 @@ export default withMT({
         '3xl': '1600px',
         '2.5xl':'1350px'
       },
-      // fontFamily: {
-      //   'sans': ['MabryPro', 'sans-serif'],
-      // },
+      fontFamily: {
+        'sans': ['MabryPro', 'sans-serif'],
+      },
 
     }
   },

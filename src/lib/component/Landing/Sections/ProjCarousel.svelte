@@ -4,7 +4,7 @@
 	import websock from '$lib/pics/websock-min.webp';
 	import instadroid from '$lib/pics/instadroid-min.webp';
 	import port from '$lib/pics/port.webp';
-	import { Image } from "@unpic/svelte";
+	import { lazyLoad } from '$lib/assets/js/lazyLoad';
 	let projects = [
 		{
 			image: insta,
@@ -74,9 +74,11 @@
 	<div class="projcar flex w-[1770px] animate-marquee overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<Image src={project.image} width="800" alt="ProjectImage" />
+				<figure>
+				<img width="350" class=" lala aspect-video" use:lazyLoad={project.image} alt="ProjectImage" />
 				<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
-				<div class="cta__text-column">
+				</figure>
+					<div class="cta__text-column">
 					<h2 class="px-2">{project.title}</h2>
 					<p class="pl-2 pb-2">
 						{#each project.description.split(' | ') as word}
@@ -96,7 +98,10 @@
 	<div class="projcar absolute top-0 flex w-[1770px] animate-marquee2 overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<img src={project.image} loading="lazy" alt="ProjectImage" />
+				<figure>
+					<img width="350" class=" aspect-video" loading="eager" src={project.image} alt="ProjectImage" />
+					<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
+					</figure>
 				<div class="cta__text-column">
 					<h2 class="px-2">{project.title}</h2>
 					<p class="pl-2 pb-2">
@@ -134,6 +139,11 @@
 		}
 	}
 
+	.lala {
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+
 	.cta {
 		display: flex;
 		flex-wrap: wrap;
@@ -143,15 +153,6 @@
 		overflow: hidden;
 		border: 0.3rem solid;
 		/* animation: slide 15s linear infinite; */
-	}
-
-	.cta img {
-		aspect-ratio: 16/9;
-		/* object-fit: cover; */
-		/* flex: 1 1 300px; */
-		width: 350px;
-		/* height: 100%; */
-		outline: 0.3rem solid;
 	}
 
 	.cta__text-column {

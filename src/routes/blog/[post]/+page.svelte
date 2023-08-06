@@ -2,7 +2,7 @@
 <script lang="ts">
 	export let data;
 	import Copy from '$lib/components/Copy.svelte';
-	import { Image } from "@unpic/svelte";
+import { lazyLoad } from '$lib/assets/js/lazyLoad.js';
 	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta;
 	const  Posts  = data.PostContent;
 	const len = data.length1;
@@ -69,16 +69,14 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 <article class="post flex  mx-2 flex-col md:mx-auto max-w-[1020px]">
 	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
-	
-	<Image
+	<figure>
+	<img
 		class="cover-image rounded-md mt-4 md:mt-6 border-[0.2rem] border-black mb-5 md:mb-10 w-[1000px]"
-		src={coverImage}
-		alt=""
-
-		layout="constrained"
-		aspectRatio={coverWidth / coverHeight} 
+		use:lazyLoad={coverImage}
+		alt={title}
 		style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
 	/>
+</figure>
 	<h1 class="text-4xl  md:text-6xl text-left mx-2  ">{title}</h1>
 
 	<div class="flex flex-col mt-4 md:mt-12 items-start justify-between w-full mx-2 md:flex-row md:items-center dark:text-gray-400">
@@ -147,6 +145,8 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 
 	.cover-image {
 		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
+		opacity: 0;
+		transition: all 0.5s ease;
 	}
 
 
