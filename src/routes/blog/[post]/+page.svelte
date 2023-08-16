@@ -79,10 +79,11 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 </figure>
 	<h1 class="text-4xl  md:text-6xl text-left mx-2  ">{title}</h1>
 
-	<div class="flex flex-col mt-4 md:mt-12 items-start justify-between w-full mx-2 md:flex-row md:items-center dark:text-gray-400">
+	
+	<div class="flex flex-col mt-4 md:mt-6 items-start justify-between w-full mx-2 md:flex-row md:items-center dark:text-gray-400">
 		<div class="flex items-center space-x-3">
 			<img loading="lazy" src="/profile.jpg" alt="profile" class="w-10 h-10 border border-black rounded-full dark:bg-gray-500 dark:border-gray-700">
-			<p class="text-lg ">Akshay Kalathil • {updated} • {minutesToRead} min{minutesToRead !== 1 ? 's' : ''} </p>
+			<p class=" text-md md:text-lg ">Akshay Kalathil • {updated} • {minutesToRead} min{minutesToRead !== 1 ? 's' : ''} </p>
 			<p class="flex-shrink-0 mt-3 text-lg md:mt-0"></p>
 		</div>
 		<!-- <p class="flex-shrink-0 mt-3 text-lg md:mt-0">4 min read • 1,570 views</p> -->
@@ -90,7 +91,6 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 
 		</button>
 	</div>
-	
 		
 		<!-- {#each categories as category}
 			<span

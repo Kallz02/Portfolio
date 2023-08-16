@@ -2,6 +2,30 @@
 	let timelineItems = [
 
 	{
+			school: 'Fintract Global',
+			class: 'SDE Tech Member',
+			year: 'May 2023 - Ongoing',
+			pcmc: 'Nextjs | Django | Mongodb',
+			img:'/exp/fg.jpg'
+			
+		},
+	{
+			school: 'Lejhro',
+			class: 'Fullstack Intern',
+			year: 'May 2023 - August 2023 · 4 mos',
+			pcmc: 'Nextjs | Nodejs',
+			img:'/exp/lej.png'
+			
+		},
+	{
+			school: 'Zealyug',
+			class: 'Frontend Intern',
+			year: 'May 2023 - June 2023 · 2 mos',
+			pcmc: 'Reactjs | Redux | Nodejs | Mongodb',
+			img:'/exp/zeal.jpeg'
+			
+		},
+	{
 			school: 'Formi',
 			class: 'Marketing Intern',
 			year: 'Apr 2022 - Jul 2022 · 4 mos',

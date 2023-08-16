@@ -36,8 +36,8 @@
 		}
 	}
 </script>
-
-<ul class="posts-list mx-2 md:ml-[12rem] flex flex-col  items-start">
+<div class="flex">
+<ul class="posts-list w-fit mx-2 md:ml-[5rem] 3xl:ml-[8rem] flex flex-col  items-start">
 	{#each posts as post}
 		<li class="my-5 max-w-[100rem]">
 			<article>
@@ -45,10 +45,12 @@
 					<img
 						use:lazyLoad={post.coverImage}
 						alt=""
-						class="w-[500px] border-2 aspect-{post.coverWidth/ post.coverHeight} rounded-md border-black"
+						width=500
+						height=1000
+						class=" w-[470px] 2xl:w-[450px] 3xl:w-[500px] border-2 aspect-{post.coverWidth/ post.coverHeight} rounded-md border-black"
 						style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
 					/>
-					<div class="max-w-[30rem] 2xl:max-w-[50rem] md:mt-6 px-2 md:px-3">
+					<div class="max-w-[35rem] 3xl:max-w-[50rem] md:mt-6 px-2 md:px-3">
 						<h2 class=" text-[2rem] leading-[2.2rem] md:text-[2.6rem] md:leading-[3rem]">
 							{post.title}
 						</h2>
@@ -70,6 +72,10 @@
 	{/each}
 </ul>
 
+<!-- <div class="hidden flex-grow xl:flex w-[200px] bg-blue-gray-400">
+
+</div> -->
+</div>
 
 <style>
 img{

@@ -46,13 +46,13 @@
 					}
 				});
 			},
-			{ threshold: 0.1, root: null }
+			{ threshold: 0, root: null }
 		);
 
 		hiddenElements = document.querySelectorAll('.hidden1');
 		hiddenElements.forEach((ele) => observer.observe(ele));
 
-		const styleSheet = document.styleSheets[0];
+		// const styleSheet = document.styleSheets[0];
 
 		const keyframes = `
   @keyframes show-animation {
@@ -70,7 +70,7 @@
   }
 `;
 
-		styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+		// styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
 
 });
 </script>

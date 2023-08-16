@@ -101,26 +101,54 @@ body {
     
 }
 
+.tick-animation {
+		display: inline-block;
+		width: 14px;
+		height: 10px;
+		background-image: url('path-to-your-tick-image.png'); /* Replace with your tick image */
+		background-size: contain;
+		animation: tick-fade 1s;
+	}
 
+	@keyframes tick-fade {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 .hidden1 {
-    opacity: 0;
-    filter: blur(5px);
+    
   
     will-change: opacity, filter, transform;
 }
 
 .show {
    
- 
+
+	 
     animation-name: show-animation;
     will-change: opacity, filter, transform;
-    animation-duration: 0.8s;
+    animation-duration: 1s;
     animation-fill-mode: both;
     animation-timing-function: ease;
 }
 
 
+@keyframes show-animation {
+	0% {
+	  transform: translate3d(-80%,0,0);
+      opacity: 0.3;
+    filter: blur(3px);
+	}
 
+	100% {
+	  transform: translate3d(0,0,0);
+      opacity: 1;
+    filter: blur(0px);
+	}
+  }
 
 code[class*="language-"],
 pre[class*="language-"] {
