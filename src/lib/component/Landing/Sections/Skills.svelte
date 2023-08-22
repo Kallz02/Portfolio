@@ -37,7 +37,8 @@
 		<div class="skill hidden1">
 		  <h2>{skill.title}</h2>
 		  <!-- <ul class="justify-around  flex-wrap flex "> -->
-		  <ul class=" ">
+		  <!-- <ul class="flex flex-wrap justify-around max-w-[20rem] mx-auto gap-3 pb-5"> -->
+			<ul>
 			{#each skill.items as item}
 			  <li>{item}</li>
 			{/each}

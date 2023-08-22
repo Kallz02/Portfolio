@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
-export const currentPage = writable<string>('')
-export const isMenuOpen = writable<boolean>(false)
+export const currentPage = writable<string>('');
+export const isMenuOpen = writable<boolean>(false);

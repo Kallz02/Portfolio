@@ -1,21 +1,19 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import { mdsvex } from 'mdsvex'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypeSlug from 'rehype-slug'
+import { mdsvex } from 'mdsvex';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	type: 'module',
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(),
-	mdsvex({
-		extensions: ['.md'],
-		rehypePlugins: [
-			rehypeSlug,
-			rehypeAutolinkHeadings,
-		],
-	})
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.md'],
+			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
+		})
 	],
 	extensions: ['.svelte', '.md'],
 	kit: {
@@ -28,8 +26,8 @@ const config = {
 			fallback: undefined,
 			precompress: true,
 			strict: true
-		}
-		), prerender: {
+		}),
+		prerender: {
 			entries: [
 				'*',
 				'/api/posts/page/*',
@@ -38,7 +36,7 @@ const config = {
 				'/blog/category/page/',
 				'/blog/category/page/*',
 				'/blog/page/',
-				'/blog/page/*',
+				'/blog/page/*'
 			]
 		}
 	}

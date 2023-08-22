@@ -72,9 +72,12 @@
 	{/each}
 </ul>
 
-<!-- <div class="hidden flex-grow xl:flex w-[200px] bg-blue-gray-400">
+<div class="hidden flex-grow xl:flex w-[200px] bg-blue-gray-400">
 
-</div> -->
+	<div class="w-full bg-black h-[100px] ">
+
+	</div>
+</div> 
 </div>
 
 <style>

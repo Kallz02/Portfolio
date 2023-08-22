@@ -1,41 +1,47 @@
 <script lang="ts">
-	import insta from '$lib/pics/instaReact-min.png';
-	import arch from '$lib/pics/arch.webp';
-	import websock from '$lib/pics/websock-min.webp';
-	import instadroid from '$lib/pics/instadroid-min.webp';
-	import port from '$lib/pics/port.webp';
+	import insta from '$lib/pics/pro/fin2.webp';
+	import arch from '$lib/pics/pro/tune.webp';
+	import websock from '$lib/pics/pro/fin1.webp';
+	import instadroid from '$lib/pics/pro/zeal.webp';
+	import port from '$lib/pics/pro/lej1.webp';
 	import { lazyLoad } from '$lib/assets/js/lazyLoad';
 	let projects = [
 		{
 			image: insta,
-			title: 'InstafakeDetectAPI',
-			description: 'React | Angular | Android | Python'
+			title: 'Fintract Global',
+			description: 'NextJS | Django | NodeJS | MongoDB',
+			img:'/exp/fg.jpg'
 		},
 		{
 			image: arch,
-			title: 'AchLinuxScripts',
-			description: 'Bash | Arch Linux'
+			title: 'Tuning Thoughts',
+			description: 'React | NodeJS',
+			img:"/exp/fg.jpg"
+
 		},
 		{
 			image: websock,
-			title: 'InstafakeDetectAPI',
-			description: 'NodeJS | JavaScript'
+			title: 'Fintract Global',
+			description: 'NextJS | Django | NodeJS | MogoDB',
+			img:'/exp/fg.jpg'
 		},
 		{
 			image: instadroid,
-			title: 'InstafakeDetectAPI',
-			description: 'Android | Python | Java | AI'
+			title: 'Zealyug',
+			description: 'MongoDB | React | Redux | NodeJS',
+			img:'/exp/zeal.jpeg'
 		},
 		{
 			image: port,
-			title: 'Akshayk.dev',
-			description: 'SvelteKit | TailwindCSS | TypeScript'
+			title: 'Lejhro',
+			description: 'NextJS | React | NodeJS',
+			img:'/exp/lej.png'
 		}
 	];
 	function getBadgeClass(word: string) {
 		switch (word) {
 			case 'React':
-				return 'bg-gray-100 text-gray-800 border-gray-800 border ';
+				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
 
 			case 'Java':
 				return 'bg-red-100 text-red-800 border-red-800 border ';
@@ -45,7 +51,11 @@
 				return 'bg-yellow-100 text-yellow-800 border-yellow-800 border ';
 			case 'Python':
 				return 'bg-yellow-100 text-yellow-800 border-yellow-800 border ';
+			case 'Django':
+				return 'bg-yellow-100 text-yellow-800 border-yellow-800 border ';
 			case 'Android':
+				return 'bg-green-100 text-green-800 border-green-800 border ';
+			case 'MongoDB':
 				return 'bg-green-100 text-green-800 border-green-800 border ';
 			case 'React':
 				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
@@ -54,6 +64,8 @@
 			case 'NodeJS':
 				return 'bg-indigo-100 text-indigo-800 border-indigo-800 border ';
 			case '.Net':
+				return 'bg-purple-100 text-purple-800 border-purple-800 border ';
+			case 'Redux':
 				return 'bg-purple-100 text-purple-800 border-purple-800 border ';
 			case 'Bash':
 				return 'bg-black-100 text-black-800 border-black border ';
@@ -71,15 +83,25 @@
 
 <div class=" overflow-hidden relative bg-[hsla(191, 35%, 85%);]">
 	<!-- <div class=" overflow-hidden relative bg-[hsla(191, 35%, 85%);] dark:bg-[#1A282D]"> -->
-	<div class="projcar flex w-[1770px] animate-marquee overflow-x-clip gap-[2rem]">
+	<div class="projcar flex w-[1750px] animate-marquee overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<figure>
-				<img width="350" class=" lala aspect-video" use:lazyLoad={project.image} alt="ProjectImage" />
+			
+				<img width="350" class="aspect-video" use:lazyLoad={project.image} alt="ProjectImage" />
 				<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
-				</figure>
+			
 					<div class="cta__text-column">
+				<div class="flex items-center">
+					<!-- <img
+					src={project.img}
+					alt=""
+					loading="lazy"
+					class="w-[35px] ml-2  my-2 h-[35px] rounded-full border-2 border-black"
+				/>	 -->
 					<h2 class="px-2">{project.title}</h2>
+				
+					
+					</div>
 					<p class="pl-2 pb-2">
 						{#each project.description.split(' | ') as word}
 							<span
@@ -95,10 +117,10 @@
 		{/each}
 	</div>
 
-	<div class="projcar absolute top-0 flex w-[1770px] animate-marquee2 overflow-x-clip gap-[2rem]">
+	<div class="projcar absolute top-0 flex w-[1750px] animate-marquee2 overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-				<figure>
+			<figure>
 					<img width="350" class=" aspect-video" loading="eager" src={project.image} alt="ProjectImage" />
 					<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
 					</figure>

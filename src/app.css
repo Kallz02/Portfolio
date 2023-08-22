@@ -3,210 +3,191 @@
 @tailwind utilities;
 
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      */
-     /* font-family: 'Averta', sans-serif; */
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-
+	/* font-family: 'Averta', sans-serif; */
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 .swal2-popup {
-    border: 1px solid black !important;
-    color: black !important;
-    background-color: whitesmoke !important;
-
+	border: 1px solid black !important;
+	color: black !important;
+	background-color: whitesmoke !important;
 }
 
-
-
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar {
-    height: 6px;
-    width: 6px;
-    background-color: #F5F5F5;
+	height: 6px;
+	width: 6px;
+	background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #171717;
-    border-radius: 15px;
+	background-color: #171717;
+	border-radius: 15px;
 }
 
 a {
-    background-color: transparent;
+	background-color: transparent;
 }
 
-@font-face{
-    font-family: 'MabryPro';
-    src: url('/MabryPro-Regular.ttf');
-  }
+@font-face {
+	font-family: 'MabryPro';
+	src: url('/MabryPro-Regular.ttf');
+}
 
-
-  @font-face{
-    font-family: 'Averta';
-    src: url('/AvertaStd-Regular.ttf');
-  }
- 
-
+@font-face {
+	font-family: 'Averta';
+	src: url('/AvertaStd-Regular.ttf');
+}
 
 body {
-    height: 100%;
-  
+	height: 100%;
 }
 
 :root {
-    --sec: black;
-    --main: rgb(255, 255, 255);
+	--sec: black;
+	--main: rgb(255, 255, 255);
 
-    --shadowColor: 187 60% 40%;
-    --shadow: 187, 47%, 60%;
-    
-        /* Colors */
-        --accent: #E63946;
-        --background: #FAF9F8;
-        --lightAccent: #A8DAE5;
-        --lighterAccent: #E6E8E4;
-        --dark: #457B9D;
-        --darker: #1D3557;
-        --slate: #2F3948;
-    
-        --white: #fff;
-        --black: #152030;
-    
-        --ink: var(--slate);
-        --paper: var(--background);
-        
-    
-        /* Fonts */
-        /**
+	--shadowColor: 187 60% 40%;
+	--shadow: 187, 47%, 60%;
+
+	/* Colors */
+	--accent: #e63946;
+	--background: #faf9f8;
+	--lightAccent: #a8dae5;
+	--lighterAccent: #e6e8e4;
+	--dark: #457b9d;
+	--darker: #1d3557;
+	--slate: #2f3948;
+
+	--white: #fff;
+	--black: #152030;
+
+	--ink: var(--slate);
+	--paper: var(--background);
+
+	/* Fonts */
+	/**
          * These are broken out into two separate variables from a previous iteration. I left
          * it in because it's nice to be able to split out the heading and body fonts.
          */
-        --accentFont: 'Libre Franklin', Georgia, Times, serif; 
-        --primaryFont: 'Libre Franklin', sans-serif;
-        --codeFont: 'Fira Code', monospace;
-    
-        /* Base styles */
-        font-size: 1rem;
-     
-    
+	--accentFont: 'Libre Franklin', Georgia, Times, serif;
+	--primaryFont: 'Libre Franklin', sans-serif;
+	--codeFont: 'Fira Code', monospace;
+
+	/* Base styles */
+	font-size: 1rem;
 }
 
 .tick-animation {
-		display: inline-block;
-		width: 14px;
-		height: 10px;
-		background-image: url('path-to-your-tick-image.png'); /* Replace with your tick image */
-		background-size: contain;
-		animation: tick-fade 1s;
-	}
+	display: inline-block;
+	width: 14px;
+	height: 10px;
+	background-image: url('path-to-your-tick-image.png'); /* Replace with your tick image */
+	background-size: contain;
+	animation: tick-fade 1s;
+}
 
-	@keyframes tick-fade {
-		0% {
-			opacity: 0;
-		}
-		100% {
-			opacity: 1;
-		}
+@keyframes tick-fade {
+	0% {
+		opacity: 0;
 	}
+	100% {
+		opacity: 1;
+	}
+}
 .hidden1 {
-    
-  
-    will-change: opacity, filter, transform;
+	will-change: opacity, filter, transform;
 }
 
 .show {
-   
-
-	 
-    animation-name: show-animation;
-    will-change: opacity, filter, transform;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: ease;
+	animation-name: show-animation;
+	will-change: opacity, filter, transform;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: ease;
 }
-
 
 @keyframes show-animation {
 	0% {
-	  transform: translate3d(-80%,0,0);
-      opacity: 0.3;
-    filter: blur(3px);
+		transform: translate3d(-80%, 0, 0);
+		opacity: 0.3;
+		filter: blur(3px);
 	}
 
 	100% {
-	  transform: translate3d(0,0,0);
-      opacity: 1;
-    filter: blur(0px);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+		filter: blur(0px);
 	}
-  }
+}
 
-code[class*="language-"],
-pre[class*="language-"] {
-    color: #f8f8f2;
-    background: none;
-    position: relative;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 1.5;
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
+code[class*='language-'],
+pre[class*='language-'] {
+	color: #f8f8f2;
+	background: none;
+	position: relative;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 
 /* Code blocks */
-pre[class*="language-"] {
-    padding: 1em;
-    margin: 2rem 0;
-    overflow: auto;
-    border-radius: 0.3em;
-    
-   
+pre[class*='language-'] {
+	padding: 1em;
+	margin: 2rem 0;
+	overflow: auto;
+	border-radius: 0.3em;
 }
 
-:not(pre)>code[class*="language-"],
-pre[class*="language-"] {
-    background: #0f1224;
-   
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+	background: #0f1224;
 }
 
 /* Inline code */
-:not(pre)>code[class*="language-"] {
-    padding: 0.1em;
-    border-radius: 0.3em;
-    white-space: normal;
+:not(pre) > code[class*='language-'] {
+	padding: 0.1em;
+	border-radius: 0.3em;
+	white-space: normal;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #6272a4;
+	color: #6272a4;
 }
 
 .token.punctuation {
-    color: #f8f8f2;
+	color: #f8f8f2;
 }
 
 .namespace {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .token.property,
@@ -214,12 +195,12 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: #ff79c6;
+	color: #ff79c6;
 }
 
 .token.boolean,
 .token.number {
-    color: #bd93f9;
+	color: #bd93f9;
 }
 
 .token.selector,
@@ -228,7 +209,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: #50fa7b;
+	color: #50fa7b;
 }
 
 .token.operator,
@@ -237,89 +218,87 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-    color: #f8f8f2;
+	color: #f8f8f2;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.function,
 .token.class-name {
-    color: #f1fa8c;
+	color: #f1fa8c;
 }
 
 .token.keyword {
-    color: #8be9fd;
+	color: #8be9fd;
 }
 
 .token.regex,
 .token.important {
-    color: #ffb86c;
+	color: #ffb86c;
 }
 
 .token.important,
 .token.bold {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .token.italic {
-    font-style: italic;
+	font-style: italic;
 }
 
 .token.entity {
-    cursor: help;
+	cursor: help;
 }
 
 .blog p {
-    font-size: 1.1rem;
-    line-height: normal;
-    margin: 2rem 0;
+	font-size: 1.1rem;
+	line-height: normal;
+	margin: 2rem 0;
 }
 
 .blog h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+	font-size: 2.5rem;
+	line-height: 3rem;
 }
 
 .blog h2 {
-    font-size: 2rem;
-    line-height: 2.5rem;
+	font-size: 2rem;
+	line-height: 2.5rem;
 }
 
 .blog h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 
 .blog h4 {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
 }
 
 .blog h5 {
-    font-size: 1rem;
-    line-height: 1.2rem;
+	font-size: 1rem;
+	line-height: 1.2rem;
 }
 
 .blog h6 {
-    font-size: 0.8rem;
-    line-height: 1rem;
+	font-size: 0.8rem;
+	line-height: 1rem;
 }
 
-.blog img{
-    box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
+.blog img {
+	box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
 }
 
-.copy{
-    background-color: whitesmoke;
-    border-radius: 0.25rem;
-    color: #171717;
-    margin-left: auto;
-    position: absolute;
-    top:1rem;
-    right: 1rem;
-    
-    padding: 1px 5px;
-    border: 2px black;
+.copy {
+	background-color: whitesmoke;
+	border-radius: 0.25rem;
+	color: #171717;
+	margin-left: auto;
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
 
-    
+	padding: 1px 5px;
+	border: 2px black;
 }
