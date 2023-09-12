@@ -26,7 +26,7 @@ class SendEmailView(View):
         try:
             # Send the email asynchronously using asyncio
             loop = asyncio.get_event_loop()
-            await loop.run_in_executor(None, send_mail, subject, message, from_email, [to_email], False)
+            loop.run_in_executor(None, send_mail, subject, message, from_email, [to_email], False)
         except Exception as e:
             response_data = {
                 'status': 'error',

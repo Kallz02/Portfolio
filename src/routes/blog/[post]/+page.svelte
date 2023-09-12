@@ -2,17 +2,16 @@
 <script lang="ts">
 	export let data;
 	import Copy from '$lib/components/Copy.svelte';
-import { lazyLoad } from '$lib/assets/js/lazyLoad.js';
-	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } = data.meta;
-	const  Posts  = data.PostContent;
+	import { lazyLoad } from '$lib/assets/js/lazyLoad.js';
+	const { title, excerpt, date, updated, coverImage, coverWidth, coverHeight, categories } =
+		data.meta;
+	const Posts = data.PostContent;
 	const len = data.length1;
-	
-
 
 	const wordsPerMinute = 200; // Adjust the reading speed as needed
 
-// Calculate the minutes to read the blog post
-let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
+	// Calculate the minutes to read the blog post
+	let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 
 	function getBadgeClass(word: string) {
 		switch (word) {
@@ -47,7 +46,6 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 				return 'bg-gray-100 text-gray-800 border-gray-800 border';
 		}
 	}
-
 </script>
 
 <svelte:head>
@@ -63,47 +61,47 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 	<meta property="og:image:width" content={coverWidth} />
 	<meta property="og:image:height" content={coverHeight} />
 	<meta name="twitter:image" content={coverImage} />
-
 </svelte:head>
 
-<article class="post flex  mx-2 flex-col md:mx-auto max-w-[1020px]">
+<article class="flex flex-col mx-2 md:mx-auto post max-w-[1020px]">
 	<!-- You might want to add an alt frontmatter attribute. If not, leaving alt blank here works, too. -->
 
 	<figure>
-	<img
-		class="cover-image rounded-md mt-4 md:mt-6 border-[0.2rem] border-black mb-5 md:mb-10 w-[1000px]"
-		use:lazyLoad={coverImage}
-		alt={title}
-		style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
-	/>
-</figure>
-	<h1 class="text-4xl  md:text-6xl text-left mx-2  ">{title}</h1>
+		<img
+			class="mt-4 mb-5 rounded-md border-black md:mt-6 md:mb-10 cover-image border-[0.2rem] w-[1000px]"
+			use:lazyLoad={coverImage}
+			alt={title}
+			style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
+		/>
+	</figure>
+	<h1 class="mx-2 text-4xl text-left md:text-6xl">{title}</h1>
 
-	
-	<div class="flex flex-col mt-4 md:mt-6 items-start justify-between w-full mx-2 md:flex-row md:items-center dark:text-gray-400">
+	<div
+		class="flex flex-col justify-between items-start mx-2 mt-4 w-full md:flex-row md:items-center md:mt-6 dark:text-gray-400"
+	>
 		<div class="flex items-center space-x-3">
-			<img loading="lazy" src="/profile.jpg" alt="profile" class="w-10 h-10 border border-black rounded-full dark:bg-gray-500 dark:border-gray-700">
-			<p class=" text-md md:text-lg ">Akshay Kalathil • {updated} • {minutesToRead} min{minutesToRead !== 1 ? 's' : ''} </p>
-			<p class="flex-shrink-0 mt-3 text-lg md:mt-0"></p>
+			<img
+				loading="lazy"
+				src="/profile.jpg"
+				alt="profile"
+				class="w-10 h-10 rounded-full border border-black dark:bg-gray-500 dark:border-gray-700"
+			/>
+			<p class="md:text-lg text-md">
+				Akshay Kalathil • {updated} • {minutesToRead} min{minutesToRead !== 1 ? 's' : ''}
+			</p>
+			<p class="flex-shrink-0 mt-3 text-lg md:mt-0" />
 		</div>
 		<!-- <p class="flex-shrink-0 mt-3 text-lg md:mt-0">4 min read • 1,570 views</p> -->
-		<button>
-
-		</button>
+		<button />
 	</div>
-		
-		<!-- {#each categories as category}
+
+	<!-- {#each categories as category}
 			<span
 				class="inline-flex items-center mr-1 gap-1.5 py-1 px-2 rounded-full text-xs font-medium {getBadgeClass(category)}"
 			>
 				{category}
 			</span>
 		{/each} -->
-	
-	
-		
-
-
 
 	<!-- <div class="mx-2">
 		<b>Published:</b>
@@ -113,41 +111,39 @@ let minutesToRead = Math.max(Math.ceil(len / (wordsPerMinute * 60)), 1);
 		{updated}
 	</div> -->
 
-	<div class="mx-2 relative blog mt-4 ">
+	<div class="relative mx-2 mt-4 blog">
 		<Copy>
-	<Posts/>
-</Copy>
-</div>
-
+			<Posts />
+		</Copy>
+	</div>
 
 	{#if categories}
-		<aside class=" mx-2 my-8">
-			<h2 class="text-lg text-bold ">Posted in:</h2>
-			<ul class="flex mt-4 text-sm  ">
-
+		<aside class="my-8 mx-2">
+			<h2 class="text-lg text-bold">Posted in:</h2>
+			<ul class="flex mt-4 text-sm">
 				{#each categories as category}
 					<li>
-	<span
-				class="inline-flex items-center mr-3 gap-1.5 py-1 px-2 rounded-full text-xs font-medium {getBadgeClass(category)}">
-						<a class="" href="/blog/category/{category}/">
-							{category}
-						</a>
+						<span
+							class="inline-flex items-center mr-3 gap-1.5 py-1 px-2 rounded-full text-xs font-medium {getBadgeClass(
+								category
+							)}"
+						>
+							<a class="" href="/blog/category/{category}/">
+								{category}
+							</a>
 						</span>
 					</li>
 				{/each}
 			</ul>
 		</aside>
 	{/if}
-
 </article>
 
 <style>
-
 	.cover-image {
 		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
 		opacity: 0;
 		transition: all 0.5s ease;
 	}
-
-
 </style>
+
