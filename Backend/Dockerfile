@@ -27,4 +27,4 @@ EXPOSE 587
 EXPOSE 7860
 
 # Start Gunicorn with Uvicorn workers as the production server
-CMD ["uvicorn", "Backend.asgi:application" ,"--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "Backend.asgi:application" ,"--host", "127.0.0.1", "--port", "7860"]
