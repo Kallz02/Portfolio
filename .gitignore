@@ -10,3 +10,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /Backend/env
 Backend/Backend/settings.py
+/email-bun
