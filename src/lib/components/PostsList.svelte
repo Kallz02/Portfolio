@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { lazyLoad } from "$lib/assets/js/lazyLoad";
+	import { lazyLoad } from '$lib/assets/js/lazyLoad';
 
 	export let posts: any = [];
 	function getBadgeClass(word: string) {
@@ -36,55 +36,57 @@
 		}
 	}
 </script>
-<div class="flex">
-<ul class="posts-list w-fit mx-2 md:ml-[5rem] 3xl:ml-[8rem] flex flex-col  items-start">
-	{#each posts as post}
-		<li class="my-5 max-w-[100rem]">
-			<article>
-				<a href="/blog/{post.slug}" class="flex flex-wrap justify-start gap-5">
-					<img
-						use:lazyLoad={post.coverImage}
-						alt=""
-						width=500
-						height=1000
-						class=" w-[470px] 2xl:w-[450px] 3xl:w-[500px] border-2 aspect-{post.coverWidth/ post.coverHeight} rounded-md border-black"
-						style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
-					/>
-					<div class="max-w-[35rem] 3xl:max-w-[50rem] md:mt-6 px-2 md:px-3">
-						<h2 class=" text-[2rem] leading-[2.2rem] md:text-[2.6rem] md:leading-[3rem]">
-							{post.title}
-						</h2>
-						<h3 class=" my-1 md:my-4">
-							{#each post.categories as word}
-								<span
-									class="
+
+<div class="flex relative">
+	<div class="flex relative">
+		<ul class="flex flex-col items-start mx-2 posts-list w-fit md:ml-[5rem] 3xl:ml-[8rem]">
+			{#each posts as post}
+				<li class="my-5 max-w-[100rem]">
+					<article>
+						<a href="/blog/{post.slug}" class="flex flex-wrap gap-5 justify-start">
+							<img
+								use:lazyLoad={post.coverImage}
+								alt=""
+								width="500"
+								height="1000"
+								class=" w-[470px] 2xl:w-[400px] 3xl:w-[500px] border-2 aspect-{post.coverWidth /
+									post.coverHeight} rounded-md border-black"
+								style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
+							/>
+							<div class="px-2 md:px-3 md:mt-6 max-w-[35rem] 3xl:max-w-[50rem]">
+								<h2 class="text-[2rem] leading-[2.2rem] md:text-[2.6rem] md:leading-[3rem]">
+									{post.title}
+								</h2>
+								<h3 class="my-1 md:my-4">
+									{#each post.categories as word}
+										<span
+											class="
 					inline-flex items-center mr-1 gap-1.5 py-1 px-2 rounded-full text-xs font-medium
 					{getBadgeClass(word)}
 				  ">{word}</span
-								>
-							{/each}
-						</h3>
-						<p class="mt-2 text-[1.2rem]">{post.excerpt}</p>
-					</div>
-				</a>
-			</article>
-		</li>
-	{/each}
-</ul>
-
-<div class="hidden flex-grow xl:flex w-[200px] bg-blue-gray-400">
-
-	<div class="w-full bg-black h-[100px] ">
-
+										>
+									{/each}
+								</h3>
+								<p class="mt-2 text-[1.2rem]">{post.excerpt}</p>
+							</div>
+						</a>
+					</article>
+				</li>
+			{/each}
+		</ul>
 	</div>
-</div> 
+
+	<div
+		class="hidden sticky left-0 flex-grow border-l-2 2xl:flex mt-[2rem] h-[800px] top-[8rem] w-[350px]"
+	>
+		<input class="w-full border border-gray-300 h-[60px] mt-[1rem] mr-[2rem] ml-[20px]" />
+	</div>
 </div>
 
 <style>
-img{
-	opacity: 0;
-	transition: all 0.5s ease;
-}
-
-
+	img {
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
 </style>
+
