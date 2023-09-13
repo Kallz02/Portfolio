@@ -22,17 +22,14 @@
 </script>
 
 <header
-	class="xl:pl-[2.5rem]  relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300  lg:border-b-[0.18rem]   dark:border-b-[0.15rem] z-[200]  lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem] relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300 lg:border-b-[0.15rem] dark:border-b-[0.15rem] z-[200] lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
 >
-
 	<h1 class="logo">
-		<a href="/">
-		Akshay Kalathil
-	</a>
+		<a href="/"> Akshay Kalathil </a>
 	</h1>
 
 	<input type="checkbox" id="nav-menu" />
-	<ul class="nav hidden md:flex">
+	<ul class="hidden md:flex nav">
 		<li><a href="/">Home</a></li>
 
 		<li><a href="/#skill">Tech</a></li>
@@ -41,7 +38,7 @@
 		<li><a href="/blog">Blog</a></li>
 		<li><a href="/contact">Contact</a></li>
 	</ul>
-	
+
 	<!-- <DarkMode class="p-0 text-lg">
 		<svelte:fragment slot="lightIcon">
 			<svg
@@ -120,12 +117,14 @@
 	</label> -->
 </header>
 
-	<ul class=" flex lg:hidden sticky top-[4.5rem] backdrop-blur-md bg-teal-100/50 z-[50] overflow-x-auto text-lg py-1 justify-around border-b-[0.15rem] border-gray-500 shadow-lg">
+<ul
+	class="flex overflow-x-auto sticky justify-around py-1 text-lg border-gray-500 shadow-lg lg:hidden top-[4.5rem] backdrop-blur-md bg-teal-100/50 z-[50] border-b-[0.15rem]"
+>
+	<li><a href="/#proj">Projects</a></li>
+	<li><a href="/#skill">Tech</a></li>
+	<li><a href="/#exp">Experience</a></li>
+</ul>
 
-		<li><a href="/#proj">Projects</a></li>
-		<li><a href="/#skill">Tech</a></li>
-		<li><a href="/#exp">Experience</a></li>
-	</ul>
 <style>
 	header {
 		display: flex;

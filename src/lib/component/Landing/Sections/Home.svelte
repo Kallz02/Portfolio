@@ -10,8 +10,12 @@
 </script>
 
 <div class="border-none pg1 section" id="home">
+	<!-- <div -->
+	<!-- 	class="lg:bg-[whitesmoke] dark:bg-[#0f191b] xl:my-8 md:pl-6 2xl:pl-16 lg:border-[0.15rem] border-black 2xl:ml-[4rem] lg:mr-[-0.5rem] xl:mr-[-1rem] rounded-md" -->
+	<!-- > -->
+
 	<div
-		class="lg:bg-[whitesmoke] dark:bg-[#0f191b] xl:my-8 md:pl-6 2xl:pl-16 lg:border-[0.15rem] border-black 2xl:ml-[4rem] lg:mr-[-0.5rem] xl:mr-[-1rem] rounded-md"
+		class="lg:bg-[whitesmoke] dark:bg-[#0f191b] md:pl-8 2xl:pl-[7rem] border-black 2xl:border-b-[0.15rem] 2xl:border-r-[0.1rem] 2xl:border-t-none rounded-md md:rounded-none"
 	>
 		<div class="main-text pt-[1.5rem] md:py-6 2xl:pt-[4rem] dark:text-[#f2f2f2]">
 			{#if show}
@@ -33,7 +37,7 @@
 				</p>
 			{/if}
 			<div
-				class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[10rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem]"
+				class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[10rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem] 3xl:top-[16rem]"
 			>
 				<a href="https://github.com/Kallz02" target="_blank">
 					<img
@@ -62,16 +66,18 @@
 			</div>
 
 			<div
-				class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-50 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem] 3xl:top-[4.5rem]"
+				class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-50 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem] 3xl:top-[7.5rem]"
 			>
 				<div class="mx-auto mt-1 text-3xl font-light text-center">Professional Work</div>
 			</div>
 		</div>
 	</div>
-	<div class="border-black social border-[0.2rem]">
+	<div
+		class="border-black md:border-t-0 border-[0.2rem] social md:border-b-[0.2rem] md:border-l-[0.1rem] md:boder-r-0"
+	>
 		<img
 			src={src1}
-			class="h-full dark:brightness-[98%] rounded-sm w-full object-cover"
+			class="h-full dark:brightness-[98%] rounded-sm md:rounded-0 w-full object-cover"
 			alt="MyPhoto"
 		/>
 	</div>
@@ -79,12 +85,11 @@
 
 <style>
 	.section {
-		padding: 0 1.5rem;
 		width: 100%;
 
 		min-height: calc(100vh - 20.4rem);
 		/* min-height: calc(100vh - 4.4rem); */
-
+		margin-bottom: 1.5rem;
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
 		scroll-margin-top: 5rem;
@@ -94,7 +99,7 @@
 	.pg1 {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-		align-items: stretch;
+		/* align-items: stretch; */
 		/* stretch items to fill container height */
 		grid-auto-rows: minmax(calc(50vh - 1rem), auto);
 		/* set a minimum height for the grid items */
@@ -103,10 +108,10 @@
 
 	.pg1 .social {
 		background-color: powderblue;
-		border-radius: 5px;
+		/* border-radius: 5px; */
 		justify-self: stretch;
 		align-self: stretch;
-		margin: 1rem 0;
+		/* margin: 1rem 0; */
 
 		box-shadow: 0.4rem 0.4rem 0 hsl(var(--shadowColor) / 1);
 	}
