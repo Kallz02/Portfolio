@@ -1,5 +1,5 @@
-<footer class="mb-14 md:mb-0">
-	<div class="socialLinks hidden1 flex ">
+<footer class="mb-14 bg-teal-300 md:mb-0">
+	<div class="flex socialLinks hidden1">
 		<a href="https://github.com/Kallz02" target="_blank">
 			<img
 				id="github"
@@ -31,7 +31,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: 5rem;
-		background-color: powderblue;
 		min-height: 8rem;
 		width: 100%;
 	}

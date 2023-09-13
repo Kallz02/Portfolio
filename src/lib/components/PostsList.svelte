@@ -77,9 +77,9 @@
 	</div>
 
 	<div
-		class="hidden sticky left-0 flex-grow border-l-2 border-black 2xl:flex mt-[2rem] h-[800px] top-[8rem] w-[350px]"
+		class="hidden sticky left-0 flex-grow border-l-2 border-black 2xl:flex h-[calc(100vh-4.75rem)] top-[4.75rem] w-[350px]"
 	>
-		<input class="w-full border border-black h-[60px] mt-[1rem] mr-[2rem] ml-[20px]" />
+		<input class="w-full border border-black h-[60px] mt-[1.5rem] mr-[2rem] ml-[20px]" />
 	</div>
 </div>
 

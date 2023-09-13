@@ -11,8 +11,14 @@
 	<meta data-key="description" name="description" content={siteDescription} />
 </svelte:head>
 
-<div class="">
-	<h1 class="my-5 text-5xl text-center md:my-10 md:text-6xl">Blog</h1>
+<div class="relative">
+	<!-- <img src="/yolo.png" alt="yolo" class="object-cover w-full h-[250px]" /> -->
+	<div class="object-cover w-full bg-yellow-200 h-[225px]" />
+	<h1
+		class="absolute top-0 py-5 text-5xl text-center md:text-6xl md:py-[4.5rem] md:px-[8rem] 3xl:px-[8rem]"
+	>
+		Blog
+	</h1>
 	<!-- <ul>
 	{#each data.uniqueCategories as category}
 	<li>
@@ -23,7 +29,7 @@
 	</li>
 	{/each}
 </ul> -->
-	<div class="relative">
+	<div class="relative border-black border-t-[0.15rem]">
 		<PostsList posts={data.posts} />
 	</div>
 	<Pagination currentPage={1} totalPosts={data.total} />
