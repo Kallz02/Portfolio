@@ -17,7 +17,7 @@
 	<div
 		class="lg:bg-[whitesmoke] dark:bg-[#0f191b] md:pl-8 2xl:pl-[7rem] border-black 2xl:border-b-[0.15rem] 2xl:border-r-[0.1rem] 2xl:border-t-none rounded-md md:rounded-none"
 	>
-		<div class="main-text pt-[1.5rem] md:py-6 2xl:pt-[4rem] dark:text-[#f2f2f2]">
+		<div class="main-text pt-[1.5rem] md:py-6 2xl:pt-[4rem] 3xl:pt-[6rem] dark:text-[#f2f2f2]">
 			{#if show}
 				<h1
 					transition:fly={{ x: -200, duration: 800 }}
@@ -37,7 +37,7 @@
 				</p>
 			{/if}
 			<div
-				class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[10rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem] 3xl:top-[16rem]"
+				class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[10rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem] 3xl:top-[11.75rem]"
 			>
 				<a href="https://github.com/Kallz02" target="_blank">
 					<img
@@ -66,7 +66,7 @@
 			</div>
 
 			<div
-				class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-50 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem] 3xl:top-[7.5rem]"
+				class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-50 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem] 3xl:top-[6.5rem]"
 			>
 				<div class="mx-auto mt-1 text-3xl font-light text-center">Professional Work</div>
 			</div>
