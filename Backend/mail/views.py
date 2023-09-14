@@ -4,11 +4,9 @@ from django.views import View
 from django.conf import settings
 import json
 import asyncio
-from django.views.decorators.csrf import csrf_exempt
 
 
 
-@csrf_exempt
 class SendEmailView(View):
     async def post(self, request):
         data = json.loads(request.body.decode('utf-8'))  # Parse the JSON data sent from Svelte
