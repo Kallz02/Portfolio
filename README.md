@@ -1,6 +1,6 @@
 # Portfolio - SvelteKit 🔥
 
-My Personal Portfoio Made Using **Svelte , SvelteKit and TypeScipt** using the Static Adaptor and **SSG**
+My Personal Portfoio Made Using **Svelte , SvelteKit , GO and TypeScipt** using the Static Adaptor and **SSG**
 
 ## Features ⭐
 

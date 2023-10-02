@@ -41,7 +41,7 @@
 	<div class="flex relative">
 		<ul class="flex flex-col items-start mx-2 posts-list w-fit md:ml-[5rem] 3xl:ml-[8rem]">
 			{#each posts as post}
-				<li class="my-5 max-w-[100rem]">
+				<li class=" text-foreground my-5 max-w-[100rem]">
 					<article>
 						<a href="/blog/{post.slug}" class="flex flex-wrap gap-5 justify-start">
 							<img

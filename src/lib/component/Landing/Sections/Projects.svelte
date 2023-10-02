@@ -66,15 +66,15 @@
 </script>
 
 <div class="pg3 section" id="proj">
-	<h2>
+	<h2 class="text-foreground">
 		<center>Projects</center>
 	</h2>
 
 	<div class="cont1">
 		{#each articles as article}
-			<article class="cta hidden1">
+			<article class="cta bg-custom-background hidden1">
 				<img src={article.imgSrc} alt={article.imgAlt} loading="lazy" />
-				<div class="cta__text-column">
+				<div class=" text-foreground cta__text-column">
 					<h2>{article.title}</h2>
 					<h3>{article.subtitle}</h3>
 					<h4 class="mt-4 text-lg">{article.desc}</h4>
@@ -161,7 +161,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		/* background: hsl(191, 35%, 90%); */
-		background: whitesmoke;
+		/* background: whitesmoke; */
 		max-width: 35rem;
 		width: 100%;
 		box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);

@@ -64,16 +64,17 @@
 	];
 </script>
 
-<div class="pg4 section" id="exp">
-	<h2>
+<div class="pg4  section" id="exp">
+	<h2 class=" text-foreground">
 		<center>Experience</center>
 	</h2>
-	<p>Click on the Cards for more!</p>
+	<p class=" text-foreground">Click on the Cards for more!</p>
+	
 	<div class="wrapper">
 		<ul class="timeline">
 			{#each timelineItems as item, index (item.school)}
 				<li>
-					<details class="panel hidden1">
+					<details class="panel bg-custom-background text-foreground hidden1">
 						<summary>
 							{#if item.school}
 								<div class="flex">
@@ -162,7 +163,7 @@
 		position: relative;
 		border: solid 0.2rem black;
 		/* background: hsl(191, 35%, 90%); */
-		background: whitesmoke;
+		/* background: whitesmoke; */
 		box-shadow: 0.4rem 0.4rem 0 hsl(var(--shadowColor) / 1);
 		/* box-shadow: 3px 3px 12px #dee1e4,
   -3px -3px 12px #fff; */
@@ -203,6 +204,7 @@
 
 	.timeline summary:hover {
 		background: #f8f8f8;
+		color: black;
 	}
 
 	.timeline:before {

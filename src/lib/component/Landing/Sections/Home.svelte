@@ -37,7 +37,7 @@
 				</p>
 			{/if}
 			<div
-				class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[10rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem] 3xl:top-[11.75rem]"
+				class="hidden fixed bg-custom-background text-foreground left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[10rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem] 3xl:top-[11.75rem]"
 			>
 				<a href="https://github.com/Kallz02" target="_blank">
 					<img
@@ -66,7 +66,7 @@
 			</div>
 
 			<div
-				class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-green-50 border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem] 3xl:top-[6.5rem]"
+				class="h-[3rem] max-w-[30rem] 3xl:max-w-[45rem] rounded-md hidden 2xl:flex bg-custom-background border-[0.15rem] border-black relative left-[1%] 2xl:top-[3rem] 3xl:top-[6.5rem]"
 			>
 				<div class="mx-auto mt-1 text-3xl font-light text-center">Professional Work</div>
 			</div>

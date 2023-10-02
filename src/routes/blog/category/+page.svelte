@@ -8,7 +8,7 @@
 	<title>Blog | Categories</title>
 </svelte:head>
 
-<div class="hidden1 fixed hidden  bg-[whitesmoke] z-50 top-[15rem] left-0 px-5 py-4  border-t-[0.15rem]  border-b-[0.15rem] border-r-[0.15rem] border-black rounded-r-md 2xl:flex flex-col  gap-8">
+<div class="hidden1 bg-custom-background text-foreground fixed hidden  bg-[whitesmoke] z-50 top-[15rem] left-0 px-5 py-4  border-t-[0.15rem]  border-b-[0.15rem] border-r-[0.15rem] border-black rounded-r-md 2xl:flex flex-col  gap-8">
 	<a href="https://github.com/Kallz02" target="_blank">
 		<img
 			id="github"
@@ -36,7 +36,7 @@
 </div>
 
 <div class="compressed-content">
-	<h1 class="text-2xl md:text-4xl mx-auto text-center py-4">All blog categories</h1>
+	<h1 class="text-2xl text-foreground md:text-4xl mx-auto text-center py-4">All blog categories</h1>
 	
 	<ul>
 		{#each uniqueCategories as category}

@@ -55,7 +55,23 @@ a {
 body {
 	height: 100%;
 }
-
+:root {
+	--light-background: #fff;
+	--dark-background: #0b1416;
+	--dark-foreground: #fff;
+	--light-foreground: #000;
+  }
+  
+  html {
+	--background: var(--light-background);
+	--foreground: var(--light-foreground);
+  }
+  
+  html.dark {
+	--background: var(--dark-background);
+	
+	--foreground: var(--dark-foreground);
+  }
 :root {
 	--sec: black;
 	--main: rgb(255, 255, 255);
@@ -246,6 +262,10 @@ pre[class*='language-'] {
 
 .token.entity {
 	cursor: help;
+}
+
+.blog{
+	color: var(--foreground);
 }
 
 .blog p {

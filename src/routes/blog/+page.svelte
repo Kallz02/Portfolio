@@ -34,7 +34,7 @@
 	</div>
 	<Pagination currentPage={1} totalPosts={data.total} />
 	<div
-		class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-[whitesmoke] top-[15rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem]"
+		class="hidden fixed left-0 z-50 flex-col gap-8 py-4 px-5 rounded-r-md border-black 2xl:flex hidden1 bg-custom-background top-[15rem] border-t-[0.15rem] border-b-[0.15rem] border-r-[0.15rem]"
 	>
 		<a href="https://github.com/Kallz02" target="_blank">
 			<img

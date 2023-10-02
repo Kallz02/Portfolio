@@ -1,74 +1,81 @@
-import { Hono } from 'hono';
-import { cors } from 'hono/cors';
-import { prettyJSON } from 'hono/pretty-json';
+import { Elysia, t } from 'elysia';
+import { cors } from '@elysiajs/cors';
+import { swagger } from '@elysiajs/swagger';
+
 import nodemailer from 'nodemailer';
-const app = new Hono();
-app.use('*', prettyJSON());
-app.use('*', cors());
-app.notFound((c) => c.json({ message: 'Not Found', ok: false }, 404));
-// Primary SMTP configuration (Gmail)
+
+const app = new Elysia();
+
+app.use(cors());
+app.use(swagger());
+
+const Email = t.Object({
+	firstName: t.String(),
+	lastName: t.String(),
+	email: t.String(),
+	phoneNumber: t.String(),
+	details: t.String(),
+	api: t.String()
+});
+
+app.post(
+	'/send-email',
+	async ({ body }: any) => {
+		const { firstName, lastName, email, phoneNumber, details, api } = body;
+		console.log(api);
+		if (api === 'bXl1c2VynameOnlwYXNzd29yZA==') {
+			const htmlEmail = `
+  <html>
+    <body>
+      <h1>Hello, ${firstName} ${lastName}</h1>
+      <h3>Email: ${email}</h3>
+      <h3>Phone Number: ${phoneNumber}</h3>
+      <h3>Details: ${details}</h3>
+    </body>
+  </html>
+`;
+
+			const mailOptions = {
+				from: 'noreply@akshayk.dev',
+				to: 'akshay@akshayk.dev',
+				subject: 'contact enquiry',
+				html: htmlEmail
+			};
+
+			// Send email using the sendEmail function
+			sendEmail(mailOptions);
+			return { data: 'mail sent' };
+		} else {
+			return { data: 'error lol' };
+		}
+	},
+	{ body: Email }
+);
+
 const primaryTransporter = nodemailer.createTransport({
 	host: process.env.SMTP_HOST,
 	port: 587, // TLS
 
 	auth: {
 		user: process.env.SMTP_USER, // Your Gmail email address
-		pass:process.env.SMTP_PASS // Your Gmail password or an app-specific password
+		pass: process.env.SMTP_PASS // Your Gmail password or an app-specific password
 	}
 });
-
-// Secondary SMTP configuration (Outlook)
-const secondaryTransporter = nodemailer.createTransport({
-	host: 'smtp-mail.outlook.com',
-	port: 587,
-	secure: false, // TLS
-	auth: {
-		user: 'your@outlook.com', // Your Outlook email address
-		pass: 'your_password' // Your Outlook password
-	}
-});
-app.get('/', (c) => {
-	return c.json({ message: 'Hello Bun!' });
-});
-
-const sendEmail = async (mailOptions: nodemailer.SendMailOptions, res: any) => {
-	try {
-		// Try sending using the primary SMTP server
-		const primaryInfo = await primaryTransporter.sendMail(mailOptions);
-		console.log('Email sent using primary SMTP server: ' + primaryInfo.response);
-	} catch (primaryError) {
-		console.error('Email sending failed using primary SMTP server:', primaryError);
-		try {
-			// Try sending using the secondary SMTP server
-			const secondaryInfo = await secondaryTransporter.sendMail(mailOptions);
-			console.log('Email sent using secondary SMTP server: ' + secondaryInfo.response);
-		} catch (secondaryError) {
-			console.error('Email sending failed using secondary SMTP server:', secondaryError);
+const sendEmail = (mailOptions: nodemailer.SendMailOptions) => {
+	primaryTransporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			console.error('Error sending mail:', error);
+		} else {
+			console.log('mail sent:', info.response);
 		}
-	}
+	});
 };
 
-// Define an email sending endpoint
-app.post('/send-email', async (c) => {
-	// const { to, subject, text } = await c.req.json();
-
-	const mailOptions = {
-		from: 'YourEmailAddress',
-		to: 'akshay@akshayk.dev',
-		subject: 'contact',
-		text: 'hello'
-	};
-
-	// Send email using the sendEmail function
-	await sendEmail(mailOptions, c);
-
-	return c.json({ success: true, message: 'Email sent successfully' });
+app.get('/', () => {
+	return { data: 'The Elysia Server' };
 });
+app.get('*', () => 'Route Not Implemented!!');
 
-const port = parseInt(process.env.PORT!) || 3000;
-console.log(`Running at http://localhost:${port}`);
+app.listen(8080);
 
-export default {
-	port,
-	fetch: app.fetch
-};
+console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);

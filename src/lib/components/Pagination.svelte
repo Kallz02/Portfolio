@@ -15,7 +15,7 @@
 {#key currentPage}
 	{#if pagesAvailable > 1}
 		<nav aria-label="Pagination navigation" class="pagination my-3 mx-auto">
-			<ul class="flex justify-center">
+			<ul class="flex text-foreground justiify-center">
 				{#each Array.from({ length: pagesAvailable }, (_, i) => i + 1) as page}
 					<li class="border-2 text-center rounded-md w-8 mr-2">
 						<a href="{path}/{page}" aria-current={isCurrentPage(page)}>

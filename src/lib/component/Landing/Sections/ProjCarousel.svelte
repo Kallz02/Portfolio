@@ -10,32 +10,31 @@
 			image: insta,
 			title: 'Fintract Global',
 			description: 'NextJS | Django | NodeJS | MongoDB',
-			img:'/exp/fg.jpg'
+			img: '/exp/fg.jpg'
 		},
 		{
 			image: arch,
 			title: 'Tuning Thoughts',
 			description: 'React | NodeJS',
-			img:"/exp/fg.jpg"
-
+			img: '/exp/fg.jpg'
 		},
 		{
 			image: websock,
 			title: 'Fintract Global',
 			description: 'NextJS | Django | NodeJS | MogoDB',
-			img:'/exp/fg.jpg'
+			img: '/exp/fg.jpg'
 		},
 		{
 			image: instadroid,
 			title: 'Zealyug',
 			description: 'MongoDB | React | Redux | NodeJS',
-			img:'/exp/zeal.jpeg'
+			img: '/exp/zeal.jpeg'
 		},
 		{
 			image: port,
 			title: 'Lejhro',
 			description: 'NextJS | React | NodeJS',
-			img:'/exp/lej.png'
+			img: '/exp/lej.png'
 		}
 	];
 	function getBadgeClass(word: string) {
@@ -83,26 +82,23 @@
 
 <div class=" overflow-hidden relative bg-[hsla(191, 35%, 85%);]">
 	<!-- <div class=" overflow-hidden relative bg-[hsla(191, 35%, 85%);] dark:bg-[#1A282D]"> -->
-	<div class="projcar flex w-[1750px] animate-marquee overflow-x-clip gap-[2rem]">
+	<div class="flex projcar w-[1750px] animate-marquee overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-			
 				<img width="350" class="aspect-video" use:lazyLoad={project.image} alt="ProjectImage" />
 				<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
-			
-					<div class="cta__text-column">
-				<div class="flex items-center">
-					<!-- <img
+
+				<div class="text-foreground cta__text-column">
+					<div class="flex items-center">
+						<!-- <img
 					src={project.img}
 					alt=""
 					loading="lazy"
-					class="w-[35px] ml-2  my-2 h-[35px] rounded-full border-2 border-black"
+					class="my-2 ml-2 rounded-full border-2 border-black w-[35px] h-[35px]"
 				/>	 -->
-					<h2 class="px-2">{project.title}</h2>
-				
-					
+						<h2 class="px-2">{project.title}</h2>
 					</div>
-					<p class="pl-2 pb-2">
+					<p class="pb-2 pl-2">
 						{#each project.description.split(' | ') as word}
 							<span
 								class="
@@ -117,16 +113,22 @@
 		{/each}
 	</div>
 
-	<div class="projcar absolute top-0 flex w-[1750px] animate-marquee2 overflow-x-clip gap-[2rem]">
+	<div class="flex absolute top-0 projcar w-[1750px] animate-marquee2 overflow-x-clip gap-[2rem]">
 		{#each projects as project}
 			<div class="cta">
-			<figure>
-					<img width="350" class=" aspect-video" loading="eager" src={project.image} alt="ProjectImage" />
+				<figure>
+					<img
+						width="350"
+						class="aspect-video"
+						loading="eager"
+						src={project.image}
+						alt="ProjectImage"
+					/>
 					<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
-					</figure>
-				<div class="cta__text-column">
+				</figure>
+				<div class="text-foreground cta__text-column">
 					<h2 class="px-2">{project.title}</h2>
-					<p class="pl-2 pb-2">
+					<p class="pb-2 pl-2">
 						{#each project.description.split(' | ') as word}
 							<span
 								class="
@@ -183,9 +185,10 @@
 		bottom: 0.3rem;
 		width: 19.5rem; */
 		border-top: 0.3rem solid;
+		border-color: black;
 		width: 100%;
 		/* background: hsla(191, 35%, 90%); */
-		background: whitesmoke;
+		/* background: whitesmoke; */
 		/* backdrop-filter: blur(8px); */
 	}
 </style>

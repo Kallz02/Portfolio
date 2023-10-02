@@ -9,6 +9,14 @@ export default withMT({
 	],
 	theme: {
 		extend: {
+			colors: {
+				custom: {
+				  background: "var(--background)",
+				  foreground: "var(--foreground)",
+				},
+				
+				  foreground: "var(--foreground)",
+			  },	
 			animation: {
 				marquee: 'marquee 25s linear infinite',
 				marquee2: 'marquee2 25s linear infinite'

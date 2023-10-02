@@ -79,18 +79,21 @@
 			return;
 		}
 
+		const api = 'bXl1c2VynameOnlwYXNzd29yZA==';
 		const formData = {
 			firstName,
 			lastName,
 			email,
 			phoneNumber,
-			details
+			details,
+			api
 		};
 
 		try {
 			isLoading = true;
 			// const response = await fetch('https://kallz02-portfolio.hf.space/send-email/', {
 			//const response = await fetch('http://localhost:7860/send-email/', {
+			// const response = await fetch('http://localhost:8080/send-email', {
 			const response = await fetch('https://back.akshayk.dev/send-email/', {
 				method: 'POST',
 				headers: {
@@ -133,23 +136,25 @@
 	<title>Contact</title>
 </svelte:head>
 
+<div
+	class="object-cover w-full text-center dark:bg-[#0f191b] border-b-2 border-black md:py-10 h-[225px]"
+>
+	<h1 class="mb-6 text-5xl text-black sm:text-6xl dark:text-white">Contact Me</h1>
+	<p class="mt-3 text-gray-800 dark:text-gray-400 text-md">
+		Let me know if you have any questions or just want to say hi.
+	</p>
+
+	<div class="mb-3 text-center">
+		<p class="mb-6 text-gray-700 text-md">I'll get back to you in 1 or 2 days.</p>
+	</div>
+</div>
 <!-- Contact Us -->
 <div class="py-8 px-4 mx-auto sm:px-6 lg:px-8 max-w-[150rem]">
 	<div class="mx-auto lg:max-w-5xl max-w-[130rem]">
-		<div class="text-center">
-			<h1 class="mb-6 text-5xl text-black sm:text-6xl dark:text-white">Contact Me</h1>
-			<p class="mt-3 text-gray-800 dark:text-gray-400 text-md">
-				Let me know if you have any questions or just want to say hi.
-			</p>
-		</div>
-
 		<div class="items-center mt-3">
-			<div class="mb-3 text-center">
-				<p class="mb-6 text-gray-700 text-md">I'll get back to you in 1 or 2 days.</p>
-			</div>
 			<!-- Card -->
 			<div
-				class="flex flex-col p-4 bg-gray-100 rounded-xl border-black sm:p-6 md:my-16 lg:p-8 lg:py-14 dark:border-gray-700 card border-[0.15rem]"
+				class="flex flex-col p-4 rounded-xl border-black sm:p-6 md:my-16 lg:p-8 lg:py-14 dark:border-gray-700 bg-custom-background card border-[0.15rem]"
 			>
 				<form on:submit|preventDefault={handleSubmit}>
 					<div class="grid gap-4">
@@ -163,7 +168,7 @@
 									bind:value={firstName}
 									class="{firstNameError
 										? 'error-input'
-										: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+										: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 									placeholder="First Name"
 								/>
 								{#if firstNameError}
@@ -179,7 +184,7 @@
 									bind:value={lastName}
 									class="{lastNameError
 										? 'error-input'
-										: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+										: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 									placeholder="Last Name"
 								/>
 								{#if lastNameError}
@@ -198,7 +203,7 @@
 								autocomplete="email"
 								class="{emailError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 								placeholder="Email"
 							/>
 							{#if emailError}
@@ -214,7 +219,7 @@
 								bind:value={phoneNumber}
 								class="{phoneNumberError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 								placeholder="Phone Number"
 							/>
 							{#if phoneNumberError}
@@ -230,7 +235,7 @@
 								rows="4"
 								class="{detailsError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full bg-gray-100 border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full bg-gray-100 border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 								placeholder="Details"
 							/>
 							{#if detailsError}
@@ -250,7 +255,7 @@
 						<button
 							type="submit"
 							disabled={isLoading}
-							class="inline-flex gap-x-3 justify-center items-center py-3 px-4 text-lg font-medium text-center text-black bg-cyan-300 rounded-md border-black transition hover:bg-cyan-700 focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white focus:outline-none border-[0.15rem] dark:focus:ring-offset-gray-800"
+							class="inline-flex gap-x-3 justify-center items-center py-3 px-4 text-lg font-medium text-center text-black bg-cyan-300 rounded-md border-black transition dark:bg-cyan-700 hover:bg-cyan-700 focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white focus:outline-none border-[0.15rem] dark:focus:ring-offset-gray-800"
 						>
 							{#if isLoading}
 								<div aria-label="Loading..." role="status">
@@ -282,7 +287,6 @@
 
 <style>
 	.card {
-		box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
+		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
 	}
 </style>
-

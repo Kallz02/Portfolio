@@ -74,7 +74,7 @@
 			style="box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);"
 		/>
 	</figure>
-	<h1 class="mx-2 text-4xl text-left md:text-6xl">{title}</h1>
+	<h1 class="mx-2 text-4xl text-foreground text-left md:text-6xl">{title}</h1>
 
 	<div
 		class="flex flex-col justify-between items-start mx-2 mt-4 w-full md:flex-row md:items-center md:mt-6 dark:text-gray-400"
@@ -119,15 +119,12 @@
 
 	{#if categories}
 		<aside class="my-8 mx-2">
-			<h2 class="text-lg text-bold">Posted in:</h2>
+			<h2 class="text-lg text-foreground text-bold">Posted in:</h2>
 			<ul class="flex mt-4 text-sm">
 				{#each categories as category}
 					<li>
 						<span
-							class="inline-flex items-center mr-3 gap-1.5 py-1 px-2 rounded-full text-xs font-medium {getBadgeClass(
-								category
-							)}"
-						>
+							class="inline-flex items-center mr-3 gap-1.5 py-1 px-2 rounded-full text-xs font-medium {getBadgeClass(category)}">
 							<a class="" href="/blog/category/{category}/">
 								{category}
 							</a>

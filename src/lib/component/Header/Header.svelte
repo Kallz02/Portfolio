@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	// import { DarkMode } from 'flowbite-svelte';
+	import { DarkMode } from 'flowbite-svelte';
 	onMount(() => {
 		const handleClick = () => {
 			const checkbox = document.getElementById('nav-menu') as HTMLInputElement;
@@ -22,7 +22,7 @@
 </script>
 
 <header
-	class="xl:pl-[2.5rem] relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300 lg:border-b-[0.15rem] dark:border-b-[0.15rem] z-[200] lg:border-b-black dark:border-b-[#B5C0C0] dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem] shadow-b-xl shadow relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300 lg:border-b-[0.15rem] dark:border-b-[0.15rem] z-[200] lg:border-b-black dark:text-[#f2f2f2]"
 >
 	<h1 class="logo">
 		<a href="/"> Akshay Kalathil </a>
@@ -39,7 +39,7 @@
 		<li><a href="/contact">Contact</a></li>
 	</ul>
 
-	<!-- <DarkMode class="p-0 text-lg">
+	<DarkMode class="p-0 text-lg">
 		<svelte:fragment slot="lightIcon">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@
 				/></svg
 			>
 		</svelte:fragment>
-	</DarkMode> -->
+	</DarkMode>
 	<div class="resume dark:border-2 dark:border-[#cad8d8]">
 		<a
 			href="https://drive.google.com/file/d/132yDbr5WAJNLiVacQvRx0S4rXtEm4z2Z/view?usp=share_link"
@@ -118,7 +118,7 @@
 </header>
 
 <ul
-	class="flex overflow-x-auto sticky justify-around py-1 text-lg border-gray-500 shadow-lg lg:hidden top-[4.5rem] backdrop-blur-md bg-teal-100/50 z-[50] border-b-[0.15rem]"
+	class="flex overflow-x-auto sticky justify-around py-1 text-lg border-black shadow-lg lg:hidden top-[4.6rem] backdrop-blur-md bg-teal-100/50 z-[50] border-t-[0.125rem] border-b-[0.125rem]"
 >
 	<li><a href="/#proj">Projects</a></li>
 	<li><a href="/#skill">Tech</a></li>
