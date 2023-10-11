@@ -1,37 +1,32 @@
 <script>
 	let timelineItems = [
-
-	{
+		{
 			school: 'Fintract Global',
 			class: 'SDE Tech Member',
 			year: 'May 2023 - Ongoing',
 			pcmc: 'Nextjs | Django | Mongodb',
-			img:'/exp/fg.jpg'
-			
+			img: '/exp/fg.jpg'
 		},
-	{
+		{
 			school: 'Lejhro',
 			class: 'Fullstack Intern',
 			year: 'May 2023 - August 2023 · 4 mos',
 			pcmc: 'Nextjs | Nodejs',
-			img:'/exp/lej.png'
-			
+			img: '/exp/lej.png'
 		},
-	{
+		{
 			school: 'Zealyug',
 			class: 'Frontend Intern',
 			year: 'May 2023 - June 2023 · 2 mos',
 			pcmc: 'Reactjs | Redux | Nodejs | Mongodb',
-			img:'/exp/zeal.jpeg'
-			
+			img: '/exp/zeal.jpeg'
 		},
-	{
+		{
 			school: 'Formi',
 			class: 'Marketing Intern',
 			year: 'Apr 2022 - Jul 2022 · 4 mos',
 			pcmc: 'Marketing',
-			img:'/exp/formi.png'
-			
+			img: '/exp/formi.png'
 		},
 		{
 			school: 'VIT, Vellore',
@@ -39,8 +34,7 @@
 			cgpa: 'CGPA: 7.35 (tentative)',
 			year: '2025 · 5 years',
 			pcmc: 'Computer Science and Engineering',
-			img:'/exp/vit.jpg'
-
+			img: '/exp/vit.jpg'
 		},
 		{
 			school: 'Delhi Public School, Whitefield',
@@ -48,28 +42,26 @@
 			percentage: '88.4%',
 			year: '2020',
 			pcmc: 'PCMC',
-			img:'/exp/dps.png'
+			img: '/exp/dps.png'
 		},
-		
+
 		{
 			school: 'Chrysalis High, Whitefield',
 			class: 'Class 10 , CBSE',
 			pcmc: 'High School',
 			percentage: '82.8%',
 			year: '2018',
-			img:'/exp/ch.png'
-		},
-	
-		
+			img: '/exp/ch.png'
+		}
 	];
 </script>
 
-<div class="pg4  section" id="exp">
+<div class="pg4 section" id="exp">
 	<h2 class=" text-foreground">
 		<center>Experience</center>
 	</h2>
 	<p class=" text-foreground">Click on the Cards for more!</p>
-	
+
 	<div class="wrapper">
 		<ul class="timeline">
 			{#each timelineItems as item, index (item.school)}
@@ -202,10 +194,10 @@
 		border-bottom: 3px solid rgba(0, 0, 0);
 	}
 
-	.timeline summary:hover {
-		background: #f8f8f8;
-		color: black;
-	}
+	/* .timeline summary:hover { */
+	/* 	background: #f8f8f8; */
+	/* 	color: black; */
+	/* } */
 
 	.timeline:before {
 		top: 0;
@@ -215,7 +207,9 @@
 		content: '';
 		width: 5px;
 		background-color: black;
-		box-shadow: 1px 1px 5px #dee1e4, -1px -1px 5px #fff;
+		box-shadow:
+			1px 1px 5px #dee1e4,
+			-1px -1px 5px #fff;
 	}
 
 	.timeline li:before {
@@ -229,7 +223,9 @@
 		background: black;
 		margin-left: -11px;
 		z-index: 9;
-		box-shadow: 2px 2px 5px #dee1e4, -2px -2px 5px #fff;
+		box-shadow:
+			2px 2px 5px #dee1e4,
+			-2px -2px 5px #fff;
 	}
 
 	.timeline li:nth-child(even) {

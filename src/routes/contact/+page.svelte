@@ -137,7 +137,7 @@
 </svelte:head>
 
 <div
-	class="object-cover w-full text-center dark:bg-[#0f191b] border-b-2 border-black md:py-10 h-[225px]"
+	class="object-cover w-full text-center py-10 px-4 dark:bg-[#0f191b] border-b-2 border-black md:py-10 h-[225px]"
 >
 	<h1 class="mb-6 text-5xl text-black sm:text-6xl dark:text-white">Contact Me</h1>
 	<p class="mt-3 text-gray-800 dark:text-gray-400 text-md">

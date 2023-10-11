@@ -88,14 +88,14 @@
 
 <Footer />
 <div
-	class="fixed bottom-0 left-0 z-50 w-full h-14 border-black md:hidden dark:bg-gray-700 dark:border-gray-600 bg-white/75 backdrop-blur-md border-t-[0.1rem]"
+	class="fixed bottom-0 left-0 z-50 w-full h-14 border-black md:hidden dark:border-gray-600 bg-custom-background backdrop-blur-md border-t-[0.1rem]"
 >
 	<div class="grid grid-cols-3 mx-auto max-w-lg h-full font-medium group-hover:bg-gray-800">
 		{#each navItems as item, index}
 			<a
 				href={item.route}
 				type="button"
-				class="inline-flex flex-col justify-around items-center px-5 pt-2 dark:border-gray-600 group dark:hover:bg-gray-800 hover:bg-gray-100/80 hover:backdrop-blur-md"
+				class="inline-flex flex-col dark:invert justify-around items-center px-5 pt-2 dark:border-gray-600 group dark:hover:bg-gray-800 hover:bg-gray-100/80 hover:backdrop-blur-md"
 			>
 				{#if index === 0}
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

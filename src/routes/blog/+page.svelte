@@ -13,9 +13,9 @@
 
 <div class="relative">
 	<!-- <img src="/yolo.png" alt="yolo" class="object-cover w-full h-[250px]" /> -->
-	<div class="object-cover w-full bg-yellow-200 h-[225px]" />
+	<div class="object-cover w-full bg-yellow-200 h-[100px] md:h-[225px]" />
 	<h1
-		class="absolute top-0 py-5 text-5xl text-center md:text-6xl md:py-[4.5rem] md:px-[8rem] 3xl:px-[8rem]"
+		class="absolute px-5 top-0 py-5 text-5xl text-center md:text-6xl md:py-[4.5rem] md:px-[8rem] 3xl:px-[8rem]"
 	>
 		Blog
 	</h1>
