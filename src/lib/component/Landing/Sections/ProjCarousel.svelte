@@ -10,31 +10,39 @@
 			image: insta,
 			title: 'Fintract Global',
 			description: 'NextJS | Django | NodeJS | MongoDB',
-			img: '/exp/fg.jpg'
+			img: '/exp/fg.jpg',
+			link: 'https://fintractglobal.com/openBanking'
 		},
 		{
 			image: arch,
 			title: 'Tuning Thoughts',
 			description: 'React | NodeJS',
-			img: '/exp/fg.jpg'
+			img: '/exp/fg.jpg',
+			link: 'https://tuning-thoughts.com'
 		},
 		{
 			image: websock,
 			title: 'Fintract Global',
 			description: 'NextJS | Django | NodeJS | MogoDB',
-			img: '/exp/fg.jpg'
+			img: '/exp/fg.jpg',
+
+			link: 'https://fintractglobal.com'
 		},
 		{
 			image: instadroid,
 			title: 'Zealyug',
 			description: 'MongoDB | React | Redux | NodeJS',
-			img: '/exp/zeal.jpeg'
+			img: '/exp/zeal.jpeg',
+
+			link: 'https://zealyug.com'
 		},
 		{
 			image: port,
 			title: 'Lejhro',
 			description: 'NextJS | React | NodeJS',
-			img: '/exp/lej.png'
+			img: '/exp/lej.png',
+
+			link: 'https://lejhro.com'
 		}
 	];
 	function getBadgeClass(word: string) {
@@ -56,8 +64,6 @@
 				return 'bg-green-100 text-green-800 border-green-800 border ';
 			case 'MongoDB':
 				return 'bg-green-100 text-green-800 border-green-800 border ';
-			case 'React':
-				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
 			case 'TypeScript':
 				return 'bg-blue-100 text-blue-800 border-blue-800 border ';
 			case 'NodeJS':
@@ -84,7 +90,7 @@
 	<!-- <div class=" overflow-hidden relative bg-[hsla(191, 35%, 85%);] dark:bg-[#1A282D]"> -->
 	<div class="flex projcar w-[1750px] animate-marquee overflow-x-clip gap-[2rem]">
 		{#each projects as project}
-			<div class="cta">
+			<a href={project.link} target="_blank" class="cta">
 				<img width="350" class="aspect-video" use:lazyLoad={project.image} alt="ProjectImage" />
 				<!-- <div class="cta__text-column dark:text-[#f2f2f2]"> -->
 
@@ -109,13 +115,13 @@
 						{/each}
 					</p>
 				</div>
-			</div>
+			</a>
 		{/each}
 	</div>
 
 	<div class="flex absolute top-0 projcar w-[1750px] animate-marquee2 overflow-x-clip gap-[2rem]">
 		{#each projects as project}
-			<div class="cta">
+			<a href={project.link} target="_blank" class="cta">
 				<figure>
 					<img
 						width="350"
@@ -139,7 +145,7 @@
 						{/each}
 					</p>
 				</div>
-			</div>
+			</a>
 		{/each}
 	</div>
 </div>

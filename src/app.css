@@ -67,7 +67,12 @@ body {
 }
 :root {
 	--light-background: #fff;
-	--dark-background: #0b1416;
+	/* --dark-background: #0b1416; */
+
+	--dark-background: #041515;
+	--light-muted: white;
+
+	--dark-muted: #0f191b;
 	--dark-foreground: #fff;
 	--light-foreground: #000;
 }
@@ -200,11 +205,12 @@ body {
 html {
 	--background: var(--light-background);
 	--foreground: var(--light-foreground);
+	--muted: var(--light-muted);
 }
 
 html.dark {
 	--background: var(--dark-background);
-
+	--muted: var(--dark-muted);
 	--foreground: var(--dark-foreground);
 }
 :root {

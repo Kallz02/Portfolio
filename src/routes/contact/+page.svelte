@@ -137,15 +137,15 @@
 </svelte:head>
 
 <div
-	class="object-cover w-full text-center py-10 px-4 dark:bg-[#0f191b] border-b-2 border-black md:py-10 h-[225px]"
+	class="object-cover w-full text-center py-10 px-4 dark:bg-muted border-b-2 border-black md:py-10 h-[225px]"
 >
-	<h1 class="mb-6 text-5xl text-black sm:text-6xl dark:text-white">Contact Me</h1>
-	<p class="mt-3 text-gray-800 dark:text-gray-400 text-md">
+	<h1 class="mb-6 text-5xl text-foreground sm:text-6xl">Contact Me</h1>
+	<p class="mt-3 text-foreground text-md">
 		Let me know if you have any questions or just want to say hi.
 	</p>
 
 	<div class="mb-3 text-center">
-		<p class="mb-6 text-gray-700 text-md">I'll get back to you in 1 or 2 days.</p>
+		<p class="mb-6 text-foreground text-md">I'll get back to you in 1 or 2 days.</p>
 	</div>
 </div>
 <!-- Contact Us -->
@@ -159,16 +159,16 @@
 				<form on:submit|preventDefault={handleSubmit}>
 					<div class="grid gap-4">
 						<!-- Grid -->
-						<div class="grid grid-cols-1 gap-4 text-black sm:grid-cols-2">
+						<div class="grid grid-cols-1 gap-4 text-foreground sm:grid-cols-2">
 							<div>
-								<label for="firstName" class="text-black sr-only">First Name</label>
+								<label for="firstName" class="sr-only text-foreground">First Name</label>
 								<input
 									type="text"
 									id="firstName"
 									bind:value={firstName}
 									class="{firstNameError
 										? 'error-input'
-										: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-black text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+										: ''} py-3 px-4 block placeholder:text-foreground w-full border-[0.15rem] bg-muted border-black rounded-md text-foreground text-md focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700"
 									placeholder="First Name"
 								/>
 								{#if firstNameError}
@@ -184,7 +184,7 @@
 									bind:value={lastName}
 									class="{lastNameError
 										? 'error-input'
-										: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+										: ''} py-3 px-4 block w-full placeholder:text-foreground border-[0.15rem] bg-muted border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 									placeholder="Last Name"
 								/>
 								{#if lastNameError}
@@ -203,7 +203,7 @@
 								autocomplete="email"
 								class="{emailError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full border-[0.15rem] placeholder:text-foreground bg-muted border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 								placeholder="Email"
 							/>
 							{#if emailError}
@@ -219,7 +219,7 @@
 								bind:value={phoneNumber}
 								class="{phoneNumberError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full border-[0.15rem] bg-gray-100 border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full border-[0.15rem] bg-muted placeholder:text-foreground border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 								placeholder="Phone Number"
 							/>
 							{#if phoneNumberError}
@@ -235,7 +235,7 @@
 								rows="4"
 								class="{detailsError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full bg-gray-100 border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full bg-muted placeholder:text-foreground border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
 								placeholder="Details"
 							/>
 							{#if detailsError}

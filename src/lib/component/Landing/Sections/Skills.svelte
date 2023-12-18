@@ -1,34 +1,32 @@
 <script lang="ts">
-
 	// Object containing data for each skill category
 	let skills = [
-	  {
-		title: 'FrontEnd',
-		items: ['NextJs', 'React', 'TypeScript', 'Angular', 'SvelteKit']
-	  },
-	  {
-		title: 'Backend',
-		items: ['Nodejs', 'Django', 'Postgres', 'MySQL', 'MongoDB', 'Servlet', 'JSP']
-	  },
-	  {
-		title: 'Programing & Scripting',
-		items: ['Java', 'C/C++', 'Python', 'JavaScript', 'Bash', 'Markdown']
-	  },
-	  {
-		title: 'Machine Learning',
-		items: ['Python', 'Scikit-learn', 'Numpy', 'Pandas']
-	  },
-	  {
-		title: 'Android',
-		items: ['Android Studio', 'Kotlin', 'Java', 'Jetpack Compose', 'XML']
-	  },
-	  {
-		title: 'Tools & Tech',
-		items: ['Linux', 'AWS', 'Azure', 'Git & Github', 'Docker', 'Kubernetes', 'Scrapy']
-	  }
+		{
+			title: 'FrontEnd',
+			items: ['NextJs', 'React', 'TypeScript', 'Angular', 'SvelteKit']
+		},
+		{
+			title: 'Backend',
+			items: ['Nodejs', 'Django', 'Postgres', 'MySQL', 'MongoDB', 'Servlet', 'JSP']
+		},
+		{
+			title: 'Programing & Scripting',
+			items: ['Java', 'C/C++', 'Python', 'JavaScript', 'Bash', 'Markdown']
+		},
+		{
+			title: 'Machine Learning',
+			items: ['Python', 'Scikit-learn', 'Numpy', 'Pandas']
+		},
+		{
+			title: 'Android',
+			items: ['Android Studio', 'Kotlin', 'Java', 'Jetpack Compose', 'XML']
+		},
+		{
+			title: 'Tools & Tech',
+			items: ['Linux', 'AWS', 'Azure', 'Git & Github', 'Docker', 'Kubernetes', 'Scrapy']
+		}
 	];
 
-	
 	function getBadgeClass(word: string) {
 		switch (word) {
 			case 'React':
@@ -62,34 +60,37 @@
 				return 'bg-gray-100 text-gray-800 border-gray-800 border';
 		}
 	}
-  </script>
-  
-  <div class="pg2 section" id="skill">
+</script>
+
+<div class="pg2 section" id="skill">
 	<h1 class="text-foreground" id="skills">
-	
-	  <center>Tech</center>
+		<center>Tech</center>
 	</h1>
 	<div class="skills">
-	  {#each skills as skill}
-		<div class="skill bg-custom-background text-foreground hidden1">
-		  <h2>{skill.title}</h2>
-		  <!-- <ul class="justify-around  flex-wrap flex "> -->
-		  <ul class="flex flex-wrap justify-around max-w-[20rem] mx-auto gap-3 pb-5">
-			<!-- <ul> -->
-			{#each skill.items as item}
-			  <li>
-				
-			<!-- <span	class="inline-flex items-center mr-3 gap-1.5 py-1 px-3 rounded-full font-medium {getBadgeClass(item)}"> -->
-				{item}
-			<!-- </span> -->
-			</li>
-			{/each}
-		  </ul>
-		</div>
-	  {/each}
+		{#each skills as skill}
+			<!-- <div class="skill bg-custom-background text-foreground hidden1"> -->
+			<div class="">
+				<h2>{skill.title}</h2>
+				<!-- <ul class="justify-around  flex-wrap flex "> -->
+				<ul class="flex flex-wrap justify-around max-w-[20rem] mx-auto gap-3 pb-5">
+					<!-- <ul> -->
+					{#each skill.items as item}
+						<li>
+							<span
+								class="inline-flex items-center mr-3 gap-1.5 py-1 px-3 rounded-full font-medium {getBadgeClass(
+									item
+								)}"
+							>
+								{item}
+							</span>
+						</li>
+					{/each}
+				</ul>
+			</div>
+			<!-- </div> -->
+		{/each}
 	</div>
-  </div>
-  
+</div>
 
 <style>
 	.section {
@@ -132,7 +133,6 @@
 		font-size: 2.5rem;
 		font-weight: 500;
 	}
-
 
 	.skill li {
 		margin-top: 0.5rem;

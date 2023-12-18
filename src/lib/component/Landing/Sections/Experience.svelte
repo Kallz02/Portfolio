@@ -65,8 +65,8 @@
 	<div class="wrapper">
 		<ul class="timeline">
 			{#each timelineItems as item, index (item.school)}
-				<li>
-					<details class="panel bg-custom-background text-foreground hidden1">
+				<li id={String(index)}>
+					<details class="panel bg-muted text-foreground hidden1">
 						<summary>
 							{#if item.school}
 								<div class="flex">
@@ -74,16 +74,17 @@
 										src={item.img}
 										alt=""
 										loading="lazy"
-										class="w-[55px] h-[55px] rounded-full border-2 border-black"
+										class="w-[55px] mt-1 h-[55px] rounded-lg border-2 border-black"
 									/>
-									<div class="flex ml-2 flex-col">
+									<div class="flex ml-4 flex-col">
 										<h4 class="text-[1.2rem] md:text-[1.5rem] font-medium">
 											{item.school}
 										</h4>
 										<h4 class="text-[1rem] flex justify-between font-medium">{item.class}</h4>
+
+										<div class=" font-normal">{item.pcmc}</div>
 									</div>
 								</div>
-								<div class="ml-[63px] font-normal">{item.pcmc}</div>
 							{/if}
 						</summary>
 						<p>{item.percentage}</p>
