@@ -73,7 +73,8 @@ body {
 	/* --dark-background: #041515; */
 	--dark-background: #0e141e;
 
-	--light-muted: white;
+	/* --light-muted: #f8f9fa; */
+	--light-muted: #f7f5f4;
 
 	/* --dark-muted: #0f191b; */
 	--dark-muted: #111827;
