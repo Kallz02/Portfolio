@@ -11,6 +11,6 @@ export const load = async ({ params }: { params: { post: string } }): Promise<an
 			length1: length
 		};
 	} catch (err: any) {
-		throw error(404, err);
+		error(404, err);
 	}
 };

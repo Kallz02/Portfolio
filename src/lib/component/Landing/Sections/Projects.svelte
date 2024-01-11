@@ -72,7 +72,7 @@
 
 	<div class="cont1">
 		{#each articles as article}
-			<article class="cta bg-custom-background hidden1">
+			<article class="cta bg-muted hidden1">
 				<img src={article.imgSrc} alt={article.imgAlt} loading="lazy" />
 				<div class=" text-foreground cta__text-column">
 					<h2>{article.title}</h2>

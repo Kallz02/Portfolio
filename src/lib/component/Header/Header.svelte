@@ -21,8 +21,12 @@
 	});
 </script>
 
+<!-- <header -->
+<!-- 	class="xl:pl-[2.5rem] shadow-b-xl shadow relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300 lg:border-b-[0.15rem] dark:border-b-[0.15rem] z-[200] lg:border-b-black dark:text-[#f2f2f2]" -->
+<!-- > -->
+
 <header
-	class="xl:pl-[2.5rem] shadow-b-xl shadow relative backdrop-blur-lg bg-[#f5f5f5ce] dark:bg-[#0B1416] dark:bg-[] xl:pr-[2rem] border-gray-300 lg:border-b-[0.15rem] dark:border-b-[0.15rem] z-[200] lg:border-b-black dark:text-[#f2f2f2]"
+	class="xl:pl-[2.5rem] shadow-b-xl shadow relative backdrop-blur-lg bg-custom-background xl:pr-[2rem] border-gray-300 lg:border-b-[0.15rem] dark:border-b-[0.15rem] z-[200] lg:border-b-black dark:text-[#f2f2f2]"
 >
 	<h1 class="logo">
 		<a href="/"> Akshay Kalathil </a>
@@ -118,7 +122,7 @@
 </header>
 
 <ul
-	class="flex overflow-x-auto sticky justify-around py-1 text-lg border-black shadow-lg lg:hidden top-[4.6rem] backdrop-blur-md bg-teal-100/50 z-[50] border-t-[0.125rem] border-b-[0.125rem]"
+	class="flex overflow-x-auto sticky justify-around py-1 text-lg border-black shadow-lg lg:hidden top-[4.6rem] backdrop-blur-md bg-blue-200/50 z-[50] border-t-[0.125rem] border-b-[0.125rem]"
 >
 	<li><a href="/#proj">Projects</a></li>
 	<li><a href="/#skill">Tech</a></li>

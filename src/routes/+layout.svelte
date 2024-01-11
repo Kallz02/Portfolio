@@ -45,7 +45,7 @@
 					}
 				});
 			},
-			{ threshold: 0, root: null }
+			{ threshold: 0.1, root: null }
 		);
 
 		hiddenElements = document.querySelectorAll('.hidden1');

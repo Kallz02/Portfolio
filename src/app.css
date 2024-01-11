@@ -65,14 +65,18 @@ a {
 body {
 	height: 100%;
 }
+
 :root {
 	--light-background: #fff;
 	/* --dark-background: #0b1416; */
 
-	--dark-background: #041515;
+	/* --dark-background: #041515; */
+	--dark-background: #0e141e;
+
 	--light-muted: white;
 
-	--dark-muted: #0f191b;
+	/* --dark-muted: #0f191b; */
+	--dark-muted: #111827;
 	--dark-foreground: #fff;
 	--light-foreground: #000;
 }
@@ -139,6 +143,7 @@ body {
 		--accent-900: #082b2a;
 		--accent-950: #041515;
 	}
+
 	.dark {
 		--text-50: #041515;
 		--text-100: #082b2b;
@@ -213,6 +218,7 @@ html.dark {
 	--muted: var(--dark-muted);
 	--foreground: var(--dark-foreground);
 }
+
 :root {
 	--sec: black;
 	--main: rgb(255, 255, 255);
@@ -252,7 +258,8 @@ html.dark {
 	display: inline-block;
 	width: 14px;
 	height: 10px;
-	background-image: url('path-to-your-tick-image.png'); /* Replace with your tick image */
+	background-image: url('path-to-your-tick-image.png');
+	/* Replace with your tick image */
 	background-size: contain;
 	animation: tick-fade 1s;
 }
@@ -261,10 +268,12 @@ html.dark {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
 }
+
 .hidden1 {
 	will-change: opacity, filter, transform;
 }
@@ -272,7 +281,7 @@ html.dark {
 .show {
 	animation-name: show-animation;
 	will-change: opacity, filter, transform;
-	animation-duration: 1s;
+	animation-duration: 0.8s;
 	animation-fill-mode: both;
 	animation-timing-function: ease;
 }

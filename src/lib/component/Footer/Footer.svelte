@@ -1,4 +1,4 @@
-<footer class="mb-14 bg-cyan-200 md:mb-0 dark:bg-[#0f191b] text-custom-foreground">
+<footer class="mb-14 bg-cyan-200 md:mb-0 dark:bg-muted text-custom-foreground">
 	<div class="flex socialLinks hidden1">
 		<a href="https://github.com/Kallz02" target="_blank">
 			<img

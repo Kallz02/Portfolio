@@ -79,7 +79,7 @@
 			return;
 		}
 
-		const api = 'bXl1c2VynameOnlwYXNzd29yZA==';
+		const api = process.env.API;
 		const formData = {
 			firstName,
 			lastName,
@@ -184,7 +184,7 @@
 									bind:value={lastName}
 									class="{lastNameError
 										? 'error-input'
-										: ''} py-3 px-4 block w-full placeholder:text-foreground border-[0.15rem] bg-muted border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+										: ''} py-3 px-4 block w-full placeholder:text-foreground border-[0.15rem] bg-muted border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700"
 									placeholder="Last Name"
 								/>
 								{#if lastNameError}
@@ -203,7 +203,7 @@
 								autocomplete="email"
 								class="{emailError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full border-[0.15rem] placeholder:text-foreground bg-muted border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full border-[0.15rem] placeholder:text-foreground bg-muted border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700"
 								placeholder="Email"
 							/>
 							{#if emailError}
@@ -219,7 +219,7 @@
 								bind:value={phoneNumber}
 								class="{phoneNumberError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full border-[0.15rem] bg-muted placeholder:text-foreground border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full border-[0.15rem] bg-muted placeholder:text-foreground border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700"
 								placeholder="Phone Number"
 							/>
 							{#if phoneNumberError}
@@ -235,7 +235,7 @@
 								rows="4"
 								class="{detailsError
 									? 'error-input'
-									: ''} py-3 px-4 block w-full bg-muted placeholder:text-foreground border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:bg-[#0f191b] dark:border-gray-700 dark:text-gray-400"
+									: ''} py-3 px-4 block w-full bg-muted placeholder:text-foreground border-[0.15rem] border-black rounded-md text-md focus:border-blue-500 focus:ring-blue-500 dark:border-gray-700"
 								placeholder="Details"
 							/>
 							{#if detailsError}

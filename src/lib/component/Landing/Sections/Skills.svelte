@@ -68,26 +68,28 @@
 	</h1>
 	<div class="skills">
 		{#each skills as skill}
-			<!-- <div class="skill bg-custom-background text-foreground hidden1"> -->
-			<div class="">
-				<h2>{skill.title}</h2>
-				<!-- <ul class="justify-around  flex-wrap flex "> -->
-				<ul class="flex flex-wrap justify-around max-w-[20rem] mx-auto gap-3 pb-5">
-					<!-- <ul> -->
-					{#each skill.items as item}
-						<li>
-							<span
-								class="inline-flex items-center mr-3 gap-1.5 py-1 px-3 rounded-full font-medium {getBadgeClass(
-									item
-								)}"
-							>
-								{item}
-							</span>
-						</li>
-					{/each}
-				</ul>
+			<div class="skill bg-custom-background text-foreground hidden1">
+				<div class="">
+					<h2 class="bg-muted py-3 border border-b-[0.3rem] border-black border-x-0 border-t-0">
+						{skill.title}
+					</h2>
+					<ul class="justify-around flex-wrap flex">
+						<ul class="flex flex-wrap justify-around max-w-[20rem] mx-auto gap-3 pb-5">
+							{#each skill.items as item}
+								<li class="font-sans">
+									<!-- <span
+										class="inline-flex items-center mr-3 gap-1.5 py-1 px-3 rounded-full font-medium {getBadgeClass(
+											item
+										)}"
+									> -->
+									{item}
+									<!-- </span> -->
+								</li>
+							{/each}
+						</ul>
+					</ul>
+				</div>
 			</div>
-			<!-- </div> -->
 		{/each}
 	</div>
 </div>
@@ -123,13 +125,15 @@
 
 		box-shadow: 0.3rem 0.3rem 0 hsl(var(--shadowColor) / 1);
 		border-radius: 10px;
-		padding: 10px 20px;
+		/* padding: 10px 20px; */
 		width: 550px;
 		text-align: center;
 		/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 	}
 
 	.skill h2 {
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
 		font-size: 2.5rem;
 		font-weight: 500;
 	}

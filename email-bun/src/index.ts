@@ -23,7 +23,7 @@ app.post(
 	async ({ body }: any) => {
 		const { firstName, lastName, email, phoneNumber, details, api } = body;
 		console.log(api);
-		if (api === 'bXl1c2VynameOnlwYXNzd29yZA==') {
+		if (api === process.env.API) {
 			const htmlEmail = `
   <html>
     <body>
@@ -76,6 +76,6 @@ app.get('/', () => {
 });
 app.get('*', () => 'Route Not Implemented!!');
 
-app.listen(8080);
+app.listen(8132);
 
 console.log(`🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
