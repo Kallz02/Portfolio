@@ -23,7 +23,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: ./email-bun/Dockerfile
+          context: ./email-bun
           push: true
           tags: akshaypranavkalathil/portfolio-email:${{ github.sha }} , akshaypranavkalathil/portfolio-email:latest
 
