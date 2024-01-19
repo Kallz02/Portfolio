@@ -3,7 +3,7 @@ name: Argo CD GitOps CI/CD
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
