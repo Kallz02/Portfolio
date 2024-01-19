@@ -76,7 +76,7 @@
 					<ul class="justify-around flex-wrap flex">
 						<ul class="flex flex-wrap justify-around max-w-[20rem] mx-auto gap-3 pb-5">
 							{#each skill.items as item}
-								<li class="font-sans">
+								<li class="">
 									<!-- <span
 										class="inline-flex items-center mr-3 gap-1.5 py-1 px-3 rounded-full font-medium {getBadgeClass(
 											item
