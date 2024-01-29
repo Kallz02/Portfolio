@@ -27,26 +27,27 @@ jobs:
           push: true
           tags: akshaypranavkalathil/portfolio-email:${{ github.sha }} , akshaypranavkalathil/portfolio-email:latest
 
-  # update:
-  #   name: Update Helm Manifests
-  #   runs-on: portfolio-runner-set
-  #   needs: build
-  #
-  #   steps:
-  #     - name: Check out code
-  #       uses: actions/checkout@v4
-  #
-  #     - name: Update Image Tag Values
-  #       run: |
-  #         chart_dir="chart"
-  #         new_image_tag=${{ github.sha }}
-  #
-  #         # Update the values.yaml file with the new image tag
-  #         sed -i "s/^  tag: .*/  tag: $new_image_tag/" "$chart_dir/values.yaml"
-  #
-  #     - name: Commit the changes made
-  #       run: |
-  #         git config --global user.name 'Kallz02'
-  #         git config --global user.email 'akshay.pranav.kalathil@gmail.com'
-  #         git commit -am "updating image tag"
-  #         git push
+  update:
+    name: Update Helm Manifests
+    runs-on: portfolio-runner-set
+    needs: build
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          ref: infra
+      - name: Update Image Tag Values
+        run: |
+          chart_dir="chart"
+          new_image_tag=${{ github.sha }}
+
+          # Update the values.yaml file with the new image tag
+          sed -i "s/^  tag: .*/  tag: $new_image_tag/" "$chart_dir/values.yaml"
+
+      - name: Commit the changes made
+        run: |
+          git config --global user.name 'Kallz02'
+          git config --global user.email 'akshay.pranav.kalathil@gmail.com'
+          git commit -a -m "updating image tag"
+          git push 
