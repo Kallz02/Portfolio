@@ -53,6 +53,7 @@ jobs:
 
       - name: Commit the changes made
         run: |
+          sudo apt update && sudo apt install git
           git config --global user.name 'Kallz02'
           git config --global user.email 'akshay.pranav.kalathil@gmail.com'
           git commit -a -m "updating image tag"
