@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json .
 COPY bun.lockb .
 
-RUN bun install --production
+RUN bun install
 
 COPY src src
 COPY tsconfig.json .
@@ -14,4 +14,4 @@ COPY tsconfig.json .
 ENV NODE_ENV production
 CMD ["bun", "src/index.ts"]
 
-EXPOSE 3000
+EXPOSE 8080
