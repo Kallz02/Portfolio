@@ -38,24 +38,29 @@ var Pool *pgxpool.Pool
 
 func main() {
 	controllers.Lol()
-	// config, err := pgxpool.ParseConfig(os.Getenv(`postgres://admin:Flixdin@123@68.233.112.42:5432/flixdin?pool_max_conns=80`))
-	// if err != nil {
-	//   fmt.Println("DB error",err)
-	// }
-	// Pool, err := pgxpool.NewWithConfig(context.Background(), config)
 
-	// if err != nil {
-	//   fmt.Println("DB2 error",err)
-	// }
-	// defer Pool.Close()
-
-	if err := initializer.InitializeDBPool(); err != nil {
+	err := initializer.InitializeDBPool()
+	if err != nil {
 		fmt.Println("DB initialization error:", err)
 		return
 	}
 
 	Pool = initializer.Pool
 	defer Pool.Close()
+	// Check the connection status
+	if err := pingDB(); err != nil {
+		fmt.Println("DB connection failed:", err)
+		return
+	}
+	fmt.Println("DB connection successful")
+
+	// Perform a test query
+	if err := performTestQuery(); err != nil {
+		fmt.Println("Test query failed:", err)
+		return
+	}
+	fmt.Println("Test query successful")
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", handleMain)
 	mux.HandleFunc("/login", handleLogin)
@@ -162,4 +167,34 @@ func GetCommentsByPostID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	json.NewEncoder(w).Encode(comments)
+}
+
+func pingDB() error {
+	if Pool == nil {
+		return fmt.Errorf("database pool is nil")
+	}
+
+	conn, err := Pool.Acquire(context.Background())
+	if err != nil {
+		return err
+	}
+	defer conn.Release()
+
+	return conn.Ping(context.Background())
+}
+
+func performTestQuery() error {
+	if Pool == nil {
+		return fmt.Errorf("database pool is nil")
+	}
+
+	conn, err := Pool.Acquire(context.Background())
+	if err != nil {
+		return err
+	}
+	defer conn.Release()
+
+	// Replace the following line with your actual test query logic
+	_, err = conn.Exec(context.Background(), "SELECT 1")
+	return err
 }

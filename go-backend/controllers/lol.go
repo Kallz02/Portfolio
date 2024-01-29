@@ -1,10 +1,7 @@
-
 package controllers
 
 import "fmt"
 
-func Lol(){
-fmt.Println("controllers loaded")
-
-
+func Lol() {
+	fmt.Println("controllers loaded")
 }
