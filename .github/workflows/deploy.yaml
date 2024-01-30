@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: akshaypranavkalathil/portfolio-email:${{ github.sha }} , akshaypranavkalathil/portfolio-email:latest
           cache-from: type=registry,ref=akshaypranavkalathil/portfolio-email:cache 
-          cache-to: type=registry,ref=akshaypranavkalathil/portfolio-email:cache ,mode=max
+          cache-to: type=registry,ref=akshaypranavkalathil/portfolio-email:cache
   update:
     name: Update Helm Manifests
     runs-on: portfolio-runner-set
