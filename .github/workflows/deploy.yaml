@@ -29,10 +29,11 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./email-bun
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64
           push: true
           tags: akshaypranavkalathil/portfolio-email:${{ github.sha }} , akshaypranavkalathil/portfolio-email:latest
-
+          cache-from: type=registry,ref=akshaypranavkalathil/portfolio-email:cache 
+          cache-to: type=registry,ref=akshaypranavkalathil/portfolio-email:cache ,mode=max
   update:
     name: Update Helm Manifests
     runs-on: portfolio-runner-set
