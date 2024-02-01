@@ -1,10 +1,9 @@
 declare global {
 	namespace App {
-		interface Error {}
-		interface Locals {}
-		interface PageData {}
-		interface Platform {}
-
+		interface Error { }
+		interface Locals { }
+		interface PageData { }
+		interface Platform { }
 		interface Global {
 			__myModule: typeof import('$lib/pics/*');
 		}
@@ -18,4 +17,4 @@ declare module '$lib/pics/*' {
 
 global.__myModule = require('$lib/pics/*');
 
-export {};
+export { };
