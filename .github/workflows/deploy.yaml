@@ -51,7 +51,7 @@ jobs:
           # Update the values.yaml file with the new image tag
           sed -i "s/^  tag: .*/  tag: $new_image_tag/" "$chart_dir/values.yaml"
 
-          sudo apt update -y && sudo apt install git -y
+          apt update -y && apt install git -y
           git config --global user.name 'Kallz02'
           git config --global user.email 'akshay.pranav.kalathil@gmail.com'
           git commit -a -m "updating image tag"
