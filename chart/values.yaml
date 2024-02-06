@@ -3,4 +3,4 @@
 # Declare variables to be passed into your templates.
 image:
   repository: akshaypranavkalathil/portfolio-email
-  tag: latest
+  tag: 7dd748ec7ddbddacc419ffcc5975a521a659a29b
