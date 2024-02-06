@@ -4,7 +4,7 @@ metadata:
   name: portfolio-email
 spec:
   selector:
-    app: potfolio-email
+    app: portfolio-email
   ports:
     - protocol: TCP
       port: 8080
