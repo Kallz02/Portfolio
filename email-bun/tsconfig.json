@@ -1,17 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "strict": false,
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "baseUrl": "."
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "commonjs",
+		"strict": true,
+		"esModuleInterop": true,
+		"outDir": "dist",
+		"sourceMap": true,
+		"baseUrl": "."
+	},
+	"include": ["src"],
+	"exclude": ["node_modules"]
 }

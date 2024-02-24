@@ -20,8 +20,9 @@ const Email = t.Object({
 
 app.post(
 	'/send-email',
-	async ({ body }: any) => {
-		const { firstName, lastName, email, phoneNumber, details, api } = body;
+	async ({ body }) => {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		const { firstName, lastName, email, phoneNumber, details, api } = body as any;
 		console.log(api);
 		if (api === process.env.API) {
 			const htmlEmail = `

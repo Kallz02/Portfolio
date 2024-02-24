@@ -72,12 +72,14 @@ body {
 
 	/* --dark-background: #041515; */
 	--dark-background: #0e141e;
+	/* --dark-background: #151718; */
 
 	/* --light-muted: #f8f9fa; */
 	--light-muted: #f7f5f4;
 
 	/* --dark-muted: #0f191b; */
 	--dark-muted: #111827;
+	/* --dark-muted: #1a1d1e; */
 	--dark-foreground: #fff;
 	--light-foreground: #000;
 }
@@ -202,13 +204,13 @@ pre[class*='language-'] {
 	border-radius: 0.3em;
 }
 
-:not(pre)>code[class*='language-'],
+:not(pre) > code[class*='language-'],
 pre[class*='language-'] {
 	background: #0f1224;
 }
 
 /* Inline code */
-:not(pre)>code[class*='language-'] {
+:not(pre) > code[class*='language-'] {
 	padding: 0.1em;
 	border-radius: 0.3em;
 	white-space: normal;
